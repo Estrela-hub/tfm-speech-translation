@@ -1,0 +1,78 @@
+{
+  "configuration": {
+    "input_audio": "D:\\MEIM\\2_Ano\\Projeto\\codigo\\results\\tts_selection\\quality_multirun\\audio_asr_16k\\piper\\run_01\\en\\tts_029.wav",
+    "output_audio": "D:\\MEIM\\2_Ano\\Projeto\\codigo\\results\\s2s_baseline\\en_to_pt.wav",
+    "source_language": "en",
+    "target_language": "pt"
+  },
+  "environment": {
+    "gpu": "NVIDIA GeForce RTX 3060 Laptop GPU",
+    "nemo": "3.0.0",
+    "onnxruntime": "1.29.0",
+    "python": "3.12.10",
+    "pytorch": "2.12.1+cu130",
+    "transformers": "5.16.1"
+  },
+  "experiment": "S2S file-to-file integration baseline",
+  "gpu_memory_snapshots": {
+    "after_asr": {
+      "free_mb": 128.0,
+      "total_mb": 6143.5,
+      "used_mb": 6015.5
+    },
+    "after_mt": {
+      "free_mb": 128.0,
+      "total_mb": 6143.5,
+      "used_mb": 6015.5
+    },
+    "after_tts": {
+      "free_mb": 58.0,
+      "total_mb": 6143.5,
+      "used_mb": 6085.5
+    },
+    "before_models": {
+      "free_mb": 1314.0,
+      "total_mb": 6143.5,
+      "used_mb": 4829.5
+    }
+  },
+  "important_note": "These timings are functional integration timings, not the final performance benchmark.",
+  "load_times_ms": {
+    "asr": 22240.351799991913,
+    "mt": 3557.8815000044415,
+    "tts": 1629.718000011053
+  },
+  "models": {
+    "asr": {
+      "model_id": "nvidia/parakeet-tdt-0.6b-v3",
+      "revision": "541d1f99c6b0c3cd0b11a95167540bb8edefd82b"
+    },
+    "mt": {
+      "model_id": "facebook/nllb-200-distilled-600M",
+      "precision": "torch.float16",
+      "revision": "f8d333a098d19b4fd9a8b18f94170487ad3f821d"
+    },
+    "tts": {
+      "family": "Piper",
+      "runtime": "ONNX Runtime CUDA",
+      "voice": "pt_PT-tugão-medium"
+    }
+  },
+  "outputs": {
+    "asr_text": "It's thinner at sea level and thicker under the continents.",
+    "translated_text": "É mais fino ao nível do mar e mais espesso sob os continentes.",
+    "tts_audio": {
+      "channels": 1,
+      "duration_s": 2.8212244897959184,
+      "frames": 62208,
+      "sample_rate": 22050,
+      "sample_width_bytes": 2
+    }
+  },
+  "processing_total_ms": 757.453300000634,
+  "stage_times_ms": {
+    "asr": 330.92320000287145,
+    "mt": 230.2522000099998,
+    "tts": 196.2778999877628
+  }
+}

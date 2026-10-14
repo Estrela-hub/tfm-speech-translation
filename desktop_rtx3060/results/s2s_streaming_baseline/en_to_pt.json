@@ -1,0 +1,107 @@
+{
+  "architecture": "audio file -> stateful chunked Parakeet -> finalized source unit -> NLLB FP16 final-only -> Piper -> output WAV",
+  "asr": {
+    "attention_style": "regular",
+    "cache_aware": false,
+    "chunk_s": 0.16,
+    "compute_dtype": "torch.bfloat16",
+    "final_text": "It's thinner at sea level and thicker under the continents.",
+    "left_context_s": 10.0,
+    "metrics": {
+      "audio_duration_s": 2.8793125,
+      "audio_load_ms": 2545.299300007173,
+      "chunk_count": 7,
+      "compute_ms": 1697.7385000063805,
+      "first_non_empty_partial_audio_s": 2.0,
+      "first_non_empty_partial_chunk": 1,
+      "rtf": 0.5896332891988557,
+      "theoretical_latency_s": 2.0
+    },
+    "model_id": "nvidia/parakeet-tdt-0.6b-v3",
+    "revision": "541d1f99c6b0c3cd0b11a95167540bb8edefd82b",
+    "right_context_s": 1.84,
+    "streaming_method": "NeMo stateful chunked RNNT/TDT streaming",
+    "theoretical_latency_s": 2.0
+  },
+  "configuration": {
+    "input_audio": "D:\\MEIM\\2_Ano\\Projeto\\codigo\\results\\tts_selection\\quality_multirun\\audio_asr_16k\\piper\\run_01\\en\\tts_029.wav",
+    "output_audio": "D:\\MEIM\\2_Ano\\Projeto\\codigo\\results\\s2s_streaming_baseline\\en_to_pt.wav",
+    "source_language": "en",
+    "target_language": "pt"
+  },
+  "environment": {
+    "gpu": "NVIDIA GeForce RTX 3060 Laptop GPU",
+    "nemo": "3.0.0",
+    "onnxruntime": "1.29.0",
+    "python": "3.12.10",
+    "pytorch": "2.12.1+cu130",
+    "transformers": "5.16.1"
+  },
+  "experiment": "Integrated S2S pipeline with stateful chunked Parakeet ASR",
+  "integration_metrics": {
+    "asr_compute_ms": 1697.7385000063805,
+    "compute_total_ms": 2772.5773000129266,
+    "mt_ms": 486.3891999993939,
+    "note": "This is an integration run, not the final Jetson latency benchmark. File I/O and model loading are reported separately.",
+    "post_asr_processing_ms": 1074.838800006546,
+    "tts_ms": 588.4496000071522
+  },
+  "load_times_ms": {
+    "asr": 14909.204099996714,
+    "mt": 5796.519700001227,
+    "tts": 1726.0398999933386
+  },
+  "memory_snapshots": {
+    "after_asr": {
+      "device_free_mb": 232.0,
+      "device_total_mb": 6143.5,
+      "device_used_mb": 5911.5,
+      "torch_allocated_mb": 1216.345703125,
+      "torch_reserved_mb": 4878.0
+    },
+    "after_mt": {
+      "device_free_mb": 0.0,
+      "device_total_mb": 6143.5,
+      "device_used_mb": 6143.5,
+      "torch_allocated_mb": 2395.75634765625,
+      "torch_reserved_mb": 5380.0
+    },
+    "after_tts": {
+      "device_free_mb": 0.0,
+      "device_total_mb": 6143.5,
+      "device_used_mb": 6143.5,
+      "torch_allocated_mb": 2395.75634765625,
+      "torch_reserved_mb": 5380.0
+    },
+    "before_models": {
+      "device_free_mb": 5130.0,
+      "device_total_mb": 6143.5,
+      "device_used_mb": 1013.5,
+      "torch_allocated_mb": 0.0,
+      "torch_reserved_mb": 0.0
+    }
+  },
+  "mt": {
+    "calls": 1,
+    "latency_ms": 486.3891999993939,
+    "model_id": "facebook/nllb-200-distilled-600M",
+    "policy": "final_only",
+    "precision": "torch.float16",
+    "revision": "f8d333a098d19b4fd9a8b18f94170487ad3f821d",
+    "translated_text": "É mais fino ao nível do mar e mais espesso sob os continentes."
+  },
+  "target_hardware": "NVIDIA Jetson Orin 8 GB",
+  "tts": {
+    "audio": {
+      "channels": 1,
+      "duration_s": 2.8444444444444446,
+      "frames": 62720,
+      "sample_rate": 22050,
+      "sample_width_bytes": 2
+    },
+    "family": "Piper",
+    "latency_ms": 588.4496000071522,
+    "runtime": "ONNX Runtime CUDA",
+    "voice": "pt_PT-tugão-medium"
+  }
+}

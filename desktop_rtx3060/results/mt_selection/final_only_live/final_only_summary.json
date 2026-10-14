@@ -1,0 +1,299 @@
+{
+  "direction_results": [
+    {
+      "exact_matches_mt10": 5,
+      "mean_generation_ms": 402.65810000018973,
+      "mean_latency_delta_vs_mt10_ms": 15.467139999600477,
+      "mean_latency_ms": 411.9241199998214,
+      "mean_mt10_final_latency_ms": 396.45698000022094,
+      "median_latency_ms": 405.90749999864784,
+      "p95_latency_ms": 537.1330199988734,
+      "samples": 5,
+      "source_language": "en",
+      "target_language": "es"
+    },
+    {
+      "exact_matches_mt10": 5,
+      "mean_generation_ms": 497.013920000245,
+      "mean_latency_delta_vs_mt10_ms": -33.915239999623736,
+      "mean_latency_ms": 499.5853600004921,
+      "mean_mt10_final_latency_ms": 533.5006000001158,
+      "median_latency_ms": 396.15090000006603,
+      "p95_latency_ms": 767.8305800003727,
+      "samples": 5,
+      "source_language": "en",
+      "target_language": "fr"
+    },
+    {
+      "exact_matches_mt10": 5,
+      "mean_generation_ms": 530.8372200001031,
+      "mean_latency_delta_vs_mt10_ms": 0.4637200003344333,
+      "mean_latency_ms": 534.0838200001599,
+      "mean_mt10_final_latency_ms": 533.6200999998255,
+      "median_latency_ms": 453.63819999874977,
+      "p95_latency_ms": 906.4138400008231,
+      "samples": 5,
+      "source_language": "en",
+      "target_language": "de"
+    },
+    {
+      "exact_matches_mt10": 5,
+      "mean_generation_ms": 372.9565800007549,
+      "mean_latency_delta_vs_mt10_ms": -26.06270000032964,
+      "mean_latency_ms": 375.2701800000068,
+      "mean_mt10_final_latency_ms": 401.33288000033644,
+      "median_latency_ms": 363.0263000013656,
+      "p95_latency_ms": 485.4664400001638,
+      "samples": 5,
+      "source_language": "en",
+      "target_language": "pt"
+    },
+    {
+      "exact_matches_mt10": 5,
+      "mean_generation_ms": 420.09347999992315,
+      "mean_latency_delta_vs_mt10_ms": 4.523779999362887,
+      "mean_latency_ms": 428.83749999928114,
+      "mean_mt10_final_latency_ms": 424.31371999991825,
+      "median_latency_ms": 487.23790000076406,
+      "p95_latency_ms": 518.8919599986548,
+      "samples": 5,
+      "source_language": "es",
+      "target_language": "en"
+    },
+    {
+      "exact_matches_mt10": 5,
+      "mean_generation_ms": 523.3290600001055,
+      "mean_latency_delta_vs_mt10_ms": -31.375479999769595,
+      "mean_latency_ms": 525.8196200004022,
+      "mean_mt10_final_latency_ms": 557.1951000001718,
+      "median_latency_ms": 494.42200000157754,
+      "p95_latency_ms": 637.3686599999928,
+      "samples": 5,
+      "source_language": "es",
+      "target_language": "fr"
+    },
+    {
+      "exact_matches_mt10": 5,
+      "mean_generation_ms": 507.2853800000303,
+      "mean_latency_delta_vs_mt10_ms": -4.6641200002341066,
+      "mean_latency_ms": 509.77576000004774,
+      "mean_mt10_final_latency_ms": 514.4398800002818,
+      "median_latency_ms": 471.3866000001872,
+      "p95_latency_ms": 680.6282199999259,
+      "samples": 5,
+      "source_language": "es",
+      "target_language": "de"
+    },
+    {
+      "exact_matches_mt10": 5,
+      "mean_generation_ms": 498.91953999940597,
+      "mean_latency_delta_vs_mt10_ms": -48.4136999999464,
+      "mean_latency_ms": 501.21562000022095,
+      "mean_mt10_final_latency_ms": 549.6293200001674,
+      "median_latency_ms": 470.3004000002693,
+      "p95_latency_ms": 710.3605800013611,
+      "samples": 5,
+      "source_language": "es",
+      "target_language": "pt"
+    },
+    {
+      "exact_matches_mt10": 5,
+      "mean_generation_ms": 426.20978000013565,
+      "mean_latency_delta_vs_mt10_ms": -10.13524000045436,
+      "mean_latency_ms": 435.0270599992655,
+      "mean_mt10_final_latency_ms": 445.16229999971983,
+      "median_latency_ms": 464.9771000003966,
+      "p95_latency_ms": 616.0209599987866,
+      "samples": 5,
+      "source_language": "fr",
+      "target_language": "en"
+    },
+    {
+      "exact_matches_mt10": 5,
+      "mean_generation_ms": 513.6407600002713,
+      "mean_latency_delta_vs_mt10_ms": 17.59358000017528,
+      "mean_latency_ms": 516.2838599997485,
+      "mean_mt10_final_latency_ms": 498.69027999957325,
+      "median_latency_ms": 575.55610000054,
+      "p95_latency_ms": 769.3154999993567,
+      "samples": 5,
+      "source_language": "fr",
+      "target_language": "es"
+    },
+    {
+      "exact_matches_mt10": 5,
+      "mean_generation_ms": 474.9373200003902,
+      "mean_latency_delta_vs_mt10_ms": 15.378140000393614,
+      "mean_latency_ms": 477.5906800001394,
+      "mean_mt10_final_latency_ms": 462.2125399997458,
+      "median_latency_ms": 578.8814999996248,
+      "p95_latency_ms": 625.5713400001696,
+      "samples": 5,
+      "source_language": "fr",
+      "target_language": "de"
+    },
+    {
+      "exact_matches_mt10": 5,
+      "mean_generation_ms": 511.866120000559,
+      "mean_latency_delta_vs_mt10_ms": -61.506699999881675,
+      "mean_latency_ms": 513.9667800001916,
+      "mean_mt10_final_latency_ms": 575.4734800000733,
+      "median_latency_ms": 535.3431000003184,
+      "p95_latency_ms": 752.6817399993888,
+      "samples": 5,
+      "source_language": "fr",
+      "target_language": "pt"
+    },
+    {
+      "exact_matches_mt10": 5,
+      "mean_generation_ms": 347.4491200006014,
+      "mean_latency_delta_vs_mt10_ms": -34.08777999939048,
+      "mean_latency_ms": 356.17958000038925,
+      "mean_mt10_final_latency_ms": 390.2673599997797,
+      "median_latency_ms": 365.79840000013064,
+      "p95_latency_ms": 392.75651999960246,
+      "samples": 5,
+      "source_language": "de",
+      "target_language": "en"
+    },
+    {
+      "exact_matches_mt10": 5,
+      "mean_generation_ms": 398.39776000007987,
+      "mean_latency_delta_vs_mt10_ms": 9.927280000192695,
+      "mean_latency_ms": 401.25329999973474,
+      "mean_mt10_final_latency_ms": 391.32601999954204,
+      "median_latency_ms": 391.211199999816,
+      "p95_latency_ms": 508.2341999986965,
+      "samples": 5,
+      "source_language": "de",
+      "target_language": "es"
+    },
+    {
+      "exact_matches_mt10": 5,
+      "mean_generation_ms": 439.13682000020344,
+      "mean_latency_delta_vs_mt10_ms": -13.684959999955026,
+      "mean_latency_ms": 441.23835999998846,
+      "mean_mt10_final_latency_ms": 454.9233199999435,
+      "median_latency_ms": 427.7342999994289,
+      "p95_latency_ms": 611.0006599999906,
+      "samples": 5,
+      "source_language": "de",
+      "target_language": "fr"
+    },
+    {
+      "exact_matches_mt10": 5,
+      "mean_generation_ms": 364.31875999951444,
+      "mean_latency_delta_vs_mt10_ms": -22.795700000278885,
+      "mean_latency_ms": 366.40455999986443,
+      "mean_mt10_final_latency_ms": 389.2002600001433,
+      "median_latency_ms": 383.7273000008281,
+      "p95_latency_ms": 425.5656799999997,
+      "samples": 5,
+      "source_language": "de",
+      "target_language": "pt"
+    },
+    {
+      "exact_matches_mt10": 5,
+      "mean_generation_ms": 361.5485999995144,
+      "mean_latency_delta_vs_mt10_ms": -2.163259999724687,
+      "mean_latency_ms": 368.1899200004409,
+      "mean_mt10_final_latency_ms": 370.3531800001656,
+      "median_latency_ms": 366.3419000004069,
+      "p95_latency_ms": 435.95920000007027,
+      "samples": 5,
+      "source_language": "pt",
+      "target_language": "en"
+    },
+    {
+      "exact_matches_mt10": 5,
+      "mean_generation_ms": 417.98753999973997,
+      "mean_latency_delta_vs_mt10_ms": -15.31252000022505,
+      "mean_latency_ms": 419.7213399998873,
+      "mean_mt10_final_latency_ms": 435.0338600001123,
+      "median_latency_ms": 417.1193000001949,
+      "p95_latency_ms": 493.1400199995551,
+      "samples": 5,
+      "source_language": "pt",
+      "target_language": "es"
+    },
+    {
+      "exact_matches_mt10": 5,
+      "mean_generation_ms": 461.43532000023697,
+      "mean_latency_delta_vs_mt10_ms": -1.0181599998759339,
+      "mean_latency_ms": 463.5392199998023,
+      "mean_mt10_final_latency_ms": 464.55737999967823,
+      "median_latency_ms": 407.35309999945457,
+      "p95_latency_ms": 662.4058199999126,
+      "samples": 5,
+      "source_language": "pt",
+      "target_language": "fr"
+    },
+    {
+      "exact_matches_mt10": 5,
+      "mean_generation_ms": 395.54367999990063,
+      "mean_latency_delta_vs_mt10_ms": -9.07394000023487,
+      "mean_latency_ms": 397.9909600002429,
+      "mean_mt10_final_latency_ms": 407.0649000004778,
+      "median_latency_ms": 364.00270000012824,
+      "p95_latency_ms": 549.9489799996809,
+      "samples": 5,
+      "source_language": "pt",
+      "target_language": "de"
+    }
+  ],
+  "environment": {
+    "gpu": "NVIDIA GeForce RTX 3060 Laptop GPU",
+    "python": "3.12.10",
+    "pytorch": "2.12.1+cu130",
+    "transformers": "5.16.1"
+  },
+  "experiment": "Live validation of the selected final-only NLLB FP16 runtime baseline.",
+  "model": {
+    "decoding": {
+      "do_sample": false,
+      "max_length": 512,
+      "num_beams": 1
+    },
+    "device": "cuda:0",
+    "id": "facebook/nllb-200-distilled-600M",
+    "name": "NLLB-200 Distilled 600M",
+    "parameter_memory_mb": 1173.16015625,
+    "parameters": 615073792,
+    "precision": "float16",
+    "revision": "f8d333a098d19b4fd9a8b18f94170487ad3f821d"
+  },
+  "notes": {
+    "deployment": "RTX 3060 laptop development result; not a final Jetson Orin measurement.",
+    "quality": "This experiment is not a new BLEU/chrF quality evaluation. Translation preservation is checked by exact comparison against the corresponding final mt_10 outputs.",
+    "runtime": "Unlike mt_14, these are live NLLB inference measurements rather than an offline scheduling simulation."
+  },
+  "performance": {
+    "live_vs_mt14_mean_delta_ms": -12.542792999993253,
+    "live_vs_mt14_p95_delta_ms": 10.511789999509233,
+    "mean_decoding_ms": 1.8142649999390414,
+    "mean_delta_vs_mt10_final_service_ms": -12.542792999993253,
+    "mean_generation_ms": 443.27824300009524,
+    "mean_mt10_final_service_ms": 459.73767299999963,
+    "mean_preprocessing_ms": 2.0686870000463387,
+    "mean_total_ms": 447.1948800000064,
+    "median_total_ms": 408.94234999905166,
+    "mt14_simulated_final_only_mean_ms": 459.73767299999963,
+    "mt14_simulated_final_only_p95_ms": 711.6833550006049,
+    "p95_total_ms": 722.1951450001142,
+    "peak_cuda_allocated_mb": 1193.9423828125,
+    "peak_cuda_reserved_mb": 1214.0
+  },
+  "scope": {
+    "directions": 20,
+    "runtime_calls_per_sequence": 1,
+    "source_utterances": 25,
+    "translations": 100
+  },
+  "validation": {
+    "exact_match_percent": 100.0,
+    "exact_matches_vs_mt10": 100,
+    "final_source": "Final stable2_hold1 source commit produced by mt_10.",
+    "reached_max_length": 0,
+    "reference_target": "Final NLLB target draft from mt_10."
+  }
+}

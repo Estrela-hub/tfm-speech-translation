@@ -1,0 +1,296 @@
+{
+  "dataset": {
+    "dataset_id": "facebook/flores",
+    "manifest_sha256": "b2e3f73365232c700a1246b7bf4726eba2401f743a6a644066c5f35d4c470399",
+    "revision": "71abf77d8b7beb5cfef59898d6b24d92ab7654fc",
+    "samples": 200,
+    "split": "dev",
+    "translation_directions": 20
+  },
+  "delta_fp16_minus_fp32": {
+    "macro_chrf_pp": 0.004617324541591472,
+    "macro_spbleu": 0.017028387418704938
+  },
+  "environment": {
+    "gpu": "NVIDIA GeForce RTX 3060 Laptop GPU",
+    "python": "3.12.10",
+    "pytorch": "2.12.1+cu130",
+    "sacrebleu": "2.6.0",
+    "transformers": "5.16.1"
+  },
+  "experiment": "NLLB FP32 vs FP16 quality comparison",
+  "fp16": {
+    "changed_from_fp32": 49,
+    "device": "cuda:0",
+    "directions": [
+      {
+        "chrf_pp": 51.610925443055486,
+        "fp32_changed": 3,
+        "fp32_exact_same": 197,
+        "model": "NLLB",
+        "precision": "float16",
+        "samples": 200,
+        "source_language": "EN",
+        "spbleu": 30.786604025054636,
+        "target_language": "ES"
+      },
+      {
+        "chrf_pp": 64.6965745703458,
+        "fp32_changed": 5,
+        "fp32_exact_same": 195,
+        "model": "NLLB",
+        "precision": "float16",
+        "samples": 200,
+        "source_language": "EN",
+        "spbleu": 48.82989480011438,
+        "target_language": "FR"
+      },
+      {
+        "chrf_pp": 56.26016007024776,
+        "fp32_changed": 5,
+        "fp32_exact_same": 195,
+        "model": "NLLB",
+        "precision": "float16",
+        "samples": 200,
+        "source_language": "EN",
+        "spbleu": 37.69025139902031,
+        "target_language": "DE"
+      },
+      {
+        "chrf_pp": 63.08201254257727,
+        "fp32_changed": 2,
+        "fp32_exact_same": 198,
+        "model": "NLLB",
+        "precision": "float16",
+        "samples": 200,
+        "source_language": "EN",
+        "spbleu": 46.24855801128921,
+        "target_language": "PT"
+      },
+      {
+        "chrf_pp": 55.74412230619866,
+        "fp32_changed": 4,
+        "fp32_exact_same": 196,
+        "model": "NLLB",
+        "precision": "float16",
+        "samples": 200,
+        "source_language": "ES",
+        "spbleu": 33.528807723631985,
+        "target_language": "EN"
+      },
+      {
+        "chrf_pp": 53.09385056335203,
+        "fp32_changed": 2,
+        "fp32_exact_same": 198,
+        "model": "NLLB",
+        "precision": "float16",
+        "samples": 200,
+        "source_language": "ES",
+        "spbleu": 33.679585846021745,
+        "target_language": "FR"
+      },
+      {
+        "chrf_pp": 45.93923611527463,
+        "fp32_changed": 4,
+        "fp32_exact_same": 196,
+        "model": "NLLB",
+        "precision": "float16",
+        "samples": 200,
+        "source_language": "ES",
+        "spbleu": 23.828197639201726,
+        "target_language": "DE"
+      },
+      {
+        "chrf_pp": 50.667242125716726,
+        "fp32_changed": 4,
+        "fp32_exact_same": 196,
+        "model": "NLLB",
+        "precision": "float16",
+        "samples": 200,
+        "source_language": "ES",
+        "spbleu": 30.31268956924453,
+        "target_language": "PT"
+      },
+      {
+        "chrf_pp": 63.67821576177495,
+        "fp32_changed": 0,
+        "fp32_exact_same": 200,
+        "model": "NLLB",
+        "precision": "float16",
+        "samples": 200,
+        "source_language": "FR",
+        "spbleu": 45.03433503520888,
+        "target_language": "EN"
+      },
+      {
+        "chrf_pp": 47.95014868128978,
+        "fp32_changed": 1,
+        "fp32_exact_same": 199,
+        "model": "NLLB",
+        "precision": "float16",
+        "samples": 200,
+        "source_language": "FR",
+        "spbleu": 26.380726255782633,
+        "target_language": "ES"
+      },
+      {
+        "chrf_pp": 49.74637583255316,
+        "fp32_changed": 2,
+        "fp32_exact_same": 198,
+        "model": "NLLB",
+        "precision": "float16",
+        "samples": 200,
+        "source_language": "FR",
+        "spbleu": 29.159802833306223,
+        "target_language": "DE"
+      },
+      {
+        "chrf_pp": 55.22388272356622,
+        "fp32_changed": 2,
+        "fp32_exact_same": 198,
+        "model": "NLLB",
+        "precision": "float16",
+        "samples": 200,
+        "source_language": "FR",
+        "spbleu": 35.905292108928926,
+        "target_language": "PT"
+      },
+      {
+        "chrf_pp": 63.43100485942098,
+        "fp32_changed": 0,
+        "fp32_exact_same": 200,
+        "model": "NLLB",
+        "precision": "float16",
+        "samples": 200,
+        "source_language": "DE",
+        "spbleu": 43.562091056553854,
+        "target_language": "EN"
+      },
+      {
+        "chrf_pp": 46.95898892153346,
+        "fp32_changed": 1,
+        "fp32_exact_same": 199,
+        "model": "NLLB",
+        "precision": "float16",
+        "samples": 200,
+        "source_language": "DE",
+        "spbleu": 25.032108854200366,
+        "target_language": "ES"
+      },
+      {
+        "chrf_pp": 56.652748410373356,
+        "fp32_changed": 1,
+        "fp32_exact_same": 199,
+        "model": "NLLB",
+        "precision": "float16",
+        "samples": 200,
+        "source_language": "DE",
+        "spbleu": 37.84124277417322,
+        "target_language": "FR"
+      },
+      {
+        "chrf_pp": 53.71898354173935,
+        "fp32_changed": 3,
+        "fp32_exact_same": 197,
+        "model": "NLLB",
+        "precision": "float16",
+        "samples": 200,
+        "source_language": "DE",
+        "spbleu": 34.55763681040872,
+        "target_language": "PT"
+      },
+      {
+        "chrf_pp": 67.20710577363667,
+        "fp32_changed": 2,
+        "fp32_exact_same": 198,
+        "model": "NLLB",
+        "precision": "float16",
+        "samples": 200,
+        "source_language": "PT",
+        "spbleu": 49.66300185484541,
+        "target_language": "EN"
+      },
+      {
+        "chrf_pp": 49.63966495485116,
+        "fp32_changed": 1,
+        "fp32_exact_same": 199,
+        "model": "NLLB",
+        "precision": "float16",
+        "samples": 200,
+        "source_language": "PT",
+        "spbleu": 28.83848069635919,
+        "target_language": "ES"
+      },
+      {
+        "chrf_pp": 58.57069770730312,
+        "fp32_changed": 3,
+        "fp32_exact_same": 197,
+        "model": "NLLB",
+        "precision": "float16",
+        "samples": 200,
+        "source_language": "PT",
+        "spbleu": 40.96046616092777,
+        "target_language": "FR"
+      },
+      {
+        "chrf_pp": 51.714303725108024,
+        "fp32_changed": 4,
+        "fp32_exact_same": 196,
+        "model": "NLLB",
+        "precision": "float16",
+        "samples": 200,
+        "source_language": "PT",
+        "spbleu": 30.736550982014776,
+        "target_language": "DE"
+      }
+    ],
+    "dtype": "torch.float16",
+    "exact_same_as_fp32": 3951,
+    "exact_same_percent": 98.775,
+    "macro_chrf_pp": 55.27931223149593,
+    "macro_spbleu": 35.628816221814425,
+    "model": "NLLB",
+    "model_id": "facebook/nllb-200-distilled-600M",
+    "near_max_length": 1,
+    "reached_max_length": 1,
+    "revision": "f8d333a098d19b4fd9a8b18f94170487ad3f821d",
+    "total_translations": 4000,
+    "worst_chrf_pp": {
+      "chrf_pp": 45.93923611527463,
+      "fp32_changed": 4,
+      "fp32_exact_same": 196,
+      "model": "NLLB",
+      "precision": "float16",
+      "samples": 200,
+      "source_language": "ES",
+      "spbleu": 23.828197639201726,
+      "target_language": "DE"
+    },
+    "worst_spbleu": {
+      "chrf_pp": 45.93923611527463,
+      "fp32_changed": 4,
+      "fp32_exact_same": 196,
+      "model": "NLLB",
+      "precision": "float16",
+      "samples": 200,
+      "source_language": "ES",
+      "spbleu": 23.828197639201726,
+      "target_language": "DE"
+    }
+  },
+  "fp32": {
+    "dtype": "float32",
+    "macro_chrf_pp": 55.27469490695434,
+    "macro_spbleu": 35.61178783439572
+  },
+  "generation": {
+    "batch_size": 1,
+    "do_sample": false,
+    "max_length": 512,
+    "num_beams": 1
+  },
+  "metrics": {
+    "chrf_pp_signature": "nrefs:1|case:mixed|eff:yes|nc:6|nw:2|space:no|version:2.6.0",
+    "spbleu_signature": "nrefs:1|case:mixed|eff:no|tok:flores200|smooth:exp|version:2.6.0"
+  }
+}

@@ -1,0 +1,504 @@
+{
+  "dataset": {
+    "dataset_id": "facebook/flores",
+    "languages": {
+      "DE": "deu_Latn",
+      "EN": "eng_Latn",
+      "ES": "spa_Latn",
+      "FR": "fra_Latn",
+      "PT": "por_Latn"
+    },
+    "manifest": "D:\\MEIM\\2_Ano\\Projeto\\codigo\\data\\mt_selection\\flores_dev_200.jsonl",
+    "manifest_sha256": "b2e3f73365232c700a1246b7bf4726eba2401f743a6a644066c5f35d4c470399",
+    "revision": "71abf77d8b7beb5cfef59898d6b24d92ab7654fc",
+    "samples": 200,
+    "split": "dev",
+    "translation_directions": 20
+  },
+  "environment": {
+    "gpu": "NVIDIA GeForce RTX 3060 Laptop GPU",
+    "python": "3.12.10",
+    "pytorch": "2.12.1+cu130",
+    "sacrebleu": "2.6.0",
+    "transformers": "5.16.1"
+  },
+  "experiment": "MT model selection - quality",
+  "generation": {
+    "batch_size": 1,
+    "device": "cuda",
+    "do_sample": false,
+    "dtype": "float32",
+    "max_length": 512,
+    "num_beams": 1
+  },
+  "metrics": {
+    "chrf_pp_signature": "nrefs:1|case:mixed|eff:yes|nc:6|nw:2|space:no|version:2.6.0",
+    "spbleu_signature": "nrefs:1|case:mixed|eff:no|tok:flores200|smooth:exp|version:2.6.0"
+  },
+  "models": [
+    {
+      "device": "cuda:0",
+      "directions": [
+        {
+          "chrf_pp": 51.61361971794748,
+          "model": "NLLB",
+          "model_id": "facebook/nllb-200-distilled-600M",
+          "revision": "f8d333a098d19b4fd9a8b18f94170487ad3f821d",
+          "samples": 200,
+          "source_language": "EN",
+          "spbleu": 30.767310943345606,
+          "target_language": "ES"
+        },
+        {
+          "chrf_pp": 64.63687765477817,
+          "model": "NLLB",
+          "model_id": "facebook/nllb-200-distilled-600M",
+          "revision": "f8d333a098d19b4fd9a8b18f94170487ad3f821d",
+          "samples": 200,
+          "source_language": "EN",
+          "spbleu": 48.688576271901645,
+          "target_language": "FR"
+        },
+        {
+          "chrf_pp": 56.226417985961504,
+          "model": "NLLB",
+          "model_id": "facebook/nllb-200-distilled-600M",
+          "revision": "f8d333a098d19b4fd9a8b18f94170487ad3f821d",
+          "samples": 200,
+          "source_language": "EN",
+          "spbleu": 37.65255134484884,
+          "target_language": "DE"
+        },
+        {
+          "chrf_pp": 63.06202419740025,
+          "model": "NLLB",
+          "model_id": "facebook/nllb-200-distilled-600M",
+          "revision": "f8d333a098d19b4fd9a8b18f94170487ad3f821d",
+          "samples": 200,
+          "source_language": "EN",
+          "spbleu": 46.20875993545304,
+          "target_language": "PT"
+        },
+        {
+          "chrf_pp": 55.73033429930408,
+          "model": "NLLB",
+          "model_id": "facebook/nllb-200-distilled-600M",
+          "revision": "f8d333a098d19b4fd9a8b18f94170487ad3f821d",
+          "samples": 200,
+          "source_language": "ES",
+          "spbleu": 33.54593601127188,
+          "target_language": "EN"
+        },
+        {
+          "chrf_pp": 53.05220948232277,
+          "model": "NLLB",
+          "model_id": "facebook/nllb-200-distilled-600M",
+          "revision": "f8d333a098d19b4fd9a8b18f94170487ad3f821d",
+          "samples": 200,
+          "source_language": "ES",
+          "spbleu": 33.607035667499794,
+          "target_language": "FR"
+        },
+        {
+          "chrf_pp": 46.01862161403057,
+          "model": "NLLB",
+          "model_id": "facebook/nllb-200-distilled-600M",
+          "revision": "f8d333a098d19b4fd9a8b18f94170487ad3f821d",
+          "samples": 200,
+          "source_language": "ES",
+          "spbleu": 23.939634648147113,
+          "target_language": "DE"
+        },
+        {
+          "chrf_pp": 50.66029868844731,
+          "model": "NLLB",
+          "model_id": "facebook/nllb-200-distilled-600M",
+          "revision": "f8d333a098d19b4fd9a8b18f94170487ad3f821d",
+          "samples": 200,
+          "source_language": "ES",
+          "spbleu": 30.31352324926329,
+          "target_language": "PT"
+        },
+        {
+          "chrf_pp": 63.67821576177495,
+          "model": "NLLB",
+          "model_id": "facebook/nllb-200-distilled-600M",
+          "revision": "f8d333a098d19b4fd9a8b18f94170487ad3f821d",
+          "samples": 200,
+          "source_language": "FR",
+          "spbleu": 45.03433503520888,
+          "target_language": "EN"
+        },
+        {
+          "chrf_pp": 47.94232999345081,
+          "model": "NLLB",
+          "model_id": "facebook/nllb-200-distilled-600M",
+          "revision": "f8d333a098d19b4fd9a8b18f94170487ad3f821d",
+          "samples": 200,
+          "source_language": "FR",
+          "spbleu": 26.347350207932045,
+          "target_language": "ES"
+        },
+        {
+          "chrf_pp": 49.78996305237596,
+          "model": "NLLB",
+          "model_id": "facebook/nllb-200-distilled-600M",
+          "revision": "f8d333a098d19b4fd9a8b18f94170487ad3f821d",
+          "samples": 200,
+          "source_language": "FR",
+          "spbleu": 29.23177632168872,
+          "target_language": "DE"
+        },
+        {
+          "chrf_pp": 55.216954648129835,
+          "model": "NLLB",
+          "model_id": "facebook/nllb-200-distilled-600M",
+          "revision": "f8d333a098d19b4fd9a8b18f94170487ad3f821d",
+          "samples": 200,
+          "source_language": "FR",
+          "spbleu": 35.87208453758445,
+          "target_language": "PT"
+        },
+        {
+          "chrf_pp": 63.43100485942098,
+          "model": "NLLB",
+          "model_id": "facebook/nllb-200-distilled-600M",
+          "revision": "f8d333a098d19b4fd9a8b18f94170487ad3f821d",
+          "samples": 200,
+          "source_language": "DE",
+          "spbleu": 43.562091056553854,
+          "target_language": "EN"
+        },
+        {
+          "chrf_pp": 46.97835315433567,
+          "model": "NLLB",
+          "model_id": "facebook/nllb-200-distilled-600M",
+          "revision": "f8d333a098d19b4fd9a8b18f94170487ad3f821d",
+          "samples": 200,
+          "source_language": "DE",
+          "spbleu": 25.03850645320535,
+          "target_language": "ES"
+        },
+        {
+          "chrf_pp": 56.67934323915209,
+          "model": "NLLB",
+          "model_id": "facebook/nllb-200-distilled-600M",
+          "revision": "f8d333a098d19b4fd9a8b18f94170487ad3f821d",
+          "samples": 200,
+          "source_language": "DE",
+          "spbleu": 37.8529406111021,
+          "target_language": "FR"
+        },
+        {
+          "chrf_pp": 53.692824558594545,
+          "model": "NLLB",
+          "model_id": "facebook/nllb-200-distilled-600M",
+          "revision": "f8d333a098d19b4fd9a8b18f94170487ad3f821d",
+          "samples": 200,
+          "source_language": "DE",
+          "spbleu": 34.51232272757043,
+          "target_language": "PT"
+        },
+        {
+          "chrf_pp": 67.22077087199574,
+          "model": "NLLB",
+          "model_id": "facebook/nllb-200-distilled-600M",
+          "revision": "f8d333a098d19b4fd9a8b18f94170487ad3f821d",
+          "samples": 200,
+          "source_language": "PT",
+          "spbleu": 49.670004412902315,
+          "target_language": "EN"
+        },
+        {
+          "chrf_pp": 49.63864346890385,
+          "model": "NLLB",
+          "model_id": "facebook/nllb-200-distilled-600M",
+          "revision": "f8d333a098d19b4fd9a8b18f94170487ad3f821d",
+          "samples": 200,
+          "source_language": "PT",
+          "spbleu": 28.83848069635919,
+          "target_language": "ES"
+        },
+        {
+          "chrf_pp": 58.51787778874558,
+          "model": "NLLB",
+          "model_id": "facebook/nllb-200-distilled-600M",
+          "revision": "f8d333a098d19b4fd9a8b18f94170487ad3f821d",
+          "samples": 200,
+          "source_language": "PT",
+          "spbleu": 40.849570333564095,
+          "target_language": "FR"
+        },
+        {
+          "chrf_pp": 51.707213102014585,
+          "model": "NLLB",
+          "model_id": "facebook/nllb-200-distilled-600M",
+          "revision": "f8d333a098d19b4fd9a8b18f94170487ad3f821d",
+          "samples": 200,
+          "source_language": "PT",
+          "spbleu": 30.702966222511744,
+          "target_language": "DE"
+        }
+      ],
+      "dtype": "torch.float32",
+      "macro_chrf_pp": 55.27469490695434,
+      "macro_spbleu": 35.61178783439572,
+      "model": "NLLB",
+      "model_id": "facebook/nllb-200-distilled-600M",
+      "predictions_file": "nllb_predictions.jsonl",
+      "revision": "f8d333a098d19b4fd9a8b18f94170487ad3f821d",
+      "worst_chrf_pp": {
+        "chrf_pp": 46.01862161403057,
+        "model": "NLLB",
+        "model_id": "facebook/nllb-200-distilled-600M",
+        "revision": "f8d333a098d19b4fd9a8b18f94170487ad3f821d",
+        "samples": 200,
+        "source_language": "ES",
+        "spbleu": 23.939634648147113,
+        "target_language": "DE"
+      },
+      "worst_spbleu": {
+        "chrf_pp": 46.01862161403057,
+        "model": "NLLB",
+        "model_id": "facebook/nllb-200-distilled-600M",
+        "revision": "f8d333a098d19b4fd9a8b18f94170487ad3f821d",
+        "samples": 200,
+        "source_language": "ES",
+        "spbleu": 23.939634648147113,
+        "target_language": "DE"
+      }
+    },
+    {
+      "device": "cuda:0",
+      "directions": [
+        {
+          "chrf_pp": 48.7907727738404,
+          "model": "M2M100",
+          "model_id": "facebook/m2m100_418M",
+          "revision": "55c2e61bbf05dfb8d7abccdc3fae6fc8512fd636",
+          "samples": 200,
+          "source_language": "EN",
+          "spbleu": 26.280796285162076,
+          "target_language": "ES"
+        },
+        {
+          "chrf_pp": 60.9008189052273,
+          "model": "M2M100",
+          "model_id": "facebook/m2m100_418M",
+          "revision": "55c2e61bbf05dfb8d7abccdc3fae6fc8512fd636",
+          "samples": 200,
+          "source_language": "EN",
+          "spbleu": 42.628933610335956,
+          "target_language": "FR"
+        },
+        {
+          "chrf_pp": 53.45939925539815,
+          "model": "M2M100",
+          "model_id": "facebook/m2m100_418M",
+          "revision": "55c2e61bbf05dfb8d7abccdc3fae6fc8512fd636",
+          "samples": 200,
+          "source_language": "EN",
+          "spbleu": 32.55547215739706,
+          "target_language": "DE"
+        },
+        {
+          "chrf_pp": 60.768944678087735,
+          "model": "M2M100",
+          "model_id": "facebook/m2m100_418M",
+          "revision": "55c2e61bbf05dfb8d7abccdc3fae6fc8512fd636",
+          "samples": 200,
+          "source_language": "EN",
+          "spbleu": 42.161938321880214,
+          "target_language": "PT"
+        },
+        {
+          "chrf_pp": 52.27835848461551,
+          "model": "M2M100",
+          "model_id": "facebook/m2m100_418M",
+          "revision": "55c2e61bbf05dfb8d7abccdc3fae6fc8512fd636",
+          "samples": 200,
+          "source_language": "ES",
+          "spbleu": 27.484216485258536,
+          "target_language": "EN"
+        },
+        {
+          "chrf_pp": 50.14074895009124,
+          "model": "M2M100",
+          "model_id": "facebook/m2m100_418M",
+          "revision": "55c2e61bbf05dfb8d7abccdc3fae6fc8512fd636",
+          "samples": 200,
+          "source_language": "ES",
+          "spbleu": 29.607559005069998,
+          "target_language": "FR"
+        },
+        {
+          "chrf_pp": 44.02774970003541,
+          "model": "M2M100",
+          "model_id": "facebook/m2m100_418M",
+          "revision": "55c2e61bbf05dfb8d7abccdc3fae6fc8512fd636",
+          "samples": 200,
+          "source_language": "ES",
+          "spbleu": 21.402457177011552,
+          "target_language": "DE"
+        },
+        {
+          "chrf_pp": 49.57305614784485,
+          "model": "M2M100",
+          "model_id": "facebook/m2m100_418M",
+          "revision": "55c2e61bbf05dfb8d7abccdc3fae6fc8512fd636",
+          "samples": 200,
+          "source_language": "ES",
+          "spbleu": 27.87440796806433,
+          "target_language": "PT"
+        },
+        {
+          "chrf_pp": 62.54114883365992,
+          "model": "M2M100",
+          "model_id": "facebook/m2m100_418M",
+          "revision": "55c2e61bbf05dfb8d7abccdc3fae6fc8512fd636",
+          "samples": 200,
+          "source_language": "FR",
+          "spbleu": 42.41332310903717,
+          "target_language": "EN"
+        },
+        {
+          "chrf_pp": 47.39528254849252,
+          "model": "M2M100",
+          "model_id": "facebook/m2m100_418M",
+          "revision": "55c2e61bbf05dfb8d7abccdc3fae6fc8512fd636",
+          "samples": 200,
+          "source_language": "FR",
+          "spbleu": 24.868287049438457,
+          "target_language": "ES"
+        },
+        {
+          "chrf_pp": 49.75661086302935,
+          "model": "M2M100",
+          "model_id": "facebook/m2m100_418M",
+          "revision": "55c2e61bbf05dfb8d7abccdc3fae6fc8512fd636",
+          "samples": 200,
+          "source_language": "FR",
+          "spbleu": 28.311306807413928,
+          "target_language": "DE"
+        },
+        {
+          "chrf_pp": 55.339965660571444,
+          "model": "M2M100",
+          "model_id": "facebook/m2m100_418M",
+          "revision": "55c2e61bbf05dfb8d7abccdc3fae6fc8512fd636",
+          "samples": 200,
+          "source_language": "FR",
+          "spbleu": 35.528449227312436,
+          "target_language": "PT"
+        },
+        {
+          "chrf_pp": 59.662132364309514,
+          "model": "M2M100",
+          "model_id": "facebook/m2m100_418M",
+          "revision": "55c2e61bbf05dfb8d7abccdc3fae6fc8512fd636",
+          "samples": 200,
+          "source_language": "DE",
+          "spbleu": 37.141498033594026,
+          "target_language": "EN"
+        },
+        {
+          "chrf_pp": 44.818729159824564,
+          "model": "M2M100",
+          "model_id": "facebook/m2m100_418M",
+          "revision": "55c2e61bbf05dfb8d7abccdc3fae6fc8512fd636",
+          "samples": 200,
+          "source_language": "DE",
+          "spbleu": 22.26962089543574,
+          "target_language": "ES"
+        },
+        {
+          "chrf_pp": 54.47230771391776,
+          "model": "M2M100",
+          "model_id": "facebook/m2m100_418M",
+          "revision": "55c2e61bbf05dfb8d7abccdc3fae6fc8512fd636",
+          "samples": 200,
+          "source_language": "DE",
+          "spbleu": 35.15476999141861,
+          "target_language": "FR"
+        },
+        {
+          "chrf_pp": 52.485785377019,
+          "model": "M2M100",
+          "model_id": "facebook/m2m100_418M",
+          "revision": "55c2e61bbf05dfb8d7abccdc3fae6fc8512fd636",
+          "samples": 200,
+          "source_language": "DE",
+          "spbleu": 32.27691590226307,
+          "target_language": "PT"
+        },
+        {
+          "chrf_pp": 63.57333747962013,
+          "model": "M2M100",
+          "model_id": "facebook/m2m100_418M",
+          "revision": "55c2e61bbf05dfb8d7abccdc3fae6fc8512fd636",
+          "samples": 200,
+          "source_language": "PT",
+          "spbleu": 43.08584662934057,
+          "target_language": "EN"
+        },
+        {
+          "chrf_pp": 47.961277801731846,
+          "model": "M2M100",
+          "model_id": "facebook/m2m100_418M",
+          "revision": "55c2e61bbf05dfb8d7abccdc3fae6fc8512fd636",
+          "samples": 200,
+          "source_language": "PT",
+          "spbleu": 26.180752737913977,
+          "target_language": "ES"
+        },
+        {
+          "chrf_pp": 57.23428071998698,
+          "model": "M2M100",
+          "model_id": "facebook/m2m100_418M",
+          "revision": "55c2e61bbf05dfb8d7abccdc3fae6fc8512fd636",
+          "samples": 200,
+          "source_language": "PT",
+          "spbleu": 38.60627178200394,
+          "target_language": "FR"
+        },
+        {
+          "chrf_pp": 49.2836525795689,
+          "model": "M2M100",
+          "model_id": "facebook/m2m100_418M",
+          "revision": "55c2e61bbf05dfb8d7abccdc3fae6fc8512fd636",
+          "samples": 200,
+          "source_language": "PT",
+          "spbleu": 26.850518661690483,
+          "target_language": "DE"
+        }
+      ],
+      "dtype": "torch.float32",
+      "macro_chrf_pp": 53.22321799984362,
+      "macro_spbleu": 32.134167091852106,
+      "model": "M2M100",
+      "model_id": "facebook/m2m100_418M",
+      "predictions_file": "m2m100_predictions.jsonl",
+      "revision": "55c2e61bbf05dfb8d7abccdc3fae6fc8512fd636",
+      "worst_chrf_pp": {
+        "chrf_pp": 44.02774970003541,
+        "model": "M2M100",
+        "model_id": "facebook/m2m100_418M",
+        "revision": "55c2e61bbf05dfb8d7abccdc3fae6fc8512fd636",
+        "samples": 200,
+        "source_language": "ES",
+        "spbleu": 21.402457177011552,
+        "target_language": "DE"
+      },
+      "worst_spbleu": {
+        "chrf_pp": 44.02774970003541,
+        "model": "M2M100",
+        "model_id": "facebook/m2m100_418M",
+        "revision": "55c2e61bbf05dfb8d7abccdc3fae6fc8512fd636",
+        "samples": 200,
+        "source_language": "ES",
+        "spbleu": 21.402457177011552,
+        "target_language": "DE"
+      }
+    }
+  ]
+}

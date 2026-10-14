@@ -1,0 +1,282 @@
+{
+  "assignment_seed": 42,
+  "instructions": "Do not inspect this file before completing the blind listening evaluation.",
+  "pairs": [
+    {
+      "A": "Piper",
+      "A_sha256": "a7a5337b539a2d4048424e43865a2f1546cbe1ad2b9e014ffdf6ff324017a7f5",
+      "B": "MMS-TTS",
+      "B_sha256": "7d58f3ff827db0101bfc1d0f43a45ab6a57125697b4e4537a3c3b13981c671aa",
+      "pair_id": "pair_001",
+      "piper_run": 1,
+      "piper_seed": 42,
+      "target_language": "en",
+      "tts_case_id": "tts_029"
+    },
+    {
+      "A": "MMS-TTS",
+      "A_sha256": "e8221d0eb47a40013e494b3318a4965f3a2659a66037e1257e70dd877fb0d9f9",
+      "B": "Piper",
+      "B_sha256": "43e23d7b8a66b237315e4f28c788a336f945b76fb7fb0f3bd06525b38a976bb1",
+      "pair_id": "pair_002",
+      "piper_run": 2,
+      "piper_seed": 43,
+      "target_language": "en",
+      "tts_case_id": "tts_037"
+    },
+    {
+      "A": "MMS-TTS",
+      "A_sha256": "02aea9db60ea130bd1966c31f651fdcfce55087b2b70909edfdcfe9b21aecb4a",
+      "B": "Piper",
+      "B_sha256": "24c282b7dc48bb4b727499e0fa0bb1b16e72ae38ac76c857d24a1f4c62309b67",
+      "pair_id": "pair_003",
+      "piper_run": 3,
+      "piper_seed": 44,
+      "target_language": "en",
+      "tts_case_id": "tts_077"
+    },
+    {
+      "A": "MMS-TTS",
+      "A_sha256": "86ad73a7da2e191212f2ad633bb10da396892f610bd599d165b07b819e75b64a",
+      "B": "Piper",
+      "B_sha256": "8942ff2c97e851e995fdbb2bdfdc6e49101ae89ce553a26fd09ce44478a165b3",
+      "pair_id": "pair_004",
+      "piper_run": 4,
+      "piper_seed": 45,
+      "target_language": "en",
+      "tts_case_id": "tts_045"
+    },
+    {
+      "A": "Piper",
+      "A_sha256": "cb78b252dd13ee4d6d74163737be204c70888bbcf4a268d9ab8a35e191c1736e",
+      "B": "MMS-TTS",
+      "B_sha256": "de76c3ead5e98ef6a796a03060891fbc439b3d4350e76251354e5098a1ca880d",
+      "pair_id": "pair_005",
+      "piper_run": 5,
+      "piper_seed": 46,
+      "target_language": "en",
+      "tts_case_id": "tts_049"
+    },
+    {
+      "A": "Piper",
+      "A_sha256": "014f2796e9f1ba13c0100742774cfa3b66453c0f3c6ab4c71b8fa18b126c9ceb",
+      "B": "MMS-TTS",
+      "B_sha256": "efb16e16bf94ed9ba6dc1a20a45fbb0437628dcaa05144836f0cba8286590646",
+      "pair_id": "pair_006",
+      "piper_run": 1,
+      "piper_seed": 42,
+      "target_language": "es",
+      "tts_case_id": "tts_021"
+    },
+    {
+      "A": "Piper",
+      "A_sha256": "a5f4606847d1aaaf55962149cd2a13d14e8493ba2496a8ae63a4fd70b2e8bce5",
+      "B": "MMS-TTS",
+      "B_sha256": "37016b20da9d3f343bf232575c7a0e112057e49ef999409e9f07120c5d69a04f",
+      "pair_id": "pair_007",
+      "piper_run": 2,
+      "piper_seed": 43,
+      "target_language": "es",
+      "tts_case_id": "tts_010"
+    },
+    {
+      "A": "MMS-TTS",
+      "A_sha256": "bb37661123386b7178899ca0023a2053d2f108079b187eb0a45f6f8dec1c6b73",
+      "B": "Piper",
+      "B_sha256": "726078c4f8079f9e98445e2cbf633b40c068db1ccc19bded2dec2c5de0ace701",
+      "pair_id": "pair_008",
+      "piper_run": 3,
+      "piper_seed": 44,
+      "target_language": "es",
+      "tts_case_id": "tts_054"
+    },
+    {
+      "A": "MMS-TTS",
+      "A_sha256": "f8caef09b753feab5c3e0c3933b6b1a282d8d6b90e686b2cd97ed4d8f50120a1",
+      "B": "Piper",
+      "B_sha256": "306ffd39d52fe5726840d5b806c9025f22aff2c73408eead59701bab9d24db1e",
+      "pair_id": "pair_009",
+      "piper_run": 4,
+      "piper_seed": 45,
+      "target_language": "es",
+      "tts_case_id": "tts_098"
+    },
+    {
+      "A": "MMS-TTS",
+      "A_sha256": "b8fbbef19d7fbbeeea78f6c1d92bfba208a15461c68fc7fb9c32cb3b05c5054e",
+      "B": "Piper",
+      "B_sha256": "9a3d2c80e259de9562135c1370f836ed3d0fbbe928a6a5fd1e58eb953b6ad513",
+      "pair_id": "pair_010",
+      "piper_run": 5,
+      "piper_seed": 46,
+      "target_language": "es",
+      "tts_case_id": "tts_090"
+    },
+    {
+      "A": "MMS-TTS",
+      "A_sha256": "f3b0121e6899ba0cf04a219b61fa396cc51653e7bf4909ebb189d3905aeabfd6",
+      "B": "Piper",
+      "B_sha256": "c183e568e3171e7346f8a56b946d2eea7a7e049252ca7313b68290ee69f7b377",
+      "pair_id": "pair_011",
+      "piper_run": 1,
+      "piper_seed": 42,
+      "target_language": "fr",
+      "tts_case_id": "tts_075"
+    },
+    {
+      "A": "Piper",
+      "A_sha256": "703c6fbe413e8ccde185e9c8baebdbaee48c3ae8955516c717884e41ebc6ced1",
+      "B": "MMS-TTS",
+      "B_sha256": "b27ba36428a640f96260e49256275ac1bf6037d3907eebf9fba00176bbb50ab1",
+      "pair_id": "pair_012",
+      "piper_run": 2,
+      "piper_seed": 43,
+      "target_language": "fr",
+      "tts_case_id": "tts_039"
+    },
+    {
+      "A": "MMS-TTS",
+      "A_sha256": "916c270114389adafd3f3196eb0b20edce8a5ae2488fe88103e549f3aa2171d8",
+      "B": "Piper",
+      "B_sha256": "381ffc59e9f257607972f35c897633fd34470578e0226e28430925b8d981d5e9",
+      "pair_id": "pair_013",
+      "piper_run": 3,
+      "piper_seed": 44,
+      "target_language": "fr",
+      "tts_case_id": "tts_035"
+    },
+    {
+      "A": "MMS-TTS",
+      "A_sha256": "6dc9f773717130a5d30b4a119450b7568e3d38589abc03e46c56333cab3ba20c",
+      "B": "Piper",
+      "B_sha256": "2b8fac352ee7ebae09f46e85c8dcc099a677cece2671e36d11d0ba1c0f241959",
+      "pair_id": "pair_014",
+      "piper_run": 4,
+      "piper_seed": 45,
+      "target_language": "fr",
+      "tts_case_id": "tts_099"
+    },
+    {
+      "A": "Piper",
+      "A_sha256": "621d073b0ebbf1b6f448ccd98b216a2ec1837d2aec017371bf455278cb8d09b6",
+      "B": "MMS-TTS",
+      "B_sha256": "dfd1e883baac35d5bfcaa0b9ff58254c06187072b9bf9cf7bc5ef0f657411ca3",
+      "pair_id": "pair_015",
+      "piper_run": 5,
+      "piper_seed": 46,
+      "target_language": "fr",
+      "tts_case_id": "tts_086"
+    },
+    {
+      "A": "Piper",
+      "A_sha256": "25ee52a8cd1638979561de0461262f0c45ee325f625db9ea68ab6b65735e4c02",
+      "B": "MMS-TTS",
+      "B_sha256": "929e53fe9b957a7d1353ed6b8d5dcb750874abb9f050b3c2c8e652f772a6a9ab",
+      "pair_id": "pair_016",
+      "piper_run": 1,
+      "piper_seed": 42,
+      "target_language": "de",
+      "tts_case_id": "tts_031"
+    },
+    {
+      "A": "MMS-TTS",
+      "A_sha256": "d7879fd5720afe994660326351dd3d8e7c189e5317686299212f034cfef93f8a",
+      "B": "Piper",
+      "B_sha256": "9d69a97d882edc00b9ea62c9447243bacdb09986ef68a346c58fb53848f91d7a",
+      "pair_id": "pair_017",
+      "piper_run": 2,
+      "piper_seed": 43,
+      "target_language": "de",
+      "tts_case_id": "tts_040"
+    },
+    {
+      "A": "Piper",
+      "A_sha256": "2e4f65bb4aeaea184104932b677477a1056f58d20408a486334c1c0bddde1039",
+      "B": "MMS-TTS",
+      "B_sha256": "51796445cd53d2dddf6b7e81b77abdfbe3142666c5f34398c4416c8002ae740a",
+      "pair_id": "pair_018",
+      "piper_run": 3,
+      "piper_seed": 44,
+      "target_language": "de",
+      "tts_case_id": "tts_071"
+    },
+    {
+      "A": "Piper",
+      "A_sha256": "48defd281087885e871579e79b0761f51d2ef3d1c2ae080ca1da5f1301e8cadb",
+      "B": "MMS-TTS",
+      "B_sha256": "eda6b78fdb40d0ac0930d0cc0b5ee44ab9f094d1bc2b6e46cda89dc573486c10",
+      "pair_id": "pair_019",
+      "piper_run": 4,
+      "piper_seed": 45,
+      "target_language": "de",
+      "tts_case_id": "tts_100"
+    },
+    {
+      "A": "MMS-TTS",
+      "A_sha256": "0668c443a44296a3888fb3a9b7217193234d7a2cb139f3f4aaa823501678431b",
+      "B": "Piper",
+      "B_sha256": "3899b9c327e32d3f1125f5f58321052446665184fbb9eb1e18497d5095c0e432",
+      "pair_id": "pair_020",
+      "piper_run": 5,
+      "piper_seed": 46,
+      "target_language": "de",
+      "tts_case_id": "tts_083"
+    },
+    {
+      "A": "Piper",
+      "A_sha256": "fdc5ea122bc682a0886e926d5ac73f9ab754d7d37ac99ee4759d5e8f458759f3",
+      "B": "MMS-TTS",
+      "B_sha256": "8fdfeb702a0fddf8b43dcaac04267c88411821793246fad54cae5b0f40dec4ef",
+      "pair_id": "pair_021",
+      "piper_run": 1,
+      "piper_seed": 42,
+      "target_language": "pt",
+      "tts_case_id": "tts_076"
+    },
+    {
+      "A": "Piper",
+      "A_sha256": "5e1b89c386cc1a44e487eeae5754c5fb470047c34a056efc3b57c201d89d3b84",
+      "B": "MMS-TTS",
+      "B_sha256": "3b0dc37b02e9b07b9fd43149c3c57134f275a0dfd1686317787a8094c01a5844",
+      "pair_id": "pair_022",
+      "piper_run": 2,
+      "piper_seed": 43,
+      "target_language": "pt",
+      "tts_case_id": "tts_012"
+    },
+    {
+      "A": "MMS-TTS",
+      "A_sha256": "fe33eee29a89912ab093035cfcd661eeffc0d6c765c3682d02a486c060c0cccf",
+      "B": "Piper",
+      "B_sha256": "478c95a1e805c229de748f72cbbe70cc249d84a28bd329c7913eab3383cad0cd",
+      "pair_id": "pair_023",
+      "piper_run": 3,
+      "piper_seed": 44,
+      "target_language": "pt",
+      "tts_case_id": "tts_028"
+    },
+    {
+      "A": "MMS-TTS",
+      "A_sha256": "af4957432d590fe51dea377bc1ba50481a4256eb1836ff13a25cc7ce40d4ec63",
+      "B": "Piper",
+      "B_sha256": "fdc073983de873174bc54cbab30c3af50f832f339ddb240806eefb42cf0cbb3c",
+      "pair_id": "pair_024",
+      "piper_run": 4,
+      "piper_seed": 45,
+      "target_language": "pt",
+      "tts_case_id": "tts_048"
+    },
+    {
+      "A": "Piper",
+      "A_sha256": "5c27e82bcd80d4271589bcc08b6f7d7288451e81fda24e3940e0da6b5d0e1bf4",
+      "B": "MMS-TTS",
+      "B_sha256": "53e9864956fc4a61dac719aa57a42203e16b7a3088412ecc0a666216a5ea1a73",
+      "pair_id": "pair_025",
+      "piper_run": 5,
+      "piper_seed": 46,
+      "target_language": "pt",
+      "tts_case_id": "tts_092"
+    }
+  ],
+  "piper_run_policy": "Round-robin across runs 1-5. Each target language uses one example from every Piper run."
+}

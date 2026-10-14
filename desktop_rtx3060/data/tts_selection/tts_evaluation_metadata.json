@@ -1,0 +1,209 @@
+{
+  "experiment": "Fixed TTS evaluation text set derived from validated mt_15 final-only NLLB translations.",
+  "manifest": {
+    "cases": 100,
+    "path": "D:\\MEIM\\2_Ano\\Projeto\\codigo\\data\\tts_selection\\tts_evaluation_manifest.jsonl",
+    "sha256": "821e4b4c2ef51ca68e98831b43b436d3fba70ea90f8b2541009dd7b67a0f54b4"
+  },
+  "methodology": {
+    "deduplication": "None. Duplicate translations are preserved because each row represents a real pipeline case.",
+    "normalization": "None.",
+    "ordering": "Ascending mt_15 case_index.",
+    "text_source": "Exact final NLLB prediction produced by mt_15.",
+    "tts_input_field": "text",
+    "unique_key": "tts_case_id"
+  },
+  "scope": {
+    "cases_per_direction": 5,
+    "cases_per_target_language": 20,
+    "languages": [
+      "en",
+      "es",
+      "fr",
+      "de",
+      "pt"
+    ],
+    "source_utterances": 25,
+    "translation_directions": 20
+  },
+  "source": {
+    "experiment": "mt_15_benchmark_final_only",
+    "path": "D:\\MEIM\\2_Ano\\Projeto\\codigo\\results\\mt_selection\\final_only_live\\final_only_predictions.jsonl",
+    "sha256": "7c58ab727cd28590930d9fa1e784d9db6c339cfa1cf272f95a3b97f14a9e1fa3",
+    "validated_mt_outputs": 100
+  },
+  "statistics": {
+    "directions": {
+      "de->en": {
+        "cases": 5
+      },
+      "de->es": {
+        "cases": 5
+      },
+      "de->fr": {
+        "cases": 5
+      },
+      "de->pt": {
+        "cases": 5
+      },
+      "en->de": {
+        "cases": 5
+      },
+      "en->es": {
+        "cases": 5
+      },
+      "en->fr": {
+        "cases": 5
+      },
+      "en->pt": {
+        "cases": 5
+      },
+      "es->de": {
+        "cases": 5
+      },
+      "es->en": {
+        "cases": 5
+      },
+      "es->fr": {
+        "cases": 5
+      },
+      "es->pt": {
+        "cases": 5
+      },
+      "fr->de": {
+        "cases": 5
+      },
+      "fr->en": {
+        "cases": 5
+      },
+      "fr->es": {
+        "cases": 5
+      },
+      "fr->pt": {
+        "cases": 5
+      },
+      "pt->de": {
+        "cases": 5
+      },
+      "pt->en": {
+        "cases": 5
+      },
+      "pt->es": {
+        "cases": 5
+      },
+      "pt->fr": {
+        "cases": 5
+      }
+    },
+    "overall": {
+      "cases": 100,
+      "characters": {
+        "max": 282,
+        "mean": 131.66,
+        "median": 119.5,
+        "min": 56
+      },
+      "duplicate_groups": 0,
+      "duplicate_occurrences": 0,
+      "unique_texts": 100,
+      "words": {
+        "max": 37,
+        "mean": 21.1,
+        "median": 20.0,
+        "min": 10
+      }
+    },
+    "per_target_language": {
+      "de": {
+        "cases": 20,
+        "characters": {
+          "max": 282,
+          "mean": 135.6,
+          "median": 127.5,
+          "min": 56
+        },
+        "duplicate_groups": 0,
+        "duplicate_occurrences": 0,
+        "unique_texts": 20,
+        "words": {
+          "max": 37,
+          "mean": 19.75,
+          "median": 19.0,
+          "min": 10
+        }
+      },
+      "en": {
+        "cases": 20,
+        "characters": {
+          "max": 216,
+          "mean": 123.8,
+          "median": 109.5,
+          "min": 59
+        },
+        "duplicate_groups": 0,
+        "duplicate_occurrences": 0,
+        "unique_texts": 20,
+        "words": {
+          "max": 33,
+          "mean": 20.15,
+          "median": 17.5,
+          "min": 10
+        }
+      },
+      "es": {
+        "cases": 20,
+        "characters": {
+          "max": 247,
+          "mean": 132.8,
+          "median": 125.0,
+          "min": 66
+        },
+        "duplicate_groups": 0,
+        "duplicate_occurrences": 0,
+        "unique_texts": 20,
+        "words": {
+          "max": 36,
+          "mean": 21.4,
+          "median": 20.0,
+          "min": 11
+        }
+      },
+      "fr": {
+        "cases": 20,
+        "characters": {
+          "max": 238,
+          "mean": 134.5,
+          "median": 120.5,
+          "min": 77
+        },
+        "duplicate_groups": 0,
+        "duplicate_occurrences": 0,
+        "unique_texts": 20,
+        "words": {
+          "max": 36,
+          "mean": 22.55,
+          "median": 21.0,
+          "min": 12
+        }
+      },
+      "pt": {
+        "cases": 20,
+        "characters": {
+          "max": 261,
+          "mean": 131.6,
+          "median": 114.5,
+          "min": 65
+        },
+        "duplicate_groups": 0,
+        "duplicate_occurrences": 0,
+        "unique_texts": 20,
+        "words": {
+          "max": 36,
+          "mean": 21.65,
+          "median": 21.5,
+          "min": 10
+        }
+      }
+    }
+  }
+}

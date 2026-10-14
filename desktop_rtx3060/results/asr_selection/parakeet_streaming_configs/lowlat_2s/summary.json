@@ -1,0 +1,81 @@
+{
+  "config_name": "lowlat_2s",
+  "model": {
+    "id": "nvidia/parakeet-tdt-0.6b-v3",
+    "revision": "541d1f99c6b0c3cd0b11a95167540bb8edefd82b",
+    "format": "nemo"
+  },
+  "nemo": {
+    "version": "3.0.0",
+    "commit": "fd6a877539710e2b98f28c43272ff81312f83417"
+  },
+  "precision": "float32",
+  "requested_streaming_config": {
+    "left_context_secs": 10.0,
+    "chunk_secs": 0.16,
+    "right_context_secs": 1.84,
+    "latency_secs": 2.0
+  },
+  "effective_streaming_config": {
+    "left_context_secs": 10.0,
+    "chunk_secs": 0.16,
+    "right_context_secs": 1.84,
+    "theoretical_latency_secs": 2.0
+  },
+  "performance": {
+    "rtfx": 3.59
+  },
+  "quality": {
+    "normalization": "basic_v1",
+    "samples": 25,
+    "macro_wer": 0.05270332128123117,
+    "macro_wer_percent": 5.270332128123116,
+    "overall_wer": 0.05201342281879195,
+    "overall_wer_percent": 5.201342281879195,
+    "empty_predictions": 0,
+    "per_language": {
+      "en": {
+        "wer": 0.07407407407407407,
+        "wer_percent": 7.4074074074074066,
+        "samples": 5,
+        "empty_predictions": 0
+      },
+      "es": {
+        "wer": 0.0,
+        "wer_percent": 0.0,
+        "samples": 5,
+        "empty_predictions": 0
+      },
+      "fr": {
+        "wer": 0.07352941176470588,
+        "wer_percent": 7.352941176470589,
+        "samples": 5,
+        "empty_predictions": 0
+      },
+      "de": {
+        "wer": 0.052083333333333336,
+        "wer_percent": 5.208333333333334,
+        "samples": 5,
+        "empty_predictions": 0
+      },
+      "pt": {
+        "wer": 0.06382978723404255,
+        "wer_percent": 6.382978723404255,
+        "samples": 5,
+        "empty_predictions": 0
+      }
+    }
+  },
+  "evaluation_subset": {
+    "samples": 25,
+    "samples_per_language": 5,
+    "languages": [
+      "en",
+      "es",
+      "fr",
+      "de",
+      "pt"
+    ],
+    "total_audio_seconds": 287.16
+  }
+}

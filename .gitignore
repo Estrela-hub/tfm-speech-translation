@@ -1,0 +1,70 @@
+# =============================================================================
+# Python
+# =============================================================================
+
+.venv/
+__pycache__/
+*.py[cod]
+*.pyo
+
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+
+# =============================================================================
+# IDE / OS
+# =============================================================================
+
+.vscode/
+.idea/
+
+.DS_Store
+Thumbs.db
+
+
+# =============================================================================
+# Desktop RTX 3060 - external repositories
+# =============================================================================
+
+desktop_rtx3060/external/NeMo-Speech/
+
+
+# =============================================================================
+# Desktop RTX 3060 - local model weights
+# =============================================================================
+
+desktop_rtx3060/data/tts_selection/piper_voices/*.onnx
+
+
+# =============================================================================
+# Desktop RTX 3060 - TTS generated audio
+# =============================================================================
+
+# Superseded exploratory quality run.
+desktop_rtx3060/results/tts_selection/quality/
+
+# Bulk audio generated during the official multi-run evaluation.
+# Structured results and the curated listening-test package are retained.
+desktop_rtx3060/results/tts_selection/quality_multirun/audio_native/
+desktop_rtx3060/results/tts_selection/quality_multirun/audio_asr_16k/
+
+
+# =============================================================================
+# Jetson model weights
+# =============================================================================
+
+jetson/models/
+
+# =============================================================================
+# Desktop RTX 3060 - generated / duplicated ASR artefacts
+# =============================================================================
+
+# Generated streaming manifest contains machine-local absolute audio paths.
+desktop_rtx3060/results/asr_selection/parakeet_streaming_configs/evaluation_manifest.jsonl
+
+# Duplicate copies of the canonical multilingual evaluation audio.
+desktop_rtx3060/results/asr_selection/parakeet_streaming_configs/audio/
+
+# Raw NeMo execution logs; structured experiment outputs are retained.
+desktop_rtx3060/results/asr_selection/**/nemo.log

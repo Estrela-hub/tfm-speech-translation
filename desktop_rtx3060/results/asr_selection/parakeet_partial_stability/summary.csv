@@ -1,0 +1,3 @@
+policy,stability_window,holdback_tokens,utterances,utterances_with_stable_commit,final_safe_utterances,final_commit_errors,transient_conflict_utterances,transient_conflict_partials,mean_first_commit_audio_s,median_first_commit_audio_s,mean_first_commit_delay_s,median_first_commit_delay_s,mean_stable_token_delay_s,median_stable_token_delay_s,mean_stable_coverage_percent,median_stable_coverage_percent,mean_stable_commit_events,mean_final_flush_tokens
+stable2_hold1,2,1,25,25,25,0,0,0,3.7536,3.44,0.6784,0.64,0.4651,0.454,86.1432,88.8889,19.28,3.16
+stable3_hold1,3,1,25,25,25,0,0,0,4.0352,3.6,0.96,0.8,0.6985,0.675,83.8355,85.7143,18.92,3.6

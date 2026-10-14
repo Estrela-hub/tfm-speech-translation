@@ -1,0 +1,86 @@
+{
+  "experiment": {
+    "model_id": "nvidia/nemotron-3.5-asr-streaming-0.6b",
+    "model_revision": "1c8deaecc64b91f034d73e08dd8b64625eb3395d",
+    "precision": "fp32",
+    "inference_mode": "full_utterance",
+    "normalization_version": "basic_v1"
+  },
+  "dataset": {
+    "name": "google/fleurs",
+    "revision": "70bb2e8",
+    "split": "test",
+    "manifest_sha256": "4cf3a7617f2db854834984a2828ee9f4e83e1fb185aa01340c8dc1a769df2cc9",
+    "samples": 1000
+  },
+  "environment": {
+    "python": "3.10.5",
+    "torch": "2.12.1+cu130",
+    "transformers": "5.16.1",
+    "datasets": "5.0.1",
+    "jiwer": "unknown",
+    "cuda_runtime": "13.0",
+    "gpu": "NVIDIA GeForce RTX 3060 Laptop GPU"
+  },
+  "languages": {
+    "en": {
+      "locale": "en-US",
+      "samples": 200,
+      "duration_minutes": 33.08566666666668,
+      "wer": 0.10580587312261824,
+      "substitutions": 321,
+      "deletions": 44,
+      "insertions": 107,
+      "hits": 4096
+    },
+    "es": {
+      "locale": "es-US",
+      "samples": 200,
+      "duration_minutes": 40.15500000000004,
+      "wer": 0.06574257425742575,
+      "substitutions": 228,
+      "deletions": 35,
+      "insertions": 69,
+      "hits": 4787
+    },
+    "fr": {
+      "locale": "fr-FR",
+      "samples": 200,
+      "duration_minutes": 33.987000000000016,
+      "wer": 0.12375859434682965,
+      "substitutions": 479,
+      "deletions": 59,
+      "insertions": 110,
+      "hits": 4698
+    },
+    "de": {
+      "locale": "de-DE",
+      "samples": 200,
+      "duration_minutes": 44.731,
+      "wer": 0.1046914721516062,
+      "substitutions": 306,
+      "deletions": 69,
+      "insertions": 78,
+      "hits": 3952
+    },
+    "pt": {
+      "locale": "pt-BR",
+      "samples": 200,
+      "duration_minutes": 42.990999999999964,
+      "wer": 0.08684546615581099,
+      "substitutions": 261,
+      "deletions": 29,
+      "insertions": 118,
+      "hits": 4408
+    }
+  },
+  "macro_wer": 0.09736879600685815,
+  "overall_corpus_wer": 0.09729934376577486,
+  "overall": {
+    "wer": 0.09729934376577486,
+    "substitutions": 1595,
+    "deletions": 236,
+    "insertions": 482,
+    "hits": 21941
+  }
+}

@@ -1,0 +1,140 @@
+{
+  "experiment": "parakeet_partial_stability_analysis",
+  "input": {
+    "partial_traces": "D:\\MEIM\\2_Ano\\Projeto\\codigo\\results\\asr_selection\\parakeet_partial_traces\\partial_traces.jsonl",
+    "utterances": "D:\\MEIM\\2_Ano\\Projeto\\codigo\\results\\asr_selection\\parakeet_partial_traces\\utterances.jsonl",
+    "metadata": "D:\\MEIM\\2_Ano\\Projeto\\codigo\\results\\asr_selection\\parakeet_partial_traces\\metadata.json",
+    "utterance_count": 25,
+    "partial_count": 1519
+  },
+  "streaming_config": {
+    "left_context_secs": 10.0,
+    "chunk_secs": 0.16,
+    "right_context_secs": 1.84,
+    "theoretical_latency_secs": 2.0
+  },
+  "policy_definition": {
+    "stable_prefix_unit": "whitespace-delimited tokens",
+    "holdback_reason": "The collector strips trailing whitespace, so the final token of the stable prefix is retained to avoid committing incomplete words.",
+    "retractions_allowed": false,
+    "end_of_utterance_flush": true
+  },
+  "policies": [
+    {
+      "policy": "stable2_hold1",
+      "stability_window": 2,
+      "holdback_tokens": 1,
+      "utterances": 25,
+      "utterances_with_stable_commit": 25,
+      "final_safe_utterances": 25,
+      "final_commit_errors": 0,
+      "transient_conflict_utterances": 0,
+      "transient_conflict_partials": 0,
+      "mean_first_commit_audio_s": 3.7536,
+      "median_first_commit_audio_s": 3.44,
+      "mean_first_commit_delay_s": 0.6784,
+      "median_first_commit_delay_s": 0.64,
+      "mean_stable_token_delay_s": 0.4651,
+      "median_stable_token_delay_s": 0.454,
+      "mean_stable_coverage_percent": 86.1432,
+      "median_stable_coverage_percent": 88.8889,
+      "mean_stable_commit_events": 19.28,
+      "mean_final_flush_tokens": 3.16,
+      "languages": {
+        "de": {
+          "utterances": 5,
+          "final_safe_utterances": 5,
+          "transient_conflict_utterances": 0,
+          "mean_first_commit_delay_s": 0.832,
+          "mean_stable_coverage_percent": 86.2765
+        },
+        "en": {
+          "utterances": 5,
+          "final_safe_utterances": 5,
+          "transient_conflict_utterances": 0,
+          "mean_first_commit_delay_s": 0.608,
+          "mean_stable_coverage_percent": 81.2839
+        },
+        "es": {
+          "utterances": 5,
+          "final_safe_utterances": 5,
+          "transient_conflict_utterances": 0,
+          "mean_first_commit_delay_s": 0.608,
+          "mean_stable_coverage_percent": 86.7388
+        },
+        "fr": {
+          "utterances": 5,
+          "final_safe_utterances": 5,
+          "transient_conflict_utterances": 0,
+          "mean_first_commit_delay_s": 0.736,
+          "mean_stable_coverage_percent": 83.7413
+        },
+        "pt": {
+          "utterances": 5,
+          "final_safe_utterances": 5,
+          "transient_conflict_utterances": 0,
+          "mean_first_commit_delay_s": 0.608,
+          "mean_stable_coverage_percent": 92.6754
+        }
+      }
+    },
+    {
+      "policy": "stable3_hold1",
+      "stability_window": 3,
+      "holdback_tokens": 1,
+      "utterances": 25,
+      "utterances_with_stable_commit": 25,
+      "final_safe_utterances": 25,
+      "final_commit_errors": 0,
+      "transient_conflict_utterances": 0,
+      "transient_conflict_partials": 0,
+      "mean_first_commit_audio_s": 4.0352,
+      "median_first_commit_audio_s": 3.6,
+      "mean_first_commit_delay_s": 0.96,
+      "median_first_commit_delay_s": 0.8,
+      "mean_stable_token_delay_s": 0.6985,
+      "median_stable_token_delay_s": 0.675,
+      "mean_stable_coverage_percent": 83.8355,
+      "median_stable_coverage_percent": 85.7143,
+      "mean_stable_commit_events": 18.92,
+      "mean_final_flush_tokens": 3.6,
+      "languages": {
+        "de": {
+          "utterances": 5,
+          "final_safe_utterances": 5,
+          "transient_conflict_utterances": 0,
+          "mean_first_commit_delay_s": 1.12,
+          "mean_stable_coverage_percent": 84.2958
+        },
+        "en": {
+          "utterances": 5,
+          "final_safe_utterances": 5,
+          "transient_conflict_utterances": 0,
+          "mean_first_commit_delay_s": 0.864,
+          "mean_stable_coverage_percent": 78.2314
+        },
+        "es": {
+          "utterances": 5,
+          "final_safe_utterances": 5,
+          "transient_conflict_utterances": 0,
+          "mean_first_commit_delay_s": 0.896,
+          "mean_stable_coverage_percent": 83.9645
+        },
+        "fr": {
+          "utterances": 5,
+          "final_safe_utterances": 5,
+          "transient_conflict_utterances": 0,
+          "mean_first_commit_delay_s": 0.896,
+          "mean_stable_coverage_percent": 81.0627
+        },
+        "pt": {
+          "utterances": 5,
+          "final_safe_utterances": 5,
+          "transient_conflict_utterances": 0,
+          "mean_first_commit_delay_s": 1.024,
+          "mean_stable_coverage_percent": 91.6228
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,317 @@
+{
+  "environment": {
+    "gpu": "NVIDIA GeForce RTX 3060 Laptop GPU",
+    "onnxruntime": "1.29.0",
+    "ort_providers": [
+      "TensorrtExecutionProvider",
+      "CUDAExecutionProvider",
+      "CPUExecutionProvider"
+    ],
+    "python": "3.12.10",
+    "pytorch": "2.12.1+cu130",
+    "transformers": "5.16.1"
+  },
+  "experiment": "Initial functional smoke test for TTS candidate selection.",
+  "methodology": {
+    "mms_runtime": "PyTorch CUDA, FP32.",
+    "piper_runtime": "ONNX Runtime with mandatory CUDAExecutionProvider.",
+    "purpose": "Functional validation only. Latency and RTF are deliberately not benchmarked in tts_01.",
+    "validation": [
+      "model/voice loads",
+      "correct GPU runtime is used",
+      "waveform/file is non-empty",
+      "sample rate is valid",
+      "audio duration is positive",
+      "MMS waveform values are finite",
+      "output WAV is readable"
+    ]
+  },
+  "results": [
+    {
+      "device": "cuda:0",
+      "dtype": "torch.float32",
+      "family": "MMS-TTS",
+      "language": "en",
+      "model_id": "facebook/mms-tts-eng",
+      "output_path": "D:\\MEIM\\2_Ano\\Projeto\\codigo\\results\\tts_selection\\smoke_test\\audio\\mms_en.wav",
+      "parameter_memory_mb": 138.41473388671875,
+      "parameters": 36284592,
+      "revision": "c71de0fe7204c83f1c10820a7d696d0b450048ba",
+      "status": "PASS",
+      "text": "The meeting starts tomorrow morning at nine o'clock.",
+      "wav_file": {
+        "channels": 1,
+        "duration_s": 3.696,
+        "file_size_bytes": 118316,
+        "frames": 59136,
+        "sample_rate": 16000,
+        "sample_width_bytes": 2
+      },
+      "waveform": {
+        "duration_s": 3.696,
+        "peak_abs": 0.7563533782958984,
+        "rms": 0.13115958869457245,
+        "sample_rate": 16000,
+        "samples": 59136
+      }
+    },
+    {
+      "device": "cuda:0",
+      "dtype": "torch.float32",
+      "family": "MMS-TTS",
+      "language": "es",
+      "model_id": "facebook/mms-tts-spa",
+      "output_path": "D:\\MEIM\\2_Ano\\Projeto\\codigo\\results\\tts_selection\\smoke_test\\audio\\mms_es.wav",
+      "parameter_memory_mb": 138.41986083984375,
+      "parameters": 36285936,
+      "revision": "833b96c0278c85cf09776d565ba8f1cb2819f7ec",
+      "status": "PASS",
+      "text": "La reunión comienza mañana por la mañana a las nueve.",
+      "wav_file": {
+        "channels": 1,
+        "duration_s": 4.624,
+        "file_size_bytes": 148012,
+        "frames": 73984,
+        "sample_rate": 16000,
+        "sample_width_bytes": 2
+      },
+      "waveform": {
+        "duration_s": 4.624,
+        "peak_abs": 0.755518913269043,
+        "rms": 0.10554523766040802,
+        "sample_rate": 16000,
+        "samples": 73984
+      }
+    },
+    {
+      "device": "cuda:0",
+      "dtype": "torch.float32",
+      "family": "MMS-TTS",
+      "language": "fr",
+      "model_id": "facebook/mms-tts-fra",
+      "output_path": "D:\\MEIM\\2_Ano\\Projeto\\codigo\\results\\tts_selection\\smoke_test\\audio\\mms_fr.wav",
+      "parameter_memory_mb": 138.41912841796875,
+      "parameters": 36285744,
+      "revision": "5806d92d6247218c0e81e5f1a7462f6f636f70a2",
+      "status": "PASS",
+      "text": "La réunion commence demain matin à neuf heures.",
+      "wav_file": {
+        "channels": 1,
+        "duration_s": 3.264,
+        "file_size_bytes": 104492,
+        "frames": 52224,
+        "sample_rate": 16000,
+        "sample_width_bytes": 2
+      },
+      "waveform": {
+        "duration_s": 3.264,
+        "peak_abs": 0.5753928422927856,
+        "rms": 0.11106740683317184,
+        "sample_rate": 16000,
+        "samples": 52224
+      }
+    },
+    {
+      "device": "cuda:0",
+      "dtype": "torch.float32",
+      "family": "MMS-TTS",
+      "language": "de",
+      "model_id": "facebook/mms-tts-deu",
+      "output_path": "D:\\MEIM\\2_Ano\\Projeto\\codigo\\results\\tts_selection\\smoke_test\\audio\\mms_de.wav",
+      "parameter_memory_mb": 138.41986083984375,
+      "parameters": 36285936,
+      "revision": "5cbe521869fcf9da4b2b3e85d7810e3005a121dc",
+      "status": "PASS",
+      "text": "Die Besprechung beginnt morgen früh um neun Uhr.",
+      "wav_file": {
+        "channels": 1,
+        "duration_s": 3.328,
+        "file_size_bytes": 106540,
+        "frames": 53248,
+        "sample_rate": 16000,
+        "sample_width_bytes": 2
+      },
+      "waveform": {
+        "duration_s": 3.328,
+        "peak_abs": 0.6078735589981079,
+        "rms": 0.14741753041744232,
+        "sample_rate": 16000,
+        "samples": 53248
+      }
+    },
+    {
+      "device": "cuda:0",
+      "dtype": "torch.float32",
+      "family": "MMS-TTS",
+      "language": "pt",
+      "model_id": "facebook/mms-tts-por",
+      "output_path": "D:\\MEIM\\2_Ano\\Projeto\\codigo\\results\\tts_selection\\smoke_test\\audio\\mms_pt.wav",
+      "parameter_memory_mb": 138.41839599609375,
+      "parameters": 36285552,
+      "revision": "7908d3953d285b6da2582b5105448b6e56e70e82",
+      "status": "PASS",
+      "text": "A reunião começa amanhã de manhã às nove horas.",
+      "wav_file": {
+        "channels": 1,
+        "duration_s": 4.016,
+        "file_size_bytes": 128556,
+        "frames": 64256,
+        "sample_rate": 16000,
+        "sample_width_bytes": 2
+      },
+      "waveform": {
+        "duration_s": 4.016,
+        "peak_abs": 0.829929769039154,
+        "rms": 0.12908388674259186,
+        "sample_rate": 16000,
+        "samples": 64256
+      }
+    },
+    {
+      "config_path": "D:\\MEIM\\2_Ano\\Projeto\\codigo\\data\\tts_selection\\piper_voices\\en_US-lessac-medium.onnx.json",
+      "config_size_kb": 4.7705078125,
+      "family": "Piper",
+      "language": "en",
+      "model_path": "D:\\MEIM\\2_Ano\\Projeto\\codigo\\data\\tts_selection\\piper_voices\\en_US-lessac-medium.onnx",
+      "model_size_mb": 60.27345085144043,
+      "output_path": "D:\\MEIM\\2_Ano\\Projeto\\codigo\\results\\tts_selection\\smoke_test\\audio\\piper_en.wav",
+      "provider": "CUDAExecutionProvider",
+      "providers": [
+        "CUDAExecutionProvider",
+        "CPUExecutionProvider"
+      ],
+      "status": "PASS",
+      "text": "The meeting starts tomorrow morning at nine o'clock.",
+      "voice": "en_US-lessac-medium",
+      "wav_file": {
+        "channels": 1,
+        "duration_s": 2.647074829931973,
+        "file_size_bytes": 116780,
+        "frames": 58368,
+        "sample_rate": 22050,
+        "sample_width_bytes": 2
+      }
+    },
+    {
+      "config_path": "D:\\MEIM\\2_Ano\\Projeto\\codigo\\data\\tts_selection\\piper_voices\\es_ES-sharvard-medium.onnx.json",
+      "config_size_kb": 4.7880859375,
+      "family": "Piper",
+      "language": "es",
+      "model_path": "D:\\MEIM\\2_Ano\\Projeto\\codigo\\data\\tts_selection\\piper_voices\\es_ES-sharvard-medium.onnx",
+      "model_size_mb": 73.17887783050537,
+      "output_path": "D:\\MEIM\\2_Ano\\Projeto\\codigo\\results\\tts_selection\\smoke_test\\audio\\piper_es.wav",
+      "provider": "CUDAExecutionProvider",
+      "providers": [
+        "CUDAExecutionProvider",
+        "CPUExecutionProvider"
+      ],
+      "status": "PASS",
+      "text": "La reunión comienza mañana por la mañana a las nueve.",
+      "voice": "es_ES-sharvard-medium",
+      "wav_file": {
+        "channels": 1,
+        "duration_s": 3.053424036281179,
+        "file_size_bytes": 134700,
+        "frames": 67328,
+        "sample_rate": 22050,
+        "sample_width_bytes": 2
+      }
+    },
+    {
+      "config_path": "D:\\MEIM\\2_Ano\\Projeto\\codigo\\data\\tts_selection\\piper_voices\\fr_FR-siwis-medium.onnx.json",
+      "config_size_kb": 4.7607421875,
+      "family": "Piper",
+      "language": "fr",
+      "model_path": "D:\\MEIM\\2_Ano\\Projeto\\codigo\\data\\tts_selection\\piper_voices\\fr_FR-siwis-medium.onnx",
+      "model_size_mb": 60.27345085144043,
+      "output_path": "D:\\MEIM\\2_Ano\\Projeto\\codigo\\results\\tts_selection\\smoke_test\\audio\\piper_fr.wav",
+      "provider": "CUDAExecutionProvider",
+      "providers": [
+        "CUDAExecutionProvider",
+        "CPUExecutionProvider"
+      ],
+      "status": "PASS",
+      "text": "La réunion commence demain matin à neuf heures.",
+      "voice": "fr_FR-siwis-medium",
+      "wav_file": {
+        "channels": 1,
+        "duration_s": 2.3336054421768706,
+        "file_size_bytes": 102956,
+        "frames": 51456,
+        "sample_rate": 22050,
+        "sample_width_bytes": 2
+      }
+    },
+    {
+      "config_path": "D:\\MEIM\\2_Ano\\Projeto\\codigo\\data\\tts_selection\\piper_voices\\de_DE-thorsten-medium.onnx.json",
+      "config_size_kb": 4.7060546875,
+      "family": "Piper",
+      "language": "de",
+      "model_path": "D:\\MEIM\\2_Ano\\Projeto\\codigo\\data\\tts_selection\\piper_voices\\de_DE-thorsten-medium.onnx",
+      "model_size_mb": 60.27345085144043,
+      "output_path": "D:\\MEIM\\2_Ano\\Projeto\\codigo\\results\\tts_selection\\smoke_test\\audio\\piper_de.wav",
+      "provider": "CUDAExecutionProvider",
+      "providers": [
+        "CUDAExecutionProvider",
+        "CPUExecutionProvider"
+      ],
+      "status": "PASS",
+      "text": "Die Besprechung beginnt morgen früh um neun Uhr.",
+      "voice": "de_DE-thorsten-medium",
+      "wav_file": {
+        "channels": 1,
+        "duration_s": 2.48453514739229,
+        "file_size_bytes": 109612,
+        "frames": 54784,
+        "sample_rate": 22050,
+        "sample_width_bytes": 2
+      }
+    },
+    {
+      "config_path": "D:\\MEIM\\2_Ano\\Projeto\\codigo\\data\\tts_selection\\piper_voices\\pt_PT-tugão-medium.onnx.json",
+      "config_size_kb": 4.908203125,
+      "family": "Piper",
+      "language": "pt",
+      "model_path": "D:\\MEIM\\2_Ano\\Projeto\\codigo\\data\\tts_selection\\piper_voices\\pt_PT-tugão-medium.onnx",
+      "model_size_mb": 60.27345085144043,
+      "output_path": "D:\\MEIM\\2_Ano\\Projeto\\codigo\\results\\tts_selection\\smoke_test\\audio\\piper_pt.wav",
+      "provider": "CUDAExecutionProvider",
+      "providers": [
+        "CUDAExecutionProvider",
+        "CPUExecutionProvider"
+      ],
+      "status": "PASS",
+      "text": "A reunião começa amanhã de manhã às nove horas.",
+      "voice": "pt_PT-tugão-medium",
+      "wav_file": {
+        "channels": 1,
+        "duration_s": 2.403265306122449,
+        "file_size_bytes": 106028,
+        "frames": 52992,
+        "sample_rate": 22050,
+        "sample_width_bytes": 2
+      }
+    }
+  ],
+  "scope": {
+    "families": [
+      "MMS-TTS",
+      "Piper"
+    ],
+    "languages": [
+      "en",
+      "es",
+      "fr",
+      "de",
+      "pt"
+    ],
+    "tests": 10
+  },
+  "summary": {
+    "mms_pass": 5,
+    "mms_total": 5,
+    "overall_pass": true,
+    "piper_pass": 5,
+    "piper_total": 5
+  }
+}

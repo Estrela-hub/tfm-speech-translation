@@ -1,0 +1,109 @@
+{
+  "environment": {
+    "python": "3.12.10"
+  },
+  "experiment": "Offline single-server scheduling analysis over measured NLLB FP16 full-prefix translation latencies.",
+  "input": {
+    "directions": 20,
+    "model_id": "facebook/nllb-200-distilled-600M",
+    "model_revision": "f8d333a098d19b4fd9a8b18f94170487ad3f821d",
+    "precision": "float16",
+    "sequences": 100,
+    "source_experiment": "mt_10_analyze_incremental_translation",
+    "target_draft_count": 2028,
+    "target_drafts": "D:\\MEIM\\2_Ano\\Projeto\\codigo\\results\\mt_selection\\incremental_translation\\target_drafts.jsonl"
+  },
+  "limitations": [
+    "Service times are reused from mt_10 rather than remeasured in a live asynchronous scheduler.",
+    "Desktop RTX 3060 measurements remain development results and must not be treated as final Jetson Orin performance.",
+    "The analysis models only the MT worker and does not yet include simultaneous ASR/TTS GPU contention."
+  ],
+  "methodology": {
+    "arrival_time": "audio_available_s from the stable2_hold1 ASR source commit.",
+    "inference": "No new NLLB inference is executed by mt_14.",
+    "latest_only_preemption": "No running MT inference is cancelled. Only pending obsolete prefixes are discarded.",
+    "server": "One non-preemptive MT worker per utterance-target sequence.",
+    "service_time": "Measured total_ms of the corresponding NLLB FP16 full-prefix translation in mt_10."
+  },
+  "quality_preservation": {
+    "final_translation": "All schedulers process the same final full source prefix used by mt_10. Therefore the final NLLB translation is preserved exactly.",
+    "note": "No claim is made that intermediate target behaviour is identical, because latest_only intentionally skips obsolete intermediate translations.",
+    "principle": "Scheduling does not alter the NLLB model, decoding configuration, or source text of a selected translation."
+  },
+  "results": [
+    {
+      "call_reduction_vs_fifo_percent": 0.0,
+      "completed_before_next_commit_percent": 58.039419087136935,
+      "compute_reduction_vs_fifo_percent": 0.0,
+      "compute_to_effective_audio_ratio": 0.46771080712842444,
+      "final_translation_preserved_percent": 100.0,
+      "final_translation_preserved_sequences": 100,
+      "max_queue_delay_ms": 4007.172000003993,
+      "mean_final_completion_after_audio_end_ms": 1126.7105810000817,
+      "mean_first_target_completion_s": 3.823944927999904,
+      "mean_max_queue_delay_ms": 728.4954860000267,
+      "mean_queue_delay_ms": 138.83891092772419,
+      "median_final_completion_after_audio_end_ms": 853.2619999995586,
+      "median_first_target_completion_s": 3.492612500001487,
+      "p95_final_completion_after_audio_end_ms": 3331.6227899988294,
+      "processed_calls": 2028,
+      "scheduler": "every_commit_fifo",
+      "sequences": 100,
+      "skipped_calls": 0,
+      "stale_completed_call_percent": 39.891518737672584,
+      "stale_completed_calls": 809,
+      "total_compute_ms": 537231.3414999935
+    },
+    {
+      "call_reduction_vs_fifo_percent": 7.445759368836293,
+      "completed_before_next_commit_percent": null,
+      "compute_reduction_vs_fifo_percent": 11.322501053300842,
+      "compute_to_effective_audio_ratio": 0.41475424606490674,
+      "final_translation_preserved_percent": 100.0,
+      "final_translation_preserved_sequences": 100,
+      "max_queue_delay_ms": 610.2825999989,
+      "mean_final_completion_after_audio_end_ms": 574.3906200001438,
+      "mean_first_target_completion_s": 3.823944927999904,
+      "mean_max_queue_delay_ms": 214.85137800015582,
+      "mean_queue_delay_ms": 33.17478085447439,
+      "median_final_completion_after_audio_end_ms": 519.8948000005112,
+      "median_first_target_completion_s": 3.492612500001487,
+      "p95_final_completion_after_audio_end_ms": 1030.1345300044159,
+      "processed_calls": 1877,
+      "scheduler": "latest_only",
+      "sequences": 100,
+      "skipped_calls": 151,
+      "stale_completed_call_percent": 33.13798614810868,
+      "stale_completed_calls": 622,
+      "total_compute_ms": 476403.31719999446
+    },
+    {
+      "call_reduction_vs_fifo_percent": 95.06903353057199,
+      "completed_before_next_commit_percent": null,
+      "compute_reduction_vs_fifo_percent": 91.44246365604108,
+      "compute_to_effective_audio_ratio": 0.040024522304638495,
+      "final_translation_preserved_percent": 100.0,
+      "final_translation_preserved_sequences": 100,
+      "max_queue_delay_ms": 0.0,
+      "mean_final_completion_after_audio_end_ms": 459.73767299999963,
+      "mean_first_target_completion_s": 11.946137672999999,
+      "mean_max_queue_delay_ms": 0.0,
+      "mean_queue_delay_ms": 0.0,
+      "median_final_completion_after_audio_end_ms": 426.37569999988045,
+      "median_first_target_completion_s": 11.651398300000583,
+      "p95_final_completion_after_audio_end_ms": 711.6833550006049,
+      "processed_calls": 100,
+      "scheduler": "final_only",
+      "sequences": 100,
+      "skipped_calls": 1928,
+      "stale_completed_call_percent": 0.0,
+      "stale_completed_calls": 0,
+      "total_compute_ms": 45973.76729999996
+    }
+  ],
+  "schedulers": {
+    "every_commit_fifo": "Translate every committed ASR prefix in arrival order. This reproduces the mt_10 naive baseline.",
+    "final_only": "Ignore all intermediate ASR commits and translate only the final complete source prefix.",
+    "latest_only": "If MT is busy, retain only the newest pending ASR prefix. Translations already running are allowed to complete."
+  }
+}

@@ -1,0 +1,5 @@
+{"id":"run_01","audio":"../../results/tts_selection/quality_multirun/audio_asr_16k/piper/run_01/en/tts_029.wav","output":"../../results/s2s_persistent_validation/run_01.wav"}
+{"id":"run_02","audio":"../../results/tts_selection/quality_multirun/audio_asr_16k/piper/run_01/en/tts_029.wav","output":"../../results/s2s_persistent_validation/run_02.wav"}
+{"id":"run_03","audio":"../../results/tts_selection/quality_multirun/audio_asr_16k/piper/run_01/en/tts_029.wav","output":"../../results/s2s_persistent_validation/run_03.wav"}
+{"id":"run_04","audio":"../../results/tts_selection/quality_multirun/audio_asr_16k/piper/run_01/en/tts_029.wav","output":"../../results/s2s_persistent_validation/run_04.wav"}
+{"id":"run_05","audio":"../../results/tts_selection/quality_multirun/audio_asr_16k/piper/run_01/en/tts_029.wav","output":"../../results/s2s_persistent_validation/run_05.wav"}

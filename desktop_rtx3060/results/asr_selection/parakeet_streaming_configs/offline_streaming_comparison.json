@@ -1,0 +1,121 @@
+{
+  "experiment": "parakeet_offline_vs_streaming",
+  "model_id": "nvidia/parakeet-tdt-0.6b-v3",
+  "model_revision": "541d1f99c6b0c3cd0b11a95167540bb8edefd82b",
+  "samples": 25,
+  "samples_per_language": 5,
+  "languages": [
+    "en",
+    "es",
+    "fr",
+    "de",
+    "pt"
+  ],
+  "normalization": {
+    "name": "comparison_v1",
+    "description": "NFKC, lowercase, punctuation to whitespace, whitespace collapse, no numerical normalization. Recomputed from raw reference and prediction text for both offline and streaming outputs."
+  },
+  "offline": {
+    "mode": "offline_full_utterance",
+    "samples": 25,
+    "macro_wer": 0.044113996662494784,
+    "macro_wer_percent": 4.411399666249478,
+    "overall_wer": 0.0436241610738255,
+    "overall_wer_percent": 4.3624161073825505,
+    "empty_predictions": 0,
+    "per_language": {
+      "en": {
+        "wer": 0.05185185185185185,
+        "wer_percent": 5.185185185185185,
+        "samples": 5,
+        "empty_predictions": 0
+      },
+      "es": {
+        "wer": 0.014814814814814815,
+        "wer_percent": 1.4814814814814816,
+        "samples": 5,
+        "empty_predictions": 0
+      },
+      "fr": {
+        "wer": 0.058823529411764705,
+        "wer_percent": 5.88235294117647,
+        "samples": 5,
+        "empty_predictions": 0
+      },
+      "de": {
+        "wer": 0.03125,
+        "wer_percent": 3.125,
+        "samples": 5,
+        "empty_predictions": 0
+      },
+      "pt": {
+        "wer": 0.06382978723404255,
+        "wer_percent": 6.382978723404255,
+        "samples": 5,
+        "empty_predictions": 0
+      }
+    }
+  },
+  "rows": [
+    {
+      "mode": "offline_full_utterance",
+      "latency_s": null,
+      "rtfx": null,
+      "macro_wer_percent": 4.411399666249478,
+      "overall_wer_percent": 4.3624161073825505,
+      "delta_macro_wer_pp": 0.0,
+      "delta_overall_wer_pp": 0.0,
+      "empty_predictions": 0
+    },
+    {
+      "mode": "baseline_4s",
+      "latency_s": 4.0,
+      "rtfx": 24.42,
+      "macro_wer_percent": 4.836931581143095,
+      "overall_wer_percent": 4.697986577181208,
+      "delta_macro_wer_pp": 0.4255319148936172,
+      "delta_overall_wer_pp": 0.33557046979865746,
+      "empty_predictions": 0
+    },
+    {
+      "mode": "lowlat_2s",
+      "latency_s": 2.0,
+      "rtfx": 3.59,
+      "macro_wer_percent": 5.270332128123116,
+      "overall_wer_percent": 5.201342281879195,
+      "delta_macro_wer_pp": 0.8589324618736383,
+      "delta_overall_wer_pp": 0.8389261744966445,
+      "empty_predictions": 0
+    },
+    {
+      "mode": "lowlat_1_76s",
+      "latency_s": 1.76,
+      "rtfx": 3.57,
+      "macro_wer_percent": 5.56771774903815,
+      "overall_wer_percent": 5.5369127516778525,
+      "delta_macro_wer_pp": 1.1563180827886717,
+      "delta_overall_wer_pp": 1.174496644295302,
+      "empty_predictions": 0
+    },
+    {
+      "mode": "lowlat_1_52s",
+      "latency_s": 1.52,
+      "rtfx": 3.43,
+      "macro_wer_percent": 12.363075371992768,
+      "overall_wer_percent": 13.25503355704698,
+      "delta_macro_wer_pp": 7.951675705743289,
+      "delta_overall_wer_pp": 8.89261744966443,
+      "empty_predictions": 1
+    },
+    {
+      "mode": "left_6s",
+      "latency_s": 2.0,
+      "rtfx": 3.6,
+      "macro_wer_percent": 7.235427386084457,
+      "overall_wer_percent": 7.2147651006711415,
+      "delta_macro_wer_pp": 2.8240277198349792,
+      "delta_overall_wer_pp": 2.852348993288591,
+      "empty_predictions": 0
+    }
+  ]
+}

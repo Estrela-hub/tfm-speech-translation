@@ -1,0 +1,58 @@
+{
+  "experiment": "parakeet_partial_trace_collection",
+  "created_at": "2026-09-01T18:36:47+01:00",
+  "model": {
+    "id": "nvidia/parakeet-tdt-0.6b-v3",
+    "revision": "541d1f99c6b0c3cd0b11a95167540bb8edefd82b",
+    "file": "parakeet-tdt-0.6b-v3.nemo",
+    "resolved_path": "C:\\Users\\migue\\.cache\\huggingface\\hub\\models--nvidia--parakeet-tdt-0.6b-v3\\blobs\\3cbdc85877e668ca7b82d0d56770eb1fac76691f55d6b97545e8d61ca588d10d",
+    "compute_dtype": "float32"
+  },
+  "nemo": {
+    "repository": "D:\\MEIM\\2_Ano\\Projeto\\codigo\\external\\NeMo-Speech",
+    "base_commit": "fd6a877539710e2b98f28c43272ff81312f83417",
+    "instrumentation_branch": "tfm-streaming-instrumentation",
+    "instrumentation_commit": "9a9deffdca4b8f6bf2dffe1d2914ae7c7191e507",
+    "script": "D:\\MEIM\\2_Ano\\Projeto\\codigo\\external\\NeMo-Speech\\examples\\asr\\asr_chunked_inference\\rnnt\\speech_to_text_streaming_infer_rnnt.py"
+  },
+  "requested_streaming_config": {
+    "left_context_secs": 10.0,
+    "chunk_secs": 0.16,
+    "right_context_secs": 1.84,
+    "requested_latency_secs": 2.0
+  },
+  "effective_streaming_config": {
+    "left_context_secs": 10.0,
+    "chunk_secs": 0.16,
+    "right_context_secs": 1.84,
+    "theoretical_latency_secs": 2.0
+  },
+  "instrumented_rtfx": 3.88,
+  "dataset": {
+    "manifest": "D:\\MEIM\\2_Ano\\Projeto\\codigo\\results\\asr_selection\\parakeet_streaming_configs\\evaluation_manifest.jsonl",
+    "manifest_sha256": "6d2c2541d9948f6a4c5e8c5dd495458c834f79a661c848eab17a1ddd4578281e",
+    "samples": 25,
+    "samples_per_language": {
+      "en": 5,
+      "es": 5,
+      "fr": 5,
+      "de": 5,
+      "pt": 5
+    },
+    "total_duration_s": 287.16,
+    "total_duration_minutes": 4.7860000000000005
+  },
+  "collection": {
+    "partial_records": 1519,
+    "utterances": 25,
+    "final_partial_matches_prediction": 25
+  },
+  "performance_note": "instrumented_rtfx includes per-chunk hypothesis conversion and logging and must not be used as the streaming performance benchmark.",
+  "outputs": {
+    "partial_traces": "D:\\MEIM\\2_Ano\\Projeto\\codigo\\results\\asr_selection\\parakeet_partial_traces\\partial_traces.jsonl",
+    "utterances": "D:\\MEIM\\2_Ano\\Projeto\\codigo\\results\\asr_selection\\parakeet_partial_traces\\utterances.jsonl",
+    "final_predictions": "D:\\MEIM\\2_Ano\\Projeto\\codigo\\results\\asr_selection\\parakeet_partial_traces\\final_predictions.jsonl",
+    "nemo_log": "D:\\MEIM\\2_Ano\\Projeto\\codigo\\results\\asr_selection\\parakeet_partial_traces\\nemo.log",
+    "metadata": "D:\\MEIM\\2_Ano\\Projeto\\codigo\\results\\asr_selection\\parakeet_partial_traces\\metadata.json"
+  }
+}

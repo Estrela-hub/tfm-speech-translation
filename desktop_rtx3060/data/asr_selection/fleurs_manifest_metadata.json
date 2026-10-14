@@ -1,0 +1,37 @@
+{
+  "dataset": "google/fleurs",
+  "dataset_revision": "70bb2e8",
+  "split": "test",
+  "sample_rate": 16000,
+  "seed": 42,
+  "samples_per_language": 200,
+  "total_samples": 1000,
+  "languages": {
+    "en": {
+      "dataset_config": "en_us",
+      "samples": 200,
+      "total_duration_s": 1985.1400000000008
+    },
+    "es": {
+      "dataset_config": "es_419",
+      "samples": 200,
+      "total_duration_s": 2409.300000000002
+    },
+    "fr": {
+      "dataset_config": "fr_fr",
+      "samples": 200,
+      "total_duration_s": 2039.2200000000012
+    },
+    "de": {
+      "dataset_config": "de_de",
+      "samples": 200,
+      "total_duration_s": 2683.86
+    },
+    "pt": {
+      "dataset_config": "pt_br",
+      "samples": 200,
+      "total_duration_s": 2579.4599999999978
+    }
+  },
+  "manifest_sha256": "4cf3a7617f2db854834984a2828ee9f4e83e1fb185aa01340c8dc1a769df2cc9"
+}

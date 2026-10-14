@@ -1,0 +1,18 @@
+{
+  "dataset_id": "facebook/flores",
+  "dataset_revision": "71abf77d8b7beb5cfef59898d6b24d92ab7654fc",
+  "languages": {
+    "DE": "deu_Latn",
+    "EN": "eng_Latn",
+    "ES": "spa_Latn",
+    "FR": "fra_Latn",
+    "PT": "por_Latn"
+  },
+  "manifest": "flores_dev_200.jsonl",
+  "manifest_sha256": "b2e3f73365232c700a1246b7bf4726eba2401f743a6a644066c5f35d4c470399",
+  "purpose": "MT model selection",
+  "selection_seed": 42,
+  "selection_size": 200,
+  "source_split_size": 997,
+  "split": "dev"
+}
