@@ -1,6 +1,7 @@
 # Repository metadata
 .gitattributes text eol=lf
 .gitignore text eol=lf
+README.md text eol=lf
 
 # Jetson/Linux text files must preserve LF line endings.
 jetson/**/*.py text eol=lf
