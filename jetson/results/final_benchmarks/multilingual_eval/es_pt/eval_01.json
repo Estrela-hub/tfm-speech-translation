@@ -1,0 +1,137 @@
+{
+  "architecture": "16 kHz PCM16 WAV -> full-utterance Parakeet -> final ASR hypothesis -> NLLB CTranslate2 FP16 final-only -> Piper ONNX Runtime CPU -> output WAV",
+  "asr": {
+    "checkpoint": "/workspace/models/parakeet/parakeet-tdt-0.6b-v3.nemo",
+    "compute_ms": 542.0606239968038,
+    "cuda_graph_decoder": false,
+    "final_text": "El curry es una receta a base de hierbas y especias y que se sirve con carne o vegetales.",
+    "method": "NeMo full-utterance RNNT/TDT inference",
+    "mode": "full_utterance",
+    "model_id": "nvidia/parakeet-tdt-0.6b-v3",
+    "precision": "torch.float16",
+    "revision": "541d1f99c6b0c3cd0b11a95167540bb8edefd82b",
+    "rtf": 0.0705808104162505
+  },
+  "configuration": {
+    "input_audio": "/workspace/data/multilingual_eval/audio/es_1894.wav",
+    "output_audio": "/workspace/results/final_benchmarks/multilingual_eval/es_pt/eval_01.wav",
+    "source_language": "es",
+    "target_language": "pt"
+  },
+  "environment": {
+    "ctranslate2": "4.8.2",
+    "cuda": "12.9",
+    "gpu": "Orin",
+    "nemo": "3.0.0",
+    "onnxruntime": "1.30.0",
+    "python": "3.12.3",
+    "pytorch": "2.8.0a0+5228986c39.nv25.06",
+    "transformers": "5.17.0"
+  },
+  "experiment": "Jetson persistent full-utterance Speech-to-Speech pipeline",
+  "input": {
+    "channels": 1,
+    "duration_s": 7.68,
+    "frames": 122880,
+    "load_ms": 14.031800001248484,
+    "sample_rate": 16000,
+    "sample_width_bytes": 2
+  },
+  "job_id": "eval_01",
+  "memory_after_job": {
+    "device_free_mb": 396.7734375,
+    "device_total_mb": 7607.31640625,
+    "system_available_mb": 435.90625,
+    "torch_allocated_mb": 1224.46875,
+    "torch_reserved_mb": 1654.0
+  },
+  "memory_note": "Jetson uses unified memory. CUDA and system memory values must not be added together.",
+  "mt": {
+    "beam_size": 1,
+    "calls": 1,
+    "compute_type": "float16",
+    "latency_ms": 495.6399250004324,
+    "max_decoding_length": 256,
+    "model_id": "facebook/nllb-200-distilled-600M",
+    "model_path": "/workspace/models/ctranslate2/nllb-200-distilled-600M-fp16",
+    "policy": "final_only",
+    "revision": "f8d333a098d19b4fd9a8b18f94170487ad3f821d",
+    "runtime": "CTranslate2",
+    "tokenizer_path": "/workspace/models/nllb_tokenizer",
+    "translated_text": "O curry é uma receita baseada em ervas e especiarias e servido com carne ou vegetais."
+  },
+  "startup": {
+    "model_load_ms": {
+      "asr": 136582.16190500025,
+      "mt": 23632.318904001295,
+      "total": 164384.45968200176,
+      "tts": 4169.978873000218
+    },
+    "warmup": {
+      "asr_bucket_total_ms": 17368.775558003108,
+      "asr_bucket_warmups": [
+        {
+          "bucket_s": 8,
+          "compute_ms": 11918.821037997986,
+          "rtf": 1.5087115237972133,
+          "text": "Desde el gobierno informaron que 19 de las personas heridas eran policías."
+        },
+        {
+          "bucket_s": 12,
+          "compute_ms": 1792.5565559999086,
+          "rtf": 0.22690589316454537,
+          "text": "Desde el gobierno informaron que 19 de las personas heridas eran policías."
+        },
+        {
+          "bucket_s": 16,
+          "compute_ms": 1765.1037220020953,
+          "rtf": 0.22343085088634118,
+          "text": "Desde el gobierno informaron que 19 de las personas heridas eran policías."
+        },
+        {
+          "bucket_s": 24,
+          "compute_ms": 1892.2942420031177,
+          "rtf": 0.2395309167092554,
+          "text": "Desde el gobierno informaron que 19 de las personas heridas eran policías."
+        }
+      ],
+      "asr_ms": 11918.821037997986,
+      "asr_rtf": 1.5087115237972133,
+      "asr_text": "Desde el gobierno informaron que 19 de las personas heridas eran policías.",
+      "input_audio": "/workspace/data/multilingual_eval/warmup/warmup_es_bucket.wav",
+      "input_duration_s": 7.9,
+      "input_load_ms": 5.631613999867113,
+      "mt_ms": 2309.282969999913,
+      "total_ms": 21444.872061998467,
+      "translated_text": "O governo informou que 19 das pessoas feridas eram policiais.",
+      "tts_ms": 1398.7302139976237
+    },
+    "warmup_enabled": true
+  },
+  "steady_state_metrics": {
+    "asr_compute_ms": 542.0606239968038,
+    "asr_rtf": 0.0705808104162505,
+    "compute_and_runtime_ms": 3081.062416997156,
+    "file_to_file_wall_ms": 3479.531771998154,
+    "input_load_ms": 14.031800001248484,
+    "mt_ms": 495.6399250004324,
+    "output_write_ms": 3.426162998948712,
+    "tts_synthesis_ms": 2043.36186799992
+  },
+  "target_hardware": "NVIDIA Jetson Orin Nano 8 GB",
+  "tts": {
+    "audio": {
+      "channels": 1,
+      "duration_s": 4.783310657596372,
+      "frames": 105472,
+      "sample_rate": 22050,
+      "sample_width_bytes": 2
+    },
+    "execution_provider": "CPUExecutionProvider",
+    "family": "Piper",
+    "output_write_ms": 3.426162998948712,
+    "runtime": "ONNX Runtime CPU",
+    "synthesis_ms": 2043.36186799992,
+    "voice": "pt_PT-tugão-medium"
+  }
+}

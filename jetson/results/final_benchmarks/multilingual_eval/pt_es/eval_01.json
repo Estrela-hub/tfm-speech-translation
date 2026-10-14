@@ -1,0 +1,137 @@
+{
+  "architecture": "16 kHz PCM16 WAV -> full-utterance Parakeet -> final ASR hypothesis -> NLLB CTranslate2 FP16 final-only -> Piper ONNX Runtime CPU -> output WAV",
+  "asr": {
+    "checkpoint": "/workspace/models/parakeet/parakeet-tdt-0.6b-v3.nemo",
+    "compute_ms": 2748.1888250003976,
+    "cuda_graph_decoder": false,
+    "final_text": "Giancarlo Zekella perdeu o controle do carro e acabou a corrida logo após a largada.",
+    "method": "NeMo full-utterance RNNT/TDT inference",
+    "mode": "full_utterance",
+    "model_id": "nvidia/parakeet-tdt-0.6b-v3",
+    "precision": "torch.float16",
+    "revision": "541d1f99c6b0c3cd0b11a95167540bb8edefd82b",
+    "rtf": 0.3271653363095711
+  },
+  "configuration": {
+    "input_audio": "/workspace/data/multilingual_eval/audio/pt_1853.wav",
+    "output_audio": "/workspace/results/final_benchmarks/multilingual_eval/pt_es/eval_01.wav",
+    "source_language": "pt",
+    "target_language": "es"
+  },
+  "environment": {
+    "ctranslate2": "4.8.2",
+    "cuda": "12.9",
+    "gpu": "Orin",
+    "nemo": "3.0.0",
+    "onnxruntime": "1.30.0",
+    "python": "3.12.3",
+    "pytorch": "2.8.0a0+5228986c39.nv25.06",
+    "transformers": "5.17.0"
+  },
+  "experiment": "Jetson persistent full-utterance Speech-to-Speech pipeline",
+  "input": {
+    "channels": 1,
+    "duration_s": 8.4,
+    "frames": 134400,
+    "load_ms": 50.069970999174984,
+    "sample_rate": 16000,
+    "sample_width_bytes": 2
+  },
+  "job_id": "eval_01",
+  "memory_after_job": {
+    "device_free_mb": 439.72265625,
+    "device_total_mb": 7607.31640625,
+    "system_available_mb": 441.12109375,
+    "torch_allocated_mb": 1224.46875,
+    "torch_reserved_mb": 1654.0
+  },
+  "memory_note": "Jetson uses unified memory. CUDA and system memory values must not be added together.",
+  "mt": {
+    "beam_size": 1,
+    "calls": 1,
+    "compute_type": "float16",
+    "latency_ms": 1171.2501080000948,
+    "max_decoding_length": 256,
+    "model_id": "facebook/nllb-200-distilled-600M",
+    "model_path": "/workspace/models/ctranslate2/nllb-200-distilled-600M-fp16",
+    "policy": "final_only",
+    "revision": "f8d333a098d19b4fd9a8b18f94170487ad3f821d",
+    "runtime": "CTranslate2",
+    "tokenizer_path": "/workspace/models/nllb_tokenizer",
+    "translated_text": "Giancarlo Zekella perdió el control del coche y terminó la carrera justo después de la salida."
+  },
+  "startup": {
+    "model_load_ms": {
+      "asr": 137455.9005629999,
+      "mt": 23651.19000499908,
+      "total": 165406.666122999,
+      "tts": 4299.575555000047
+    },
+    "warmup": {
+      "asr_bucket_total_ms": 16746.847136000724,
+      "asr_bucket_warmups": [
+        {
+          "bucket_s": 8,
+          "compute_ms": 11299.148582998896,
+          "rtf": 1.415933406390839,
+          "text": "Leões são os felinos mais sociais, vivendo em grandes grupos chamados de alcateias."
+        },
+        {
+          "bucket_s": 12,
+          "compute_ms": 1874.309358998289,
+          "rtf": 0.2348758595235951,
+          "text": "Leões são os felinos mais sociais, vivendo em grandes grupos chamados de alcateias."
+        },
+        {
+          "bucket_s": 16,
+          "compute_ms": 1731.1504620010965,
+          "rtf": 0.21693614812043815,
+          "text": "Leões são os felinos mais sociais, vivendo em grandes grupos chamados de alcateias."
+        },
+        {
+          "bucket_s": 24,
+          "compute_ms": 1842.2387320024427,
+          "rtf": 0.23085698396020585,
+          "text": "Leões são os felinos mais sociais, vivendo em grandes grupos chamados de alcateias."
+        }
+      ],
+      "asr_ms": 11299.148582998896,
+      "asr_rtf": 1.415933406390839,
+      "asr_text": "Leões são os felinos mais sociais, vivendo em grandes grupos chamados de alcateias.",
+      "input_audio": "/workspace/data/multilingual_eval/warmup/warmup_pt.wav",
+      "input_duration_s": 7.98,
+      "input_load_ms": 19.929072997911135,
+      "mt_ms": 3963.582314001542,
+      "total_ms": 25440.52942500275,
+      "translated_text": "Los leones son los felinos más sociales, viviendo en grandes grupos llamados alcaceas.",
+      "tts_ms": 4368.61777899685
+    },
+    "warmup_enabled": true
+  },
+  "steady_state_metrics": {
+    "asr_compute_ms": 2748.1888250003976,
+    "asr_rtf": 0.3271653363095711,
+    "compute_and_runtime_ms": 5573.6493799995515,
+    "file_to_file_wall_ms": 6568.0531120015075,
+    "input_load_ms": 50.069970999174984,
+    "mt_ms": 1171.2501080000948,
+    "output_write_ms": 29.725172000325983,
+    "tts_synthesis_ms": 1654.210446999059
+  },
+  "target_hardware": "NVIDIA Jetson Orin Nano 8 GB",
+  "tts": {
+    "audio": {
+      "channels": 1,
+      "duration_s": 5.23609977324263,
+      "frames": 115456,
+      "sample_rate": 22050,
+      "sample_width_bytes": 2
+    },
+    "execution_provider": "CPUExecutionProvider",
+    "family": "Piper",
+    "output_write_ms": 29.725172000325983,
+    "runtime": "ONNX Runtime CPU",
+    "synthesis_ms": 1654.210446999059,
+    "voice": "es_ES-sharvard-medium"
+  }
+}

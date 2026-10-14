@@ -1,0 +1,14 @@
+# Repository metadata
+.gitattributes text eol=lf
+.gitignore text eol=lf
+
+# Jetson/Linux text files must preserve LF line endings.
+jetson/**/*.py text eol=lf
+jetson/**/*.json text eol=lf
+jetson/**/*.jsonl text eol=lf
+jetson/**/*.txt text eol=lf
+jetson/**/*.md text eol=lf
+jetson/**/Dockerfile* text eol=lf
+
+# Audio files are binary.
+jetson/**/*.wav binary

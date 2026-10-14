@@ -1,0 +1,187 @@
+{
+  "configuration": {
+    "asr_mode": "full_utterance",
+    "jobs": 12,
+    "mt_compute_type": "float16",
+    "mt_runtime": "CTranslate2",
+    "source_language": "en",
+    "target_language": "pt",
+    "tts_runtime": "ONNX Runtime CPU"
+  },
+  "experiment": "Jetson persistent full-utterance S2S repeated-execution test",
+  "startup": {
+    "model_load_ms": {
+      "asr": 128809.0949940006,
+      "mt": 22619.18852999952,
+      "total": 155193.6218130004,
+      "tts": 3765.338289000283
+    },
+    "warmup": {
+      "asr_ms": 12169.163906999529,
+      "asr_rtf": 0.8630612699999666,
+      "asr_text": "One of the most common methods used to illustrate the importance of socialization is to draw upon the unfortunate cases of children who were through neglect, misfortune, or willful abuse not socialized by adults while they were growing up.",
+      "input_audio": "/workspace/data/multilingual_eval/audio/en_1961.wav",
+      "input_duration_s": 14.1,
+      "input_load_ms": 100.45354700014286,
+      "mt_ms": 1775.2550220002377,
+      "total_ms": 16372.644273000333,
+      "translated_text": "Um dos métodos mais comuns utilizados para ilustrar a importância da socialização é basear-se nos casos infelizes de crianças que foram negligenciadas, infelizes ou abusadas intencionalmente por adultos quando cresciam.",
+      "tts_ms": 1900.4948740002874
+    }
+  },
+  "summary": {
+    "asr_ms": {
+      "max": 1898.4729240000888,
+      "mean": 840.0868162498986,
+      "median": 452.5900174994604,
+      "min": 261.94571999985783
+    },
+    "asr_rtf": {
+      "max": 0.3132793603960543,
+      "mean": 0.09983477693032977,
+      "median": 0.03982651214976184,
+      "min": 0.0301939853909376
+    },
+    "compute_total_ms": {
+      "max": 3012.592611999935,
+      "mean": 2122.6316621665924,
+      "median": 2244.419086999187,
+      "min": 1049.9974610011122
+    },
+    "file_to_file_wall_ms": {
+      "max": 3024.910326000281,
+      "mean": 2135.974261250188,
+      "median": 2249.9835979997442,
+      "min": 1054.082479000499
+    },
+    "input_load_ms": {
+      "max": 50.741571999424195,
+      "mean": 8.406490666705698,
+      "median": 0.3165104999425239,
+      "min": 0.23492299987992737
+    },
+    "jobs": 12,
+    "memory": {
+      "after_each_job": [
+        {
+          "device_free_mb": 320.82421875,
+          "device_total_mb": 7607.30859375,
+          "system_available_mb": 322.3671875,
+          "torch_allocated_mb": 1224.46875,
+          "torch_reserved_mb": 1534.0
+        },
+        {
+          "device_free_mb": 313.29296875,
+          "device_total_mb": 7607.30859375,
+          "system_available_mb": 313.8984375,
+          "torch_allocated_mb": 1224.46875,
+          "torch_reserved_mb": 1534.0
+        },
+        {
+          "device_free_mb": 288.01171875,
+          "device_total_mb": 7607.30859375,
+          "system_available_mb": 288.30078125,
+          "torch_allocated_mb": 1224.46875,
+          "torch_reserved_mb": 1534.0
+        },
+        {
+          "device_free_mb": 277.21875,
+          "device_total_mb": 7607.30859375,
+          "system_available_mb": 277.5,
+          "torch_allocated_mb": 1224.46875,
+          "torch_reserved_mb": 1534.0
+        },
+        {
+          "device_free_mb": 265.6484375,
+          "device_total_mb": 7607.30859375,
+          "system_available_mb": 266.171875,
+          "torch_allocated_mb": 1224.46875,
+          "torch_reserved_mb": 1534.0
+        },
+        {
+          "device_free_mb": 245.5546875,
+          "device_total_mb": 7607.30859375,
+          "system_available_mb": 245.96875,
+          "torch_allocated_mb": 1224.46875,
+          "torch_reserved_mb": 1534.0
+        },
+        {
+          "device_free_mb": 244.51171875,
+          "device_total_mb": 7607.30859375,
+          "system_available_mb": 244.7578125,
+          "torch_allocated_mb": 1224.46875,
+          "torch_reserved_mb": 1534.0
+        },
+        {
+          "device_free_mb": 253.86328125,
+          "device_total_mb": 7607.30859375,
+          "system_available_mb": 254.61328125,
+          "torch_allocated_mb": 1224.46875,
+          "torch_reserved_mb": 1534.0
+        },
+        {
+          "device_free_mb": 253.46484375,
+          "device_total_mb": 7607.30859375,
+          "system_available_mb": 253.87890625,
+          "torch_allocated_mb": 1224.46875,
+          "torch_reserved_mb": 1534.0
+        },
+        {
+          "device_free_mb": 252.7109375,
+          "device_total_mb": 7607.30859375,
+          "system_available_mb": 252.96484375,
+          "torch_allocated_mb": 1224.46875,
+          "torch_reserved_mb": 1534.0
+        },
+        {
+          "device_free_mb": 251.96875,
+          "device_total_mb": 7607.30859375,
+          "system_available_mb": 252.22265625,
+          "torch_allocated_mb": 1224.46875,
+          "torch_reserved_mb": 1534.0
+        },
+        {
+          "device_free_mb": 251.921875,
+          "device_total_mb": 7607.30859375,
+          "system_available_mb": 252.17578125,
+          "torch_allocated_mb": 1224.46875,
+          "torch_reserved_mb": 1534.0
+        }
+      ],
+      "after_warmup": {
+        "device_free_mb": 440.1328125,
+        "device_total_mb": 7607.30859375,
+        "system_available_mb": 441.41015625,
+        "torch_allocated_mb": 1224.46875,
+        "torch_reserved_mb": 1534.0
+      },
+      "system_available_change_mb": -189.234375
+    },
+    "mt_ms": {
+      "max": 881.5660569998727,
+      "mean": 605.6225616666021,
+      "median": 546.4513619999707,
+      "min": 374.57921800069016
+    },
+    "output_consistency": {
+      "asr_exactly_stable": null,
+      "asr_unique_outputs": null,
+      "comparable": false,
+      "mt_exactly_stable": null,
+      "mt_unique_outputs": null,
+      "reason": "batch contains different input audio paths"
+    },
+    "output_write_ms": {
+      "max": 1.1235709998800303,
+      "mean": 0.8629993332457767,
+      "median": 0.8639755001240701,
+      "min": 0.5521529992620344
+    },
+    "tts_ms": {
+      "max": 1481.5756289999626,
+      "mean": 676.9222842500918,
+      "median": 522.165304000282,
+      "min": 364.9617480004963
+    }
+  }
+}

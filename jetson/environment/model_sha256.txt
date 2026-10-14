@@ -1,0 +1,18 @@
+]633;E;echo "# Final Jetson model artefacts";49963740-10d0-4637-b413-3acdcdf9bbc8]633;C# Final Jetson model artefacts
+
+3cbdc85877e668ca7b82d0d56770eb1fac76691f55d6b97545e8d61ca588d10d  models/parakeet/parakeet-tdt-0.6b-v3.nemo
+8f6496adfc930cbfecbe8281112197705c488fab47d34b4829b06d7f478909af  models/ctranslate2/nllb-200-distilled-600M-fp16/config.json
+3ac0b60f625a29ecae1f7198ff0b08ccbd493c5546bc7abb5a8c866b76b2b1cf  models/ctranslate2/nllb-200-distilled-600M-fp16/model.bin
+af53bfd0e6f726209e7325e45b87ab3b14e5856f7d42d7b9be91de3287c45267  models/ctranslate2/nllb-200-distilled-600M-fp16/shared_vocabulary.json
+5b5fe5108a8ba9ff701f2d0727efdbd4b7a4781efed12e9e94f003d75a9a609b  models/nllb_tokenizer/tokenizer_config.json
+0545bfd541590ed03d26c85507ef886e1e8734822c21e85678342e1c5e345223  models/nllb_tokenizer/tokenizer.json
+7e64762d8e5118bb578f2eea6207e1a35a8e0c30595010b666f983fc87bb7819  models/piper/de_DE-thorsten-medium.onnx
+974adee790533adb273a1ac88f49027d2a1b8f0f2cf4905954a4791e79264e85  models/piper/de_DE-thorsten-medium.onnx.json
+5efe09e69902187827af646e1a6e9d269dee769f9877d17b16b1b46eeaaf019f  models/piper/en_US-lessac-medium.onnx
+efe19c417bed055f2d69908248c6ba650fa135bc868b0e6abb3da181dab690a0  models/piper/en_US-lessac-medium.onnx.json
+40febfb1679c69a4505ff311dc136e121e3419a13a290ef264fdf43ddedd0fb1  models/piper/es_ES-sharvard-medium.onnx
+7438c9b699c72b0c3388dae1b68d3f364dc66a2150fe554a1c11f03372957b2c  models/piper/es_ES-sharvard-medium.onnx.json
+641d1ab097da2b81128c076810edb052b385decc8be3381814802a64a73baf99  models/piper/fr_FR-siwis-medium.onnx
+39479916c2db192b5ac9764daddd0c744d83e023ad890c6976c0633ae4df8959  models/piper/fr_FR-siwis-medium.onnx.json
+223a7aaca69a155c61897e8ada7c3b13bc306e16c72dbb9c2fed733e2b0927d4  models/piper/pt_PT-tugão-medium.onnx
+fe0918dfc0f1a89264a6eea4afe8e95d8e9fed3cc6c81b5c2f87fcb2b50c7320  models/piper/pt_PT-tugão-medium.onnx.json

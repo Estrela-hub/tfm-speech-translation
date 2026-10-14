@@ -1,0 +1,137 @@
+{
+  "architecture": "16 kHz PCM16 WAV -> full-utterance Parakeet -> final ASR hypothesis -> NLLB CTranslate2 FP16 final-only -> Piper ONNX Runtime CPU -> output WAV",
+  "asr": {
+    "checkpoint": "/workspace/models/parakeet/parakeet-tdt-0.6b-v3.nemo",
+    "compute_ms": 941.908978002175,
+    "cuda_graph_decoder": false,
+    "final_text": "La corrélation entre la pathologie du cerveau et le comportement soutient les scientifiques dans leurs recherches.",
+    "method": "NeMo full-utterance RNNT/TDT inference",
+    "mode": "full_utterance",
+    "model_id": "nvidia/parakeet-tdt-0.6b-v3",
+    "precision": "torch.float16",
+    "revision": "541d1f99c6b0c3cd0b11a95167540bb8edefd82b",
+    "rtf": 0.15543052442280117
+  },
+  "configuration": {
+    "input_audio": "/workspace/data/multilingual_eval/audio/fr_1821.wav",
+    "output_audio": "/workspace/results/final_benchmarks/multilingual_eval/fr_pt/eval_01.wav",
+    "source_language": "fr",
+    "target_language": "pt"
+  },
+  "environment": {
+    "ctranslate2": "4.8.2",
+    "cuda": "12.9",
+    "gpu": "Orin",
+    "nemo": "3.0.0",
+    "onnxruntime": "1.30.0",
+    "python": "3.12.3",
+    "pytorch": "2.8.0a0+5228986c39.nv25.06",
+    "transformers": "5.17.0"
+  },
+  "experiment": "Jetson persistent full-utterance Speech-to-Speech pipeline",
+  "input": {
+    "channels": 1,
+    "duration_s": 6.06,
+    "frames": 96960,
+    "load_ms": 6.8052829992666375,
+    "sample_rate": 16000,
+    "sample_width_bytes": 2
+  },
+  "job_id": "eval_01",
+  "memory_after_job": {
+    "device_free_mb": 381.56640625,
+    "device_total_mb": 7607.31640625,
+    "system_available_mb": 381.94921875,
+    "torch_allocated_mb": 1224.46875,
+    "torch_reserved_mb": 1654.0
+  },
+  "memory_note": "Jetson uses unified memory. CUDA and system memory values must not be added together.",
+  "mt": {
+    "beam_size": 1,
+    "calls": 1,
+    "compute_type": "float16",
+    "latency_ms": 569.1778600012185,
+    "max_decoding_length": 256,
+    "model_id": "facebook/nllb-200-distilled-600M",
+    "model_path": "/workspace/models/ctranslate2/nllb-200-distilled-600M-fp16",
+    "policy": "final_only",
+    "revision": "f8d333a098d19b4fd9a8b18f94170487ad3f821d",
+    "runtime": "CTranslate2",
+    "tokenizer_path": "/workspace/models/nllb_tokenizer",
+    "translated_text": "A correlação entre a patologia cerebral e o comportamento sustenta os cientistas na sua pesquisa."
+  },
+  "startup": {
+    "model_load_ms": {
+      "asr": 137591.65499600203,
+      "mt": 23258.77932000003,
+      "total": 164845.53496400258,
+      "tts": 3995.1006480005162
+    },
+    "warmup": {
+      "asr_bucket_total_ms": 17329.00082299966,
+      "asr_bucket_warmups": [
+        {
+          "bucket_s": 8,
+          "compute_ms": 11671.426513999904,
+          "rtf": 1.462584776190464,
+          "text": "L'équipe des sapeurs-pompiers a finalement éteint le feu à 23 h 35."
+        },
+        {
+          "bucket_s": 12,
+          "compute_ms": 1976.5534840007604,
+          "rtf": 0.247688406516386,
+          "text": "L'équipe des sapeurs-pompiers a finalement éteint le feu à 23 h 35."
+        },
+        {
+          "bucket_s": 16,
+          "compute_ms": 1807.284089998575,
+          "rtf": 0.2264767030073402,
+          "text": "L'équipe des sapeurs-pompiers a finalement éteint le feu à 23 h 35."
+        },
+        {
+          "bucket_s": 24,
+          "compute_ms": 1873.7367350004206,
+          "rtf": 0.2348041021303785,
+          "text": "L'équipe des sapeurs-pompiers a finalement éteint le feu à 23 h 35."
+        }
+      ],
+      "asr_ms": 11671.426513999904,
+      "asr_rtf": 1.462584776190464,
+      "asr_text": "L'équipe des sapeurs-pompiers a finalement éteint le feu à 23 h 35.",
+      "input_audio": "/workspace/data/multilingual_eval/warmup/warmup_fr.wav",
+      "input_duration_s": 7.98,
+      "input_load_ms": 4.739871001220308,
+      "mt_ms": 1503.58445099846,
+      "total_ms": 21949.896632999298,
+      "translated_text": "A equipe de bombeiros finalmente apagou o fogo às 23h35.",
+      "tts_ms": 2766.3756820002163
+    },
+    "warmup_enabled": true
+  },
+  "steady_state_metrics": {
+    "asr_compute_ms": 941.908978002175,
+    "asr_rtf": 0.15543052442280117,
+    "compute_and_runtime_ms": 3388.731432005443,
+    "file_to_file_wall_ms": 4090.625238000939,
+    "input_load_ms": 6.8052829992666375,
+    "mt_ms": 569.1778600012185,
+    "output_write_ms": 12.899310000648256,
+    "tts_synthesis_ms": 1877.6445940020494
+  },
+  "target_hardware": "NVIDIA Jetson Orin Nano 8 GB",
+  "tts": {
+    "audio": {
+      "channels": 1,
+      "duration_s": 4.156371882086168,
+      "frames": 91648,
+      "sample_rate": 22050,
+      "sample_width_bytes": 2
+    },
+    "execution_provider": "CPUExecutionProvider",
+    "family": "Piper",
+    "output_write_ms": 12.899310000648256,
+    "runtime": "ONNX Runtime CPU",
+    "synthesis_ms": 1877.6445940020494,
+    "voice": "pt_PT-tugão-medium"
+  }
+}

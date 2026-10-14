@@ -1,0 +1,137 @@
+{
+  "architecture": "16 kHz PCM16 WAV -> full-utterance Parakeet -> final ASR hypothesis -> NLLB CTranslate2 FP16 final-only -> Piper ONNX Runtime CPU -> output WAV",
+  "asr": {
+    "checkpoint": "/workspace/models/parakeet/parakeet-tdt-0.6b-v3.nemo",
+    "compute_ms": 289.73381299874745,
+    "cuda_graph_decoder": false,
+    "final_text": "These are sometimes crowded family beaches with a good range of shops lining the shore, swimming is safe.",
+    "method": "NeMo full-utterance RNNT/TDT inference",
+    "mode": "full_utterance",
+    "model_id": "nvidia/parakeet-tdt-0.6b-v3",
+    "precision": "torch.float16",
+    "revision": "541d1f99c6b0c3cd0b11a95167540bb8edefd82b",
+    "rtf": 0.029808005452546034
+  },
+  "configuration": {
+    "input_audio": "/workspace/data/multilingual_eval/audio/en_1944.wav",
+    "output_audio": "/workspace/results/final_benchmarks/multilingual_eval/en_pt/eval_03.wav",
+    "source_language": "en",
+    "target_language": "pt"
+  },
+  "environment": {
+    "ctranslate2": "4.8.2",
+    "cuda": "12.9",
+    "gpu": "Orin",
+    "nemo": "3.0.0",
+    "onnxruntime": "1.30.0",
+    "python": "3.12.3",
+    "pytorch": "2.8.0a0+5228986c39.nv25.06",
+    "transformers": "5.17.0"
+  },
+  "experiment": "Jetson persistent full-utterance Speech-to-Speech pipeline",
+  "input": {
+    "channels": 1,
+    "duration_s": 9.72,
+    "frames": 155520,
+    "load_ms": 53.1105279987969,
+    "sample_rate": 16000,
+    "sample_width_bytes": 2
+  },
+  "job_id": "eval_03",
+  "memory_after_job": {
+    "device_free_mb": 355.76171875,
+    "device_total_mb": 7607.31640625,
+    "system_available_mb": 357.203125,
+    "torch_allocated_mb": 1224.46875,
+    "torch_reserved_mb": 1654.0
+  },
+  "memory_note": "Jetson uses unified memory. CUDA and system memory values must not be added together.",
+  "mt": {
+    "beam_size": 1,
+    "calls": 1,
+    "compute_type": "float16",
+    "latency_ms": 500.4696319992945,
+    "max_decoding_length": 256,
+    "model_id": "facebook/nllb-200-distilled-600M",
+    "model_path": "/workspace/models/ctranslate2/nllb-200-distilled-600M-fp16",
+    "policy": "final_only",
+    "revision": "f8d333a098d19b4fd9a8b18f94170487ad3f821d",
+    "runtime": "CTranslate2",
+    "tokenizer_path": "/workspace/models/nllb_tokenizer",
+    "translated_text": "Estas são às vezes praias familiares lotadas com uma boa gama de lojas ao longo da praia, nadar é seguro."
+  },
+  "startup": {
+    "model_load_ms": {
+      "asr": 136077.37484099925,
+      "mt": 23080.548704001558,
+      "total": 162980.18402000162,
+      "tts": 3822.260475000803
+    },
+    "warmup": {
+      "asr_bucket_total_ms": 17790.40860200257,
+      "asr_bucket_warmups": [
+        {
+          "bucket_s": 8,
+          "compute_ms": 12446.263244000875,
+          "rtf": 1.5714978843435448,
+          "text": "Bishkek was described as sinking into a state of anarchy by one observer, as gangs of people roamed the street and plundered stores of consumer goods."
+        },
+        {
+          "bucket_s": 12,
+          "compute_ms": 1803.7221929989755,
+          "rtf": 0.2277427011362343,
+          "text": "Bishkek was described as sinking into a state of anarchy by one observer, as gangs of people roamed the street and plundered stores of consumer goods."
+        },
+        {
+          "bucket_s": 16,
+          "compute_ms": 1732.8876960018533,
+          "rtf": 0.21879895151538553,
+          "text": "Bishkek was described as sinking into a state of anarchy by one observer, as gangs of people roamed the street and plundered stores of consumer goods."
+        },
+        {
+          "bucket_s": 24,
+          "compute_ms": 1807.535469000868,
+          "rtf": 0.22822417537889747,
+          "text": "Bishkek was described as sinking into a state of anarchy by one observer, as gangs of people roamed the street and plundered stores of consumer goods."
+        }
+      ],
+      "asr_ms": 12446.263244000875,
+      "asr_rtf": 1.5714978843435448,
+      "asr_text": "Bishkek was described as sinking into a state of anarchy by one observer, as gangs of people roamed the street and plundered stores of consumer goods.",
+      "input_audio": "/workspace/data/multilingual_eval/warmup/warmup_en.wav",
+      "input_duration_s": 7.92,
+      "input_load_ms": 5.235019001702312,
+      "mt_ms": 2586.069895001856,
+      "total_ms": 22574.523634997604,
+      "translated_text": "Bishkek foi descrito como mergulhando em um estado de anarquia por um observador, enquanto gangues de pessoas vagam pelas ruas e saqueam lojas de bens de consumo.",
+      "tts_ms": 1644.4127190006839
+    },
+    "warmup_enabled": true
+  },
+  "steady_state_metrics": {
+    "asr_compute_ms": 289.73381299874745,
+    "asr_rtf": 0.029808005452546034,
+    "compute_and_runtime_ms": 1265.6226610015437,
+    "file_to_file_wall_ms": 1323.8795329998538,
+    "input_load_ms": 53.1105279987969,
+    "mt_ms": 500.4696319992945,
+    "output_write_ms": 1.5462579976883717,
+    "tts_synthesis_ms": 475.4192160035018
+  },
+  "target_hardware": "NVIDIA Jetson Orin Nano 8 GB",
+  "tts": {
+    "audio": {
+      "channels": 1,
+      "duration_s": 4.934240362811791,
+      "frames": 108800,
+      "sample_rate": 22050,
+      "sample_width_bytes": 2
+    },
+    "execution_provider": "CPUExecutionProvider",
+    "family": "Piper",
+    "output_write_ms": 1.5462579976883717,
+    "runtime": "ONNX Runtime CPU",
+    "synthesis_ms": 475.4192160035018,
+    "voice": "pt_PT-tugão-medium"
+  }
+}

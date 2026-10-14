@@ -1,0 +1,152 @@
+{
+  "configuration": {
+    "asr_mode": "full_utterance",
+    "jobs": 7,
+    "mt_compute_type": "float16",
+    "mt_runtime": "CTranslate2",
+    "source_language": "en",
+    "target_language": "pt",
+    "tts_runtime": "ONNX Runtime CPU"
+  },
+  "experiment": "Jetson persistent full-utterance S2S repeated-execution test",
+  "startup": {
+    "model_load_ms": {
+      "asr": 137604.73694900065,
+      "mt": 24416.48099900067,
+      "total": 165778.44316200115,
+      "tts": 3757.2252139998454
+    },
+    "warmup": {
+      "asr_ms": 12251.260072999685,
+      "asr_rtf": 2.041876678833281,
+      "asr_text": "Rolando Mendoza fired his M-16 rifle at the tourists.",
+      "input_audio": "/workspace/data/multilingual_eval/warmup_multiduration/en/warmup_en_06s.wav",
+      "input_duration_s": 6.0,
+      "input_load_ms": 6.99677100055851,
+      "mt_ms": 1474.0430749998268,
+      "total_ms": 14847.503212999982,
+      "translated_text": "Rolando Mendoza disparou o seu rifle M-16 contra os turistas.",
+      "tts_ms": 722.7404209997985
+    }
+  },
+  "summary": {
+    "asr_ms": {
+      "max": 1878.9765809997334,
+      "mean": 1681.4537717143269,
+      "median": 1750.225400999625,
+      "min": 1140.3957669999727
+    },
+    "asr_rtf": {
+      "max": 0.26056158722750405,
+      "mean": 0.17544199059468005,
+      "median": 0.1658976894032655,
+      "min": 0.13088200744684225
+    },
+    "compute_total_ms": {
+      "max": 3959.210789000281,
+      "mean": 2920.7192950000585,
+      "median": 2901.9687079990035,
+      "min": 2073.0780430003506
+    },
+    "file_to_file_wall_ms": {
+      "max": 3987.7914529997724,
+      "mean": 2951.8830152857327,
+      "median": 2920.312859999285,
+      "min": 2088.2082140005878
+    },
+    "input_load_ms": {
+      "max": 109.07023499930801,
+      "mean": 21.39074585712868,
+      "median": 6.157396000162407,
+      "min": 3.6251880001145764
+    },
+    "jobs": 7,
+    "memory": {
+      "after_each_job": [
+        {
+          "device_free_mb": 496.58984375,
+          "device_total_mb": 7607.31640625,
+          "system_available_mb": 497.61328125,
+          "torch_allocated_mb": 1224.46875,
+          "torch_reserved_mb": 1482.0
+        },
+        {
+          "device_free_mb": 461.68359375,
+          "device_total_mb": 7607.31640625,
+          "system_available_mb": 463.328125,
+          "torch_allocated_mb": 1224.46875,
+          "torch_reserved_mb": 1530.0
+        },
+        {
+          "device_free_mb": 445.56640625,
+          "device_total_mb": 7607.31640625,
+          "system_available_mb": 447.37890625,
+          "torch_allocated_mb": 1224.46875,
+          "torch_reserved_mb": 1530.0
+        },
+        {
+          "device_free_mb": 442.578125,
+          "device_total_mb": 7607.31640625,
+          "system_available_mb": 444.49609375,
+          "torch_allocated_mb": 1224.46875,
+          "torch_reserved_mb": 1530.0
+        },
+        {
+          "device_free_mb": 434.1640625,
+          "device_total_mb": 7607.31640625,
+          "system_available_mb": 436.109375,
+          "torch_allocated_mb": 1224.46875,
+          "torch_reserved_mb": 1530.0
+        },
+        {
+          "device_free_mb": 426.3671875,
+          "device_total_mb": 7607.31640625,
+          "system_available_mb": 428.390625,
+          "torch_allocated_mb": 1224.46875,
+          "torch_reserved_mb": 1530.0
+        },
+        {
+          "device_free_mb": 365.4453125,
+          "device_total_mb": 7607.31640625,
+          "system_available_mb": 381.5546875,
+          "torch_allocated_mb": 1224.46875,
+          "torch_reserved_mb": 1578.0
+        }
+      ],
+      "after_warmup": {
+        "device_free_mb": 548.40625,
+        "device_total_mb": 7607.31640625,
+        "system_available_mb": 549.05078125,
+        "torch_allocated_mb": 1224.46875,
+        "torch_reserved_mb": 1480.0
+      },
+      "system_available_change_mb": -167.49609375
+    },
+    "mt_ms": {
+      "max": 890.7376170000134,
+      "mean": 570.9084794286484,
+      "median": 536.7361680000613,
+      "min": 400.2527789998567
+    },
+    "output_consistency": {
+      "asr_exactly_stable": null,
+      "asr_unique_outputs": null,
+      "comparable": false,
+      "mt_exactly_stable": null,
+      "mt_unique_outputs": null,
+      "reason": "batch contains different input audio paths"
+    },
+    "output_write_ms": {
+      "max": 16.976574000182154,
+      "mean": 5.113801142865019,
+      "median": 4.476627999792981,
+      "min": 0.5581859995800187
+    },
+    "tts_ms": {
+      "max": 1223.0368669997915,
+      "mean": 668.3570438570833,
+      "median": 495.7182799998918,
+      "min": 414.0982550006811
+    }
+  }
+}

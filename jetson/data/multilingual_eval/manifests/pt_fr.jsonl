@@ -1,0 +1,5 @@
+{"id": "eval_01", "audio": "/workspace/data/multilingual_eval/audio/pt_1853.wav", "output": "/workspace/results/final_benchmarks/multilingual_eval/pt_fr/eval_01.wav"}
+{"id": "eval_02", "audio": "/workspace/data/multilingual_eval/audio/pt_1669.wav", "output": "/workspace/results/final_benchmarks/multilingual_eval/pt_fr/eval_02.wav"}
+{"id": "eval_03", "audio": "/workspace/data/multilingual_eval/audio/pt_1959.wav", "output": "/workspace/results/final_benchmarks/multilingual_eval/pt_fr/eval_03.wav"}
+{"id": "eval_04", "audio": "/workspace/data/multilingual_eval/audio/pt_1988.wav", "output": "/workspace/results/final_benchmarks/multilingual_eval/pt_fr/eval_04.wav"}
+{"id": "eval_05", "audio": "/workspace/data/multilingual_eval/audio/pt_1843.wav", "output": "/workspace/results/final_benchmarks/multilingual_eval/pt_fr/eval_05.wav"}

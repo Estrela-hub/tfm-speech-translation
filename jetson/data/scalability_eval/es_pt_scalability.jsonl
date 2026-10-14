@@ -1,0 +1,16 @@
+{"id": "stabilization", "audio": "/workspace/data/multilingual_eval/warmup/warmup_es_bucket.wav", "output": "/workspace/results/final_benchmarks/scalability_es_pt/stabilization.wav"}
+{"id": "es_1894_r1", "audio": "/workspace/data/multilingual_eval/audio/es_1894.wav", "output": "/workspace/results/final_benchmarks/scalability_es_pt/es_1894_r1.wav"}
+{"id": "es_1962_r1", "audio": "/workspace/data/multilingual_eval/audio/es_1962.wav", "output": "/workspace/results/final_benchmarks/scalability_es_pt/es_1962_r1.wav"}
+{"id": "es_1675_r1", "audio": "/workspace/data/multilingual_eval/audio/es_1675.wav", "output": "/workspace/results/final_benchmarks/scalability_es_pt/es_1675_r1.wav"}
+{"id": "es_1835_r1", "audio": "/workspace/data/multilingual_eval/audio/es_1835.wav", "output": "/workspace/results/final_benchmarks/scalability_es_pt/es_1835_r1.wav"}
+{"id": "es_1685_r1", "audio": "/workspace/data/multilingual_eval/audio/es_1685.wav", "output": "/workspace/results/final_benchmarks/scalability_es_pt/es_1685_r1.wav"}
+{"id": "es_1894_r2", "audio": "/workspace/data/multilingual_eval/audio/es_1894.wav", "output": "/workspace/results/final_benchmarks/scalability_es_pt/es_1894_r2.wav"}
+{"id": "es_1962_r2", "audio": "/workspace/data/multilingual_eval/audio/es_1962.wav", "output": "/workspace/results/final_benchmarks/scalability_es_pt/es_1962_r2.wav"}
+{"id": "es_1675_r2", "audio": "/workspace/data/multilingual_eval/audio/es_1675.wav", "output": "/workspace/results/final_benchmarks/scalability_es_pt/es_1675_r2.wav"}
+{"id": "es_1835_r2", "audio": "/workspace/data/multilingual_eval/audio/es_1835.wav", "output": "/workspace/results/final_benchmarks/scalability_es_pt/es_1835_r2.wav"}
+{"id": "es_1685_r2", "audio": "/workspace/data/multilingual_eval/audio/es_1685.wav", "output": "/workspace/results/final_benchmarks/scalability_es_pt/es_1685_r2.wav"}
+{"id": "es_1894_r3", "audio": "/workspace/data/multilingual_eval/audio/es_1894.wav", "output": "/workspace/results/final_benchmarks/scalability_es_pt/es_1894_r3.wav"}
+{"id": "es_1962_r3", "audio": "/workspace/data/multilingual_eval/audio/es_1962.wav", "output": "/workspace/results/final_benchmarks/scalability_es_pt/es_1962_r3.wav"}
+{"id": "es_1675_r3", "audio": "/workspace/data/multilingual_eval/audio/es_1675.wav", "output": "/workspace/results/final_benchmarks/scalability_es_pt/es_1675_r3.wav"}
+{"id": "es_1835_r3", "audio": "/workspace/data/multilingual_eval/audio/es_1835.wav", "output": "/workspace/results/final_benchmarks/scalability_es_pt/es_1835_r3.wav"}
+{"id": "es_1685_r3", "audio": "/workspace/data/multilingual_eval/audio/es_1685.wav", "output": "/workspace/results/final_benchmarks/scalability_es_pt/es_1685_r3.wav"}

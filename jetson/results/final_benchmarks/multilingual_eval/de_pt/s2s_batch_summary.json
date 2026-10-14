@@ -1,0 +1,165 @@
+{
+  "configuration": {
+    "asr_mode": "full_utterance",
+    "jobs": 5,
+    "mt_compute_type": "float16",
+    "mt_runtime": "CTranslate2",
+    "source_language": "de",
+    "target_language": "pt",
+    "tts_runtime": "ONNX Runtime CPU"
+  },
+  "experiment": "Jetson persistent full-utterance S2S repeated-execution test",
+  "startup": {
+    "model_load_ms": {
+      "asr": 135836.4271729988,
+      "mt": 24075.083235999045,
+      "total": 164000.11350400018,
+      "tts": 4088.603095002327
+    },
+    "warmup": {
+      "asr_bucket_total_ms": 17165.309218999028,
+      "asr_bucket_warmups": [
+        {
+          "bucket_s": 8,
+          "compute_ms": 11701.179497002158,
+          "rtf": 1.466313220175709,
+          "text": "Er war nicht dazu in der Lage, die benötigten Medikamente einzunehmen, um seinen Schmerz zu verwenden, da sie bei den Commonwealth Games verboten sind."
+        },
+        {
+          "bucket_s": 12,
+          "compute_ms": 1840.1277049997589,
+          "rtf": 0.23059244423555875,
+          "text": "Er war nicht dazu in der Lage, die benötigten Medikamente einzunehmen, um seinen Schmerz zu verwenden, da sie bei den Commonwealth Games verboten sind."
+        },
+        {
+          "bucket_s": 16,
+          "compute_ms": 1787.9224509997584,
+          "rtf": 0.22405043245611006,
+          "text": "Er war nicht dazu in der Lage, die benötigten Medikamente einzunehmen, um seinen Schmerz zu verwenden, da sie bei den Commonwealth Games verboten sind."
+        },
+        {
+          "bucket_s": 24,
+          "compute_ms": 1836.079565997352,
+          "rtf": 0.23008515864628468,
+          "text": "Er war nicht dazu in der Lage, die benötigten Medikamente einzunehmen, um seinen Schmerz zu verwenden, da sie bei den Commonwealth Games verboten sind."
+        }
+      ],
+      "asr_ms": 11701.179497002158,
+      "asr_rtf": 1.466313220175709,
+      "asr_text": "Er war nicht dazu in der Lage, die benötigten Medikamente einzunehmen, um seinen Schmerz zu verwenden, da sie bei den Commonwealth Games verboten sind.",
+      "input_audio": "/workspace/data/multilingual_eval/warmup/warmup_de.wav",
+      "input_duration_s": 7.98,
+      "input_load_ms": 4.616760998032987,
+      "mt_ms": 2269.5979379968776,
+      "total_ms": 21689.510775999224,
+      "translated_text": "Ele não conseguiu tomar os medicamentos necessários para usar a dor, pois eles são proibidos nos Jogos da Commonwealth.",
+      "tts_ms": 1937.9706530016847
+    }
+  },
+  "summary": {
+    "asr_ms": {
+      "max": 483.0877580025117,
+      "mean": 383.6421006002638,
+      "median": 377.24888999946415,
+      "min": 333.670741001697
+    },
+    "asr_rtf": {
+      "max": 0.05080867976164968,
+      "mean": 0.033222173019364,
+      "median": 0.028086762710580557,
+      "min": 0.022241609484461865
+    },
+    "compute_total_ms": {
+      "max": 3349.5107740018284,
+      "mean": 2634.9985264008865,
+      "median": 2467.500231003214,
+      "min": 2147.133512000437
+    },
+    "file_to_file_wall_ms": {
+      "max": 3380.397364999226,
+      "mean": 2659.648712599301,
+      "median": 2480.431635998684,
+      "min": 2159.71949699815
+    },
+    "input_load_ms": {
+      "max": 36.1975199994049,
+      "mean": 16.386201001296286,
+      "median": 7.672318002732936,
+      "min": 6.690174002869753
+    },
+    "jobs": 5,
+    "memory": {
+      "after_each_job": [
+        {
+          "device_free_mb": 476.1484375,
+          "device_total_mb": 7607.31640625,
+          "system_available_mb": 484.91015625,
+          "torch_allocated_mb": 1224.46875,
+          "torch_reserved_mb": 1654.0
+        },
+        {
+          "device_free_mb": 446.5390625,
+          "device_total_mb": 7607.31640625,
+          "system_available_mb": 460.52734375,
+          "torch_allocated_mb": 1224.46875,
+          "torch_reserved_mb": 1654.0
+        },
+        {
+          "device_free_mb": 450.046875,
+          "device_total_mb": 7607.31640625,
+          "system_available_mb": 464.2109375,
+          "torch_allocated_mb": 1224.46875,
+          "torch_reserved_mb": 1654.0
+        },
+        {
+          "device_free_mb": 453.94140625,
+          "device_total_mb": 7607.31640625,
+          "system_available_mb": 468.19140625,
+          "torch_allocated_mb": 1224.46875,
+          "torch_reserved_mb": 1654.0
+        },
+        {
+          "device_free_mb": 443.51953125,
+          "device_total_mb": 7607.31640625,
+          "system_available_mb": 457.9765625,
+          "torch_allocated_mb": 1224.46875,
+          "torch_reserved_mb": 1654.0
+        }
+      ],
+      "after_warmup": {
+        "device_free_mb": 480.2265625,
+        "device_total_mb": 7607.31640625,
+        "system_available_mb": 481.62890625,
+        "torch_allocated_mb": 1224.46875,
+        "torch_reserved_mb": 1654.0
+      },
+      "system_available_change_mb": -23.65234375
+    },
+    "mt_ms": {
+      "max": 577.8900059995067,
+      "mean": 521.6954774012265,
+      "median": 551.7881790001411,
+      "min": 390.56952300234116
+    },
+    "output_consistency": {
+      "asr_exactly_stable": null,
+      "asr_unique_outputs": null,
+      "comparable": false,
+      "mt_exactly_stable": null,
+      "mt_unique_outputs": null,
+      "reason": "batch contains different input audio paths"
+    },
+    "output_write_ms": {
+      "max": 5.84595299733337,
+      "mean": 2.4922551994677633,
+      "median": 1.3614529998449143,
+      "min": 0.5253609997453168
+    },
+    "tts_ms": {
+      "max": 2314.6348369991756,
+      "mean": 1729.6609483993961,
+      "median": 1612.566001000232,
+      "min": 1357.2015399986412
+    }
+  }
+}

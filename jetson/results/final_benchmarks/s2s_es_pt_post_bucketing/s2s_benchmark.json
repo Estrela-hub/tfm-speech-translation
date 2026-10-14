@@ -1,0 +1,886 @@
+{
+  "architecture": "16 kHz PCM16 WAV -> full-utterance Parakeet FP16 CUDA -> NLLB CTranslate2 FP16 CUDA final-only -> Piper ONNX Runtime CPU -> WAV",
+  "benchmark_note": "Model loading and stabilization runs are excluded from measured steady-state statistics.",
+  "configuration": {
+    "input": {
+      "channels": 1,
+      "duration_s": 7.68,
+      "frames": 122880,
+      "sample_rate": 16000,
+      "sample_width_bytes": 2
+    },
+    "input_audio": "/workspace/data/fleur_es_sample.wav",
+    "measured_runs": 20,
+    "output_directory": "/workspace/results/final_benchmarks/s2s_es_pt_post_bucketing",
+    "source_code": "spa_Latn",
+    "source_language": "es",
+    "target_code": "por_Latn",
+    "target_language": "pt",
+    "warmup_runs": 3
+  },
+  "environment": {
+    "ctranslate2": "4.8.2",
+    "cuda": "12.9",
+    "gpu": "Orin",
+    "nemo": "3.0.0",
+    "onnxruntime": "1.30.0",
+    "python": "3.12.3",
+    "pytorch": "2.8.0a0+5228986c39.nv25.06",
+    "transformers": "5.17.0"
+  },
+  "experiment": "Final Jetson persistent Speech-to-Speech benchmark",
+  "memory": {
+    "after_asr": {
+      "device_free_mb": 2881.203125,
+      "device_total_mb": 7607.31640625,
+      "system_available_mb": 2885.27734375,
+      "torch_allocated_mb": 1216.345703125,
+      "torch_reserved_mb": 1478.0
+    },
+    "after_benchmark": {
+      "device_free_mb": 358.85546875,
+      "device_total_mb": 7607.31640625,
+      "system_available_mb": 377.73046875,
+      "torch_allocated_mb": 1224.46875,
+      "torch_reserved_mb": 1654.0
+    },
+    "after_mt": {
+      "device_free_mb": 1318.09375,
+      "device_total_mb": 7607.31640625,
+      "system_available_mb": 1322.3515625,
+      "torch_allocated_mb": 1216.34375,
+      "torch_reserved_mb": 1478.0
+    },
+    "after_tts": {
+      "device_free_mb": 1314.96875,
+      "device_total_mb": 7607.31640625,
+      "system_available_mb": 1319.2890625,
+      "torch_allocated_mb": 1216.34375,
+      "torch_reserved_mb": 1478.0
+    },
+    "after_warmup": {
+      "device_free_mb": 346.08984375,
+      "device_total_mb": 7607.31640625,
+      "system_available_mb": 346.77734375,
+      "torch_allocated_mb": 1224.46875,
+      "torch_reserved_mb": 1654.0
+    },
+    "before_models": {
+      "device_free_mb": 4982.89453125,
+      "device_total_mb": 7607.31640625,
+      "system_available_mb": 4987.8828125,
+      "torch_allocated_mb": 0.0,
+      "torch_reserved_mb": 0.0
+    }
+  },
+  "memory_note": "Jetson uses unified memory. CUDA and system memory values must not be added together.",
+  "model_load_ms": {
+    "asr": 131614.11094399955,
+    "mt": 22617.535367000528,
+    "total": 157969.44434100078,
+    "tts": 3737.798030000704
+  },
+  "models": {
+    "asr": {
+      "mode": "full_utterance",
+      "model_id": "nvidia/parakeet-tdt-0.6b-v3",
+      "precision": "torch.float16",
+      "revision": "541d1f99c6b0c3cd0b11a95167540bb8edefd82b"
+    },
+    "mt": {
+      "compute_type": "float16",
+      "model_id": "facebook/nllb-200-distilled-600M",
+      "policy": "final_only",
+      "revision": "f8d333a098d19b4fd9a8b18f94170487ad3f821d",
+      "runtime": "CTranslate2"
+    },
+    "tts": {
+      "family": "Piper",
+      "runtime": "ONNX Runtime CPU",
+      "voice": "pt_PT-tugão-medium"
+    }
+  },
+  "output_consistency": {
+    "asr_exact": true,
+    "asr_text": "Esto parece tener sentido, ya que en la Tierra no se percibe su movimiento, ¿cierto?",
+    "mt_exact": true,
+    "translated_text": "Isto parece fazer sentido, já que na Terra não se percebe o seu movimento, certo?"
+  },
+  "runs": [
+    {
+      "asr_ms": 264.80937100131996,
+      "asr_rtf": 0.034480386849130205,
+      "asr_text": "Esto parece tener sentido, ya que en la Tierra no se percibe su movimiento, ¿cierto?",
+      "compute_total_ms": 1094.42434200173,
+      "file_to_file_wall_ms": 1104.8095160003868,
+      "input": {
+        "channels": 1,
+        "duration_s": 7.68,
+        "frames": 122880,
+        "sample_rate": 16000,
+        "sample_width_bytes": 2
+      },
+      "input_audio": "/workspace/data/fleur_es_sample.wav",
+      "input_load_ms": 0.22778399943490513,
+      "job_id": "run_01",
+      "mt_ms": 399.1452890004439,
+      "output_audio": "/workspace/results/final_benchmarks/s2s_es_pt_post_bucketing/run_01.wav",
+      "output_write_ms": 2.834077000443358,
+      "translated_text": "Isto parece fazer sentido, já que na Terra não se percebe o seu movimento, certo?",
+      "tts_info": {
+        "channels": 1,
+        "duration_s": 4.307301587301588,
+        "frames": 94976,
+        "sample_rate": 22050,
+        "sample_width_bytes": 2
+      },
+      "tts_ms": 430.46968199996627
+    },
+    {
+      "asr_ms": 263.737368000875,
+      "asr_rtf": 0.034340803125113936,
+      "asr_text": "Esto parece tener sentido, ya que en la Tierra no se percibe su movimiento, ¿cierto?",
+      "compute_total_ms": 1037.1928220010886,
+      "file_to_file_wall_ms": 1041.7708929999208,
+      "input": {
+        "channels": 1,
+        "duration_s": 7.68,
+        "frames": 122880,
+        "sample_rate": 16000,
+        "sample_width_bytes": 2
+      },
+      "input_audio": "/workspace/data/fleur_es_sample.wav",
+      "input_load_ms": 0.23213600070448592,
+      "job_id": "run_02",
+      "mt_ms": 372.72003299949574,
+      "output_audio": "/workspace/results/final_benchmarks/s2s_es_pt_post_bucketing/run_02.wav",
+      "output_write_ms": 1.0128649992111605,
+      "translated_text": "Isto parece fazer sentido, já que na Terra não se percebe o seu movimento, certo?",
+      "tts_info": {
+        "channels": 1,
+        "duration_s": 4.133151927437642,
+        "frames": 91136,
+        "sample_rate": 22050,
+        "sample_width_bytes": 2
+      },
+      "tts_ms": 400.7354210007179
+    },
+    {
+      "asr_ms": 263.3895799990569,
+      "asr_rtf": 0.034295518229043864,
+      "asr_text": "Esto parece tener sentido, ya que en la Tierra no se percibe su movimiento, ¿cierto?",
+      "compute_total_ms": 1049.1973440002766,
+      "file_to_file_wall_ms": 1053.6757950030733,
+      "input": {
+        "channels": 1,
+        "duration_s": 7.68,
+        "frames": 122880,
+        "sample_rate": 16000,
+        "sample_width_bytes": 2
+      },
+      "input_audio": "/workspace/data/fleur_es_sample.wav",
+      "input_load_ms": 0.20887099890387617,
+      "job_id": "run_03",
+      "mt_ms": 380.14248499894165,
+      "output_audio": "/workspace/results/final_benchmarks/s2s_es_pt_post_bucketing/run_03.wav",
+      "output_write_ms": 0.9693440006230958,
+      "translated_text": "Isto parece fazer sentido, já que na Terra não se percebe o seu movimento, certo?",
+      "tts_info": {
+        "channels": 1,
+        "duration_s": 4.121541950113379,
+        "frames": 90880,
+        "sample_rate": 22050,
+        "sample_width_bytes": 2
+      },
+      "tts_ms": 405.6652790022781
+    },
+    {
+      "asr_ms": 262.32125599926803,
+      "asr_rtf": 0.03415641354157136,
+      "asr_text": "Esto parece tener sentido, ya que en la Tierra no se percibe su movimiento, ¿cierto?",
+      "compute_total_ms": 1199.316722995718,
+      "file_to_file_wall_ms": 1204.2362789979961,
+      "input": {
+        "channels": 1,
+        "duration_s": 7.68,
+        "frames": 122880,
+        "sample_rate": 16000,
+        "sample_width_bytes": 2
+      },
+      "input_audio": "/workspace/data/fleur_es_sample.wav",
+      "input_load_ms": 0.20467799913603812,
+      "job_id": "run_04",
+      "mt_ms": 382.3445729976811,
+      "output_audio": "/workspace/results/final_benchmarks/s2s_es_pt_post_bucketing/run_04.wav",
+      "output_write_ms": 1.4124939989414997,
+      "translated_text": "Isto parece fazer sentido, já que na Terra não se percebe o seu movimento, certo?",
+      "tts_info": {
+        "channels": 1,
+        "duration_s": 4.330521541950113,
+        "frames": 95488,
+        "sample_rate": 22050,
+        "sample_width_bytes": 2
+      },
+      "tts_ms": 554.6508939987689
+    },
+    {
+      "asr_ms": 265.51752199884504,
+      "asr_rtf": 0.034572594010266286,
+      "asr_text": "Esto parece tener sentido, ya que en la Tierra no se percibe su movimiento, ¿cierto?",
+      "compute_total_ms": 1053.677329000493,
+      "file_to_file_wall_ms": 1058.1440050009405,
+      "input": {
+        "channels": 1,
+        "duration_s": 7.68,
+        "frames": 122880,
+        "sample_rate": 16000,
+        "sample_width_bytes": 2
+      },
+      "input_audio": "/workspace/data/fleur_es_sample.wav",
+      "input_load_ms": 0.2335760000278242,
+      "job_id": "run_05",
+      "mt_ms": 369.89945900131715,
+      "output_audio": "/workspace/results/final_benchmarks/s2s_es_pt_post_bucketing/run_05.wav",
+      "output_write_ms": 0.6144850012788083,
+      "translated_text": "Isto parece fazer sentido, já que na Terra não se percebe o seu movimento, certo?",
+      "tts_info": {
+        "channels": 1,
+        "duration_s": 4.249251700680272,
+        "frames": 93696,
+        "sample_rate": 22050,
+        "sample_width_bytes": 2
+      },
+      "tts_ms": 418.26034800033085
+    },
+    {
+      "asr_ms": 263.21280500269495,
+      "asr_rtf": 0.034272500651392576,
+      "asr_text": "Esto parece tener sentido, ya que en la Tierra no se percibe su movimiento, ¿cierto?",
+      "compute_total_ms": 1038.3809200029646,
+      "file_to_file_wall_ms": 1043.2207269986975,
+      "input": {
+        "channels": 1,
+        "duration_s": 7.68,
+        "frames": 122880,
+        "sample_rate": 16000,
+        "sample_width_bytes": 2
+      },
+      "input_audio": "/workspace/data/fleur_es_sample.wav",
+      "input_load_ms": 0.20167100228718482,
+      "job_id": "run_06",
+      "mt_ms": 383.0670290008129,
+      "output_audio": "/workspace/results/final_benchmarks/s2s_es_pt_post_bucketing/run_06.wav",
+      "output_write_ms": 1.370189002045663,
+      "translated_text": "Isto parece fazer sentido, já que na Terra não se percebe o seu movimento, certo?",
+      "tts_info": {
+        "channels": 1,
+        "duration_s": 4.0751020408163265,
+        "frames": 89856,
+        "sample_rate": 22050,
+        "sample_width_bytes": 2
+      },
+      "tts_ms": 392.1010859994567
+    },
+    {
+      "asr_ms": 263.1039049992978,
+      "asr_rtf": 0.03425832096345024,
+      "asr_text": "Esto parece tener sentido, ya que en la Tierra no se percibe su movimiento, ¿cierto?",
+      "compute_total_ms": 1043.108050002047,
+      "file_to_file_wall_ms": 1047.798668998439,
+      "input": {
+        "channels": 1,
+        "duration_s": 7.68,
+        "frames": 122880,
+        "sample_rate": 16000,
+        "sample_width_bytes": 2
+      },
+      "input_audio": "/workspace/data/fleur_es_sample.wav",
+      "input_load_ms": 0.20099900211789645,
+      "job_id": "run_07",
+      "mt_ms": 380.99137600147515,
+      "output_audio": "/workspace/results/final_benchmarks/s2s_es_pt_post_bucketing/run_07.wav",
+      "output_write_ms": 1.2077510000381153,
+      "translated_text": "Isto parece fazer sentido, já que na Terra não se percebe o seu movimento, certo?",
+      "tts_info": {
+        "channels": 1,
+        "duration_s": 4.179591836734694,
+        "frames": 92160,
+        "sample_rate": 22050,
+        "sample_width_bytes": 2
+      },
+      "tts_ms": 399.01276900127414
+    },
+    {
+      "asr_ms": 260.07612499961397,
+      "asr_rtf": 0.0338640787759914,
+      "asr_text": "Esto parece tener sentido, ya que en la Tierra no se percibe su movimiento, ¿cierto?",
+      "compute_total_ms": 1047.3171480007295,
+      "file_to_file_wall_ms": 1051.436644000205,
+      "input": {
+        "channels": 1,
+        "duration_s": 7.68,
+        "frames": 122880,
+        "sample_rate": 16000,
+        "sample_width_bytes": 2
+      },
+      "input_audio": "/workspace/data/fleur_es_sample.wav",
+      "input_load_ms": 0.21683899831259623,
+      "job_id": "run_08",
+      "mt_ms": 370.9059230022831,
+      "output_audio": "/workspace/results/final_benchmarks/s2s_es_pt_post_bucketing/run_08.wav",
+      "output_write_ms": 0.5693949970009271,
+      "translated_text": "Isto parece fazer sentido, já que na Terra não se percebe o seu movimento, certo?",
+      "tts_info": {
+        "channels": 1,
+        "duration_s": 3.9938321995464854,
+        "frames": 88064,
+        "sample_rate": 22050,
+        "sample_width_bytes": 2
+      },
+      "tts_ms": 416.33509999883245
+    },
+    {
+      "asr_ms": 266.0079690031125,
+      "asr_rtf": 0.03463645429728028,
+      "asr_text": "Esto parece tener sentido, ya que en la Tierra no se percibe su movimiento, ¿cierto?",
+      "compute_total_ms": 1077.8423470037524,
+      "file_to_file_wall_ms": 1081.96504100124,
+      "input": {
+        "channels": 1,
+        "duration_s": 7.68,
+        "frames": 122880,
+        "sample_rate": 16000,
+        "sample_width_bytes": 2
+      },
+      "input_audio": "/workspace/data/fleur_es_sample.wav",
+      "input_load_ms": 0.18877399998018518,
+      "job_id": "run_09",
+      "mt_ms": 373.3308670016413,
+      "output_audio": "/workspace/results/final_benchmarks/s2s_es_pt_post_bucketing/run_09.wav",
+      "output_write_ms": 0.5746429997088853,
+      "translated_text": "Isto parece fazer sentido, já que na Terra não se percebe o seu movimento, certo?",
+      "tts_info": {
+        "channels": 1,
+        "duration_s": 4.179591836734694,
+        "frames": 92160,
+        "sample_rate": 22050,
+        "sample_width_bytes": 2
+      },
+      "tts_ms": 438.50351099899854
+    },
+    {
+      "asr_ms": 263.3054789985181,
+      "asr_rtf": 0.034284567577932044,
+      "asr_text": "Esto parece tener sentido, ya que en la Tierra no se percibe su movimiento, ¿cierto?",
+      "compute_total_ms": 1396.6983899990737,
+      "file_to_file_wall_ms": 1402.3021280008834,
+      "input": {
+        "channels": 1,
+        "duration_s": 7.68,
+        "frames": 122880,
+        "sample_rate": 16000,
+        "sample_width_bytes": 2
+      },
+      "input_audio": "/workspace/data/fleur_es_sample.wav",
+      "input_load_ms": 0.18429400006425567,
+      "job_id": "run_10",
+      "mt_ms": 378.59391900201445,
+      "output_audio": "/workspace/results/final_benchmarks/s2s_es_pt_post_bucketing/run_10.wav",
+      "output_write_ms": 1.5762109978822991,
+      "translated_text": "Isto parece fazer sentido, já que na Terra não se percebe o seu movimento, certo?",
+      "tts_info": {
+        "channels": 1,
+        "duration_s": 4.214421768707483,
+        "frames": 92928,
+        "sample_rate": 22050,
+        "sample_width_bytes": 2
+      },
+      "tts_ms": 754.7989919985412
+    },
+    {
+      "asr_ms": 265.8637720014667,
+      "asr_rtf": 0.034617678646024316,
+      "asr_text": "Esto parece tener sentido, ya que en la Tierra no se percibe su movimiento, ¿cierto?",
+      "compute_total_ms": 1059.394311003416,
+      "file_to_file_wall_ms": 1064.3831480010704,
+      "input": {
+        "channels": 1,
+        "duration_s": 7.68,
+        "frames": 122880,
+        "sample_rate": 16000,
+        "sample_width_bytes": 2
+      },
+      "input_audio": "/workspace/data/fleur_es_sample.wav",
+      "input_load_ms": 0.22592800087295473,
+      "job_id": "run_11",
+      "mt_ms": 388.26863700160175,
+      "output_audio": "/workspace/results/final_benchmarks/s2s_es_pt_post_bucketing/run_11.wav",
+      "output_write_ms": 1.2989870010642335,
+      "translated_text": "Isto parece fazer sentido, já que na Terra não se percebe o seu movimento, certo?",
+      "tts_info": {
+        "channels": 1,
+        "duration_s": 4.237641723356009,
+        "frames": 93440,
+        "sample_rate": 22050,
+        "sample_width_bytes": 2
+      },
+      "tts_ms": 405.2619020003476
+    },
+    {
+      "asr_ms": 263.441322997096,
+      "asr_rtf": 0.03430225559858021,
+      "asr_text": "Esto parece tener sentido, ya que en la Tierra no se percibe su movimiento, ¿cierto?",
+      "compute_total_ms": 1044.3619429970568,
+      "file_to_file_wall_ms": 1049.1587090000394,
+      "input": {
+        "channels": 1,
+        "duration_s": 7.68,
+        "frames": 122880,
+        "sample_rate": 16000,
+        "sample_width_bytes": 2
+      },
+      "input_audio": "/workspace/data/fleur_es_sample.wav",
+      "input_load_ms": 0.22506299865199253,
+      "job_id": "run_12",
+      "mt_ms": 375.9861529979389,
+      "output_audio": "/workspace/results/final_benchmarks/s2s_es_pt_post_bucketing/run_12.wav",
+      "output_write_ms": 1.3322039994818624,
+      "translated_text": "Isto parece fazer sentido, já que na Terra não se percebe o seu movimento, certo?",
+      "tts_info": {
+        "channels": 1,
+        "duration_s": 4.121541950113379,
+        "frames": 90880,
+        "sample_rate": 22050,
+        "sample_width_bytes": 2
+      },
+      "tts_ms": 404.93446700202185
+    },
+    {
+      "asr_ms": 263.9228739972168,
+      "asr_rtf": 0.03436495755172094,
+      "asr_text": "Esto parece tener sentido, ya que en la Tierra no se percibe su movimiento, ¿cierto?",
+      "compute_total_ms": 1070.2945070006535,
+      "file_to_file_wall_ms": 1075.3363379990333,
+      "input": {
+        "channels": 1,
+        "duration_s": 7.68,
+        "frames": 122880,
+        "sample_rate": 16000,
+        "sample_width_bytes": 2
+      },
+      "input_audio": "/workspace/data/fleur_es_sample.wav",
+      "input_load_ms": 0.23207200138131157,
+      "job_id": "run_13",
+      "mt_ms": 383.1302280013915,
+      "output_audio": "/workspace/results/final_benchmarks/s2s_es_pt_post_bucketing/run_13.wav",
+      "output_write_ms": 1.4569759987352882,
+      "translated_text": "Isto parece fazer sentido, já que na Terra não se percebe o seu movimento, certo?",
+      "tts_info": {
+        "channels": 1,
+        "duration_s": 4.260861678004535,
+        "frames": 93952,
+        "sample_rate": 22050,
+        "sample_width_bytes": 2
+      },
+      "tts_ms": 423.2414050020452
+    },
+    {
+      "asr_ms": 264.731606002897,
+      "asr_rtf": 0.03447026119829388,
+      "asr_text": "Esto parece tener sentido, ya que en la Tierra no se percibe su movimiento, ¿cierto?",
+      "compute_total_ms": 1045.286771004612,
+      "file_to_file_wall_ms": 1050.1719559979392,
+      "input": {
+        "channels": 1,
+        "duration_s": 7.68,
+        "frames": 122880,
+        "sample_rate": 16000,
+        "sample_width_bytes": 2
+      },
+      "input_audio": "/workspace/data/fleur_es_sample.wav",
+      "input_load_ms": 0.22695200095768087,
+      "job_id": "run_14",
+      "mt_ms": 376.38968500323244,
+      "output_audio": "/workspace/results/final_benchmarks/s2s_es_pt_post_bucketing/run_14.wav",
+      "output_write_ms": 1.3246519993117545,
+      "translated_text": "Isto parece fazer sentido, já que na Terra não se percebe o seu movimento, certo?",
+      "tts_info": {
+        "channels": 1,
+        "duration_s": 4.133151927437642,
+        "frames": 91136,
+        "sample_rate": 22050,
+        "sample_width_bytes": 2
+      },
+      "tts_ms": 404.1654799984826
+    },
+    {
+      "asr_ms": 263.17885000025854,
+      "asr_rtf": 0.034268079427117,
+      "asr_text": "Esto parece tener sentido, ya que en la Tierra no se percibe su movimiento, ¿cierto?",
+      "compute_total_ms": 1051.8781230020977,
+      "file_to_file_wall_ms": 1056.4112009997189,
+      "input": {
+        "channels": 1,
+        "duration_s": 7.68,
+        "frames": 122880,
+        "sample_rate": 16000,
+        "sample_width_bytes": 2
+      },
+      "input_audio": "/workspace/data/fleur_es_sample.wav",
+      "input_load_ms": 0.2261199988424778,
+      "job_id": "run_15",
+      "mt_ms": 380.2771410009882,
+      "output_audio": "/workspace/results/final_benchmarks/s2s_es_pt_post_bucketing/run_15.wav",
+      "output_write_ms": 1.0011209997173864,
+      "translated_text": "Isto parece fazer sentido, já que na Terra não se percebe o seu movimento, certo?",
+      "tts_info": {
+        "channels": 1,
+        "duration_s": 4.249251700680272,
+        "frames": 93696,
+        "sample_rate": 22050,
+        "sample_width_bytes": 2
+      },
+      "tts_ms": 408.422132000851
+    },
+    {
+      "asr_ms": 262.59777499944903,
+      "asr_rtf": 0.03419241861971993,
+      "asr_text": "Esto parece tener sentido, ya que en la Tierra no se percibe su movimiento, ¿cierto?",
+      "compute_total_ms": 1038.1280689980485,
+      "file_to_file_wall_ms": 1043.5816570025054,
+      "input": {
+        "channels": 1,
+        "duration_s": 7.68,
+        "frames": 122880,
+        "sample_rate": 16000,
+        "sample_width_bytes": 2
+      },
+      "input_audio": "/workspace/data/fleur_es_sample.wav",
+      "input_load_ms": 0.2186640012951102,
+      "job_id": "run_16",
+      "mt_ms": 371.2923960010812,
+      "output_audio": "/workspace/results/final_benchmarks/s2s_es_pt_post_bucketing/run_16.wav",
+      "output_write_ms": 1.8204440020781476,
+      "translated_text": "Isto parece fazer sentido, já que na Terra não se percebe o seu movimento, certo?",
+      "tts_info": {
+        "channels": 1,
+        "duration_s": 4.167981859410431,
+        "frames": 91904,
+        "sample_rate": 22050,
+        "sample_width_bytes": 2
+      },
+      "tts_ms": 404.2378979975183
+    },
+    {
+      "asr_ms": 262.897624001198,
+      "asr_rtf": 0.03423146145848932,
+      "asr_text": "Esto parece tener sentido, ya que en la Tierra no se percibe su movimiento, ¿cierto?",
+      "compute_total_ms": 1050.4447289968084,
+      "file_to_file_wall_ms": 1054.9271169984422,
+      "input": {
+        "channels": 1,
+        "duration_s": 7.68,
+        "frames": 122880,
+        "sample_rate": 16000,
+        "sample_width_bytes": 2
+      },
+      "input_audio": "/workspace/data/fleur_es_sample.wav",
+      "input_load_ms": 0.22595900009036995,
+      "job_id": "run_17",
+      "mt_ms": 379.87571899793693,
+      "output_audio": "/workspace/results/final_benchmarks/s2s_es_pt_post_bucketing/run_17.wav",
+      "output_write_ms": 0.9746879986778367,
+      "translated_text": "Isto parece fazer sentido, já que na Terra não se percebe o seu movimento, certo?",
+      "tts_info": {
+        "channels": 1,
+        "duration_s": 4.2260317460317465,
+        "frames": 93184,
+        "sample_rate": 22050,
+        "sample_width_bytes": 2
+      },
+      "tts_ms": 407.6713859976735
+    },
+    {
+      "asr_ms": 263.3081330022833,
+      "asr_rtf": 0.03428491315133897,
+      "asr_text": "Esto parece tener sentido, ya que en la Tierra no se percibe su movimiento, ¿cierto?",
+      "compute_total_ms": 1042.3126200003026,
+      "file_to_file_wall_ms": 1047.434740998142,
+      "input": {
+        "channels": 1,
+        "duration_s": 7.68,
+        "frames": 122880,
+        "sample_rate": 16000,
+        "sample_width_bytes": 2
+      },
+      "input_audio": "/workspace/data/fleur_es_sample.wav",
+      "input_load_ms": 0.21882300279685296,
+      "job_id": "run_18",
+      "mt_ms": 377.545145998738,
+      "output_audio": "/workspace/results/final_benchmarks/s2s_es_pt_post_bucketing/run_18.wav",
+      "output_write_ms": 1.5700999974797014,
+      "translated_text": "Isto parece fazer sentido, já que na Terra não se percebe o seu movimento, certo?",
+      "tts_info": {
+        "channels": 1,
+        "duration_s": 4.0751020408163265,
+        "frames": 89856,
+        "sample_rate": 22050,
+        "sample_width_bytes": 2
+      },
+      "tts_ms": 401.45934099928127
+    },
+    {
+      "asr_ms": 262.2878429974662,
+      "asr_rtf": 0.034152062890295085,
+      "asr_text": "Esto parece tener sentido, ya que en la Tierra no se percibe su movimiento, ¿cierto?",
+      "compute_total_ms": 1045.0173479985096,
+      "file_to_file_wall_ms": 1050.0090010027634,
+      "input": {
+        "channels": 1,
+        "duration_s": 7.68,
+        "frames": 122880,
+        "sample_rate": 16000,
+        "sample_width_bytes": 2
+      },
+      "input_audio": "/workspace/data/fleur_es_sample.wav",
+      "input_load_ms": 0.23408799825119786,
+      "job_id": "run_19",
+      "mt_ms": 374.7934390012233,
+      "output_audio": "/workspace/results/final_benchmarks/s2s_es_pt_post_bucketing/run_19.wav",
+      "output_write_ms": 1.376525000523543,
+      "translated_text": "Isto parece fazer sentido, já que na Terra não se percebe o seu movimento, certo?",
+      "tts_info": {
+        "channels": 1,
+        "duration_s": 4.191201814058957,
+        "frames": 92416,
+        "sample_rate": 22050,
+        "sample_width_bytes": 2
+      },
+      "tts_ms": 407.93606599982013
+    },
+    {
+      "asr_ms": 264.50650799961295,
+      "asr_rtf": 0.034440951562449605,
+      "asr_text": "Esto parece tener sentido, ya que en la Tierra no se percibe su movimiento, ¿cierto?",
+      "compute_total_ms": 1060.5979249994562,
+      "file_to_file_wall_ms": 1065.492007001012,
+      "input": {
+        "channels": 1,
+        "duration_s": 7.68,
+        "frames": 122880,
+        "sample_rate": 16000,
+        "sample_width_bytes": 2
+      },
+      "input_audio": "/workspace/data/fleur_es_sample.wav",
+      "input_load_ms": 0.21498299975064583,
+      "job_id": "run_20",
+      "mt_ms": 378.933287000109,
+      "output_audio": "/workspace/results/final_benchmarks/s2s_es_pt_post_bucketing/run_20.wav",
+      "output_write_ms": 1.343051997537259,
+      "translated_text": "Isto parece fazer sentido, já que na Terra não se percebe o seu movimento, certo?",
+      "tts_info": {
+        "channels": 1,
+        "duration_s": 4.295691609977324,
+        "frames": 94720,
+        "sample_rate": 22050,
+        "sample_width_bytes": 2
+      },
+      "tts_ms": 417.15812999973423
+    }
+  ],
+  "stabilization": [
+    {
+      "asr_bucket_total_ms": 17176.317718003702,
+      "asr_bucket_warmups": [
+        {
+          "bucket_s": 8,
+          "compute_ms": 11860.297999999602,
+          "rtf": 1.544309635416615,
+          "text": "Esto parece tener sentido, ya que en la Tierra no se percibe su movimiento, ¿cierto?"
+        },
+        {
+          "bucket_s": 12,
+          "compute_ms": 1916.3743140015868,
+          "rtf": 0.24952790546895662,
+          "text": "Esto parece tener sentido, ya que en la Tierra no se percibe su movimiento, ¿cierto?"
+        },
+        {
+          "bucket_s": 16,
+          "compute_ms": 1674.4035450028605,
+          "rtf": 0.21802129492224748,
+          "text": "Esto parece tener sentido, ya que en la Tierra no se percibe su movimiento, ¿cierto?"
+        },
+        {
+          "bucket_s": 24,
+          "compute_ms": 1725.2418589996523,
+          "rtf": 0.2246408670572464,
+          "text": "Esto parece tener sentido, ya que en la Tierra no se percibe su movimiento, ¿cierto?"
+        }
+      ],
+      "asr_ms": 11860.297999999602,
+      "asr_rtf": 1.544309635416615,
+      "asr_text": "Esto parece tener sentido, ya que en la Tierra no se percibe su movimiento, ¿cierto?",
+      "input_audio": "/workspace/data/fleur_es_sample.wav",
+      "input_duration_s": 7.68,
+      "input_load_ms": 7.834946001821663,
+      "mt_ms": 1783.258968996961,
+      "run": 1,
+      "total_ms": 20256.86785599828,
+      "translated_text": "Isto parece fazer sentido, já que na Terra não se percebe o seu movimento, certo?",
+      "tts_ms": 1009.3070120019547
+    },
+    {
+      "asr_bucket_total_ms": 1130.5934749980224,
+      "asr_bucket_warmups": [
+        {
+          "bucket_s": 8,
+          "compute_ms": 302.5631299969973,
+          "rtf": 0.03939624088502569,
+          "text": "Esto parece tener sentido, ya que en la Tierra no se percibe su movimiento, ¿cierto?"
+        },
+        {
+          "bucket_s": 12,
+          "compute_ms": 263.4919529991748,
+          "rtf": 0.03430884804676756,
+          "text": "Esto parece tener sentido, ya que en la Tierra no se percibe su movimiento, ¿cierto?"
+        },
+        {
+          "bucket_s": 16,
+          "compute_ms": 259.64171400119085,
+          "rtf": 0.03380751484390506,
+          "text": "Esto parece tener sentido, ya que en la Tierra no se percibe su movimiento, ¿cierto?"
+        },
+        {
+          "bucket_s": 24,
+          "compute_ms": 304.89667800065945,
+          "rtf": 0.039700088281335866,
+          "text": "Esto parece tener sentido, ya que en la Tierra no se percibe su movimiento, ¿cierto?"
+        }
+      ],
+      "asr_ms": 302.5631299969973,
+      "asr_rtf": 0.03939624088502569,
+      "asr_text": "Esto parece tener sentido, ya que en la Tierra no se percibe su movimiento, ¿cierto?",
+      "input_audio": "/workspace/data/fleur_es_sample.wav",
+      "input_duration_s": 7.68,
+      "input_load_ms": 41.932454998459434,
+      "mt_ms": 382.13416899816366,
+      "run": 2,
+      "total_ms": 1985.6501180001942,
+      "translated_text": "Isto parece fazer sentido, já que na Terra não se percebe o seu movimento, certo?",
+      "tts_ms": 408.81802400326706
+    },
+    {
+      "asr_bucket_total_ms": 1066.4545900035591,
+      "asr_bucket_warmups": [
+        {
+          "bucket_s": 8,
+          "compute_ms": 262.6226440006576,
+          "rtf": 0.03419565677091896,
+          "text": "Esto parece tener sentido, ya que en la Tierra no se percibe su movimiento, ¿cierto?"
+        },
+        {
+          "bucket_s": 12,
+          "compute_ms": 258.08786999914446,
+          "rtf": 0.0336051914061386,
+          "text": "Esto parece tener sentido, ya que en la Tierra no se percibe su movimiento, ¿cierto?"
+        },
+        {
+          "bucket_s": 16,
+          "compute_ms": 255.77009800326778,
+          "rtf": 0.033303398177508825,
+          "text": "Esto parece tener sentido, ya que en la Tierra no se percibe su movimiento, ¿cierto?"
+        },
+        {
+          "bucket_s": 24,
+          "compute_ms": 289.9739780004893,
+          "rtf": 0.03775702838548038,
+          "text": "Esto parece tener sentido, ya que en la Tierra no se percibe su movimiento, ¿cierto?"
+        }
+      ],
+      "asr_ms": 262.6226440006576,
+      "asr_rtf": 0.03419565677091896,
+      "asr_text": "Esto parece tener sentido, ya que en la Tierra no se percibe su movimiento, ¿cierto?",
+      "input_audio": "/workspace/data/fleur_es_sample.wav",
+      "input_duration_s": 7.68,
+      "input_load_ms": 0.3583799989428371,
+      "mt_ms": 351.3180480003939,
+      "run": 3,
+      "total_ms": 2313.972523999837,
+      "translated_text": "Isto parece fazer sentido, já que na Terra não se percebe o seu movimento, certo?",
+      "tts_ms": 886.7962490003265
+    }
+  ],
+  "summary": {
+    "asr_ms": {
+      "max": 266.0079690031125,
+      "mean": 263.61088440007734,
+      "median": 263.3488565006701,
+      "min": 260.07612499961397,
+      "p95": 265.870981851549,
+      "stdev": 1.383601136892516
+    },
+    "asr_rtf": {
+      "max": 0.03463645429728028,
+      "mean": 0.03432433390626007,
+      "median": 0.03429021569019142,
+      "min": 0.0338640787759914,
+      "p95": 0.034618617428587115,
+      "stdev": 0.0001801563980328803
+    },
+    "compute_total_ms": {
+      "max": 1396.6983899990737,
+      "mean": 1077.2435880504418,
+      "median": 1049.8210364985425,
+      "min": 1037.1928220010886,
+      "p95": 1209.185806345886,
+      "stdev": 83.24429279601604
+    },
+    "file_to_file_wall_ms": {
+      "max": 1402.3021280008834,
+      "mean": 1082.3132786001224,
+      "median": 1054.3014560007578,
+      "min": 1041.7708929999208,
+      "p95": 1214.1395714481407,
+      "stdev": 83.493343488983
+    },
+    "input_load_ms": {
+      "max": 0.23408799825119786,
+      "mean": 0.2174137001929921,
+      "median": 0.22194300072442275,
+      "min": 0.18429400006425567,
+      "p95": 0.23360159993899288,
+      "stdev": 0.014740918436255659
+    },
+    "mean_stage_share_percent": {
+      "asr": 24.47087059270886,
+      "mt": 35.171398874251295,
+      "tts": 40.357730533039835
+    },
+    "mt_ms": {
+      "max": 399.1452890004439,
+      "mean": 378.8816392005174,
+      "median": 378.7636030010617,
+      "min": 369.89945900131715,
+      "p95": 388.81246960154385,
+      "stdev": 6.724311289964551
+    },
+    "output_write_ms": {
+      "max": 2.834077000443358,
+      "mean": 1.2820101495890412,
+      "median": 1.3284279993968084,
+      "min": 0.5693949970009271,
+      "p95": 1.8711256519964088,
+      "stdev": 0.4996793645920864
+    },
+    "system_available_change_mb": 30.953125,
+    "tts_ms": {
+      "max": 754.7989919985412,
+      "mean": 434.75106444984704,
+      "median": 407.8037259987468,
+      "min": 392.1010859994567,
+      "p95": 564.6582988987576,
+      "stdev": 82.67580970944594
+    }
+  },
+  "target_hardware": "NVIDIA Jetson Orin Nano 8 GB"
+}

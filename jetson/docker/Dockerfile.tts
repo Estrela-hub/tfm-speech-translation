@@ -1,0 +1,42 @@
+FROM tfm-asr:baseline
+
+RUN python3 -m pip install \
+    --no-cache-dir \
+    "piper-tts==1.6.0"
+
+RUN apt-get update && \
+    apt-get install -y --no-install-recommends \
+        build-essential \
+        cmake \
+        git && \
+    rm -rf /var/lib/apt/lists/*
+
+RUN git clone \
+        --branch v4.8.2 \
+        --depth 1 \
+        --recursive \
+        https://github.com/OpenNMT/CTranslate2.git \
+        /tmp/CTranslate2 && \
+    cd /tmp/CTranslate2 && \
+    test "$(git rev-parse --short=7 HEAD)" = "d44d2d0" && \
+    mkdir build && \
+    cd build && \
+    cmake .. \
+        -DWITH_CUDA=ON \
+        -DWITH_CUDNN=OFF \
+        -DWITH_MKL=OFF \
+        -DOPENMP_RUNTIME=NONE \
+        -DCUDA_ARCH_LIST="8.7" \
+        -DBUILD_CLI=OFF \
+        -DBUILD_TESTS=OFF \
+        -DCMAKE_BUILD_TYPE=Release && \
+    make -j4 && \
+    make install && \
+    ldconfig && \
+    cd /tmp/CTranslate2/python && \
+    python3 -m pip install \
+        --no-cache-dir \
+        . && \
+    rm -rf /tmp/CTranslate2
+
+WORKDIR /workspace

@@ -1,0 +1,137 @@
+{
+  "architecture": "16 kHz PCM16 WAV -> full-utterance Parakeet -> final ASR hypothesis -> NLLB CTranslate2 FP16 final-only -> Piper ONNX Runtime CPU -> output WAV",
+  "asr": {
+    "checkpoint": "/workspace/models/parakeet/parakeet-tdt-0.6b-v3.nemo",
+    "compute_ms": 348.4700189983414,
+    "cuda_graph_decoder": false,
+    "final_text": "El número de iones de hidrógeno la H en pH presentes en el producto químico analizado determina su nivel de pH.",
+    "method": "NeMo full-utterance RNNT/TDT inference",
+    "mode": "full_utterance",
+    "model_id": "nvidia/parakeet-tdt-0.6b-v3",
+    "precision": "torch.float16",
+    "revision": "541d1f99c6b0c3cd0b11a95167540bb8edefd82b",
+    "rtf": 0.031564313315067156
+  },
+  "configuration": {
+    "input_audio": "/workspace/data/multilingual_eval/audio/es_1962.wav",
+    "output_audio": "/workspace/results/final_benchmarks/scalability_es_pt/es_1962_r2.wav",
+    "source_language": "es",
+    "target_language": "pt"
+  },
+  "environment": {
+    "ctranslate2": "4.8.2",
+    "cuda": "12.9",
+    "gpu": "Orin",
+    "nemo": "3.0.0",
+    "onnxruntime": "1.30.0",
+    "python": "3.12.3",
+    "pytorch": "2.8.0a0+5228986c39.nv25.06",
+    "transformers": "5.17.0"
+  },
+  "experiment": "Jetson persistent full-utterance Speech-to-Speech pipeline",
+  "input": {
+    "channels": 1,
+    "duration_s": 11.04,
+    "frames": 176640,
+    "load_ms": 0.36285999885876663,
+    "sample_rate": 16000,
+    "sample_width_bytes": 2
+  },
+  "job_id": "es_1962_r2",
+  "memory_after_job": {
+    "device_free_mb": 269.83203125,
+    "device_total_mb": 7607.31640625,
+    "system_available_mb": 270.125,
+    "torch_allocated_mb": 1224.46875,
+    "torch_reserved_mb": 1654.0
+  },
+  "memory_note": "Jetson uses unified memory. CUDA and system memory values must not be added together.",
+  "mt": {
+    "beam_size": 1,
+    "calls": 1,
+    "compute_type": "float16",
+    "latency_ms": 523.6337959977391,
+    "max_decoding_length": 256,
+    "model_id": "facebook/nllb-200-distilled-600M",
+    "model_path": "/workspace/models/ctranslate2/nllb-200-distilled-600M-fp16",
+    "policy": "final_only",
+    "revision": "f8d333a098d19b4fd9a8b18f94170487ad3f821d",
+    "runtime": "CTranslate2",
+    "tokenizer_path": "/workspace/models/nllb_tokenizer",
+    "translated_text": "O número de íons de hidrogênio H no pH presentes no produto químico analisado determina o seu nível de pH."
+  },
+  "startup": {
+    "model_load_ms": {
+      "asr": 134613.8837969993,
+      "mt": 23760.05920800162,
+      "total": 162599.14139900138,
+      "tts": 4225.198394000472
+    },
+    "warmup": {
+      "asr_bucket_total_ms": 17278.465163002693,
+      "asr_bucket_warmups": [
+        {
+          "bucket_s": 8,
+          "compute_ms": 11955.306758001825,
+          "rtf": 1.5133299693673197,
+          "text": "Desde el gobierno informaron que 19 de las personas heridas eran policías."
+        },
+        {
+          "bucket_s": 12,
+          "compute_ms": 1788.3626129987533,
+          "rtf": 0.22637501430363965,
+          "text": "Desde el gobierno informaron que 19 de las personas heridas eran policías."
+        },
+        {
+          "bucket_s": 16,
+          "compute_ms": 1739.0107179999177,
+          "rtf": 0.22012793898733135,
+          "text": "Desde el gobierno informaron que 19 de las personas heridas eran policías."
+        },
+        {
+          "bucket_s": 24,
+          "compute_ms": 1795.7850740021968,
+          "rtf": 0.22731456632939198,
+          "text": "Desde el gobierno informaron que 19 de las personas heridas eran policías."
+        }
+      ],
+      "asr_ms": 11955.306758001825,
+      "asr_rtf": 1.5133299693673197,
+      "asr_text": "Desde el gobierno informaron que 19 de las personas heridas eran policías.",
+      "input_audio": "/workspace/data/multilingual_eval/warmup/warmup_es_bucket.wav",
+      "input_duration_s": 7.9,
+      "input_load_ms": 31.683867000538157,
+      "mt_ms": 3040.6256890018994,
+      "total_ms": 22919.005387000652,
+      "translated_text": "O governo informou que 19 das pessoas feridas eram policiais.",
+      "tts_ms": 2076.936473000387
+    },
+    "warmup_enabled": true
+  },
+  "steady_state_metrics": {
+    "asr_compute_ms": 348.4700189983414,
+    "asr_rtf": 0.031564313315067156,
+    "compute_and_runtime_ms": 2238.8278269972943,
+    "file_to_file_wall_ms": 2269.7478589980165,
+    "input_load_ms": 0.36285999885876663,
+    "mt_ms": 523.6337959977391,
+    "output_write_ms": 1.1647760002233554,
+    "tts_synthesis_ms": 1366.7240120012139
+  },
+  "target_hardware": "NVIDIA Jetson Orin Nano 8 GB",
+  "tts": {
+    "audio": {
+      "channels": 1,
+      "duration_s": 5.0967800453514736,
+      "frames": 112384,
+      "sample_rate": 22050,
+      "sample_width_bytes": 2
+    },
+    "execution_provider": "CPUExecutionProvider",
+    "family": "Piper",
+    "output_write_ms": 1.1647760002233554,
+    "runtime": "ONNX Runtime CPU",
+    "synthesis_ms": 1366.7240120012139,
+    "voice": "pt_PT-tugão-medium"
+  }
+}

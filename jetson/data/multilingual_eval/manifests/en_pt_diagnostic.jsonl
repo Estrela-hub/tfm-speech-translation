@@ -1,0 +1,12 @@
+{"id": "stabilization_01", "audio": "/workspace/data/multilingual_eval/audio/en_1961.wav", "output": "/workspace/results/final_benchmarks/multilingual_diagnostic/en_pt/stabilization_01.wav"}
+{"id": "stabilization_02", "audio": "/workspace/data/multilingual_eval/audio/en_1961.wav", "output": "/workspace/results/final_benchmarks/multilingual_diagnostic/en_pt/stabilization_02.wav"}
+{"id": "cycle_1_eval_01", "audio": "/workspace/data/multilingual_eval/audio/en_1870.wav", "output": "/workspace/results/final_benchmarks/multilingual_diagnostic/en_pt/cycle_1_eval_01.wav"}
+{"id": "cycle_1_eval_02", "audio": "/workspace/data/multilingual_eval/audio/en_1900.wav", "output": "/workspace/results/final_benchmarks/multilingual_diagnostic/en_pt/cycle_1_eval_02.wav"}
+{"id": "cycle_1_eval_03", "audio": "/workspace/data/multilingual_eval/audio/en_1944.wav", "output": "/workspace/results/final_benchmarks/multilingual_diagnostic/en_pt/cycle_1_eval_03.wav"}
+{"id": "cycle_1_eval_04", "audio": "/workspace/data/multilingual_eval/audio/en_1968.wav", "output": "/workspace/results/final_benchmarks/multilingual_diagnostic/en_pt/cycle_1_eval_04.wav"}
+{"id": "cycle_1_eval_05", "audio": "/workspace/data/multilingual_eval/audio/en_1961.wav", "output": "/workspace/results/final_benchmarks/multilingual_diagnostic/en_pt/cycle_1_eval_05.wav"}
+{"id": "cycle_2_eval_01", "audio": "/workspace/data/multilingual_eval/audio/en_1870.wav", "output": "/workspace/results/final_benchmarks/multilingual_diagnostic/en_pt/cycle_2_eval_01.wav"}
+{"id": "cycle_2_eval_02", "audio": "/workspace/data/multilingual_eval/audio/en_1900.wav", "output": "/workspace/results/final_benchmarks/multilingual_diagnostic/en_pt/cycle_2_eval_02.wav"}
+{"id": "cycle_2_eval_03", "audio": "/workspace/data/multilingual_eval/audio/en_1944.wav", "output": "/workspace/results/final_benchmarks/multilingual_diagnostic/en_pt/cycle_2_eval_03.wav"}
+{"id": "cycle_2_eval_04", "audio": "/workspace/data/multilingual_eval/audio/en_1968.wav", "output": "/workspace/results/final_benchmarks/multilingual_diagnostic/en_pt/cycle_2_eval_04.wav"}
+{"id": "cycle_2_eval_05", "audio": "/workspace/data/multilingual_eval/audio/en_1961.wav", "output": "/workspace/results/final_benchmarks/multilingual_diagnostic/en_pt/cycle_2_eval_05.wav"}

@@ -1,0 +1,110 @@
+{
+  "architecture": "16 kHz PCM16 WAV -> full-utterance Parakeet -> final ASR hypothesis -> NLLB CTranslate2 FP16 final-only -> Piper ONNX Runtime CPU -> output WAV",
+  "asr": {
+    "checkpoint": "/workspace/models/parakeet/parakeet-tdt-0.6b-v3.nemo",
+    "compute_ms": 1878.9765809997334,
+    "cuda_graph_decoder": false,
+    "final_text": "However that is not true. Although there is something written on the back of the document it is not a treasure map.",
+    "method": "NeMo full-utterance RNNT/TDT inference",
+    "mode": "full_utterance",
+    "model_id": "nvidia/parakeet-tdt-0.6b-v3",
+    "precision": "torch.float16",
+    "revision": "541d1f99c6b0c3cd0b11a95167540bb8edefd82b",
+    "rtf": 0.1875226128742249
+  },
+  "configuration": {
+    "input_audio": "/workspace/data/multilingual_eval/warmup_multiduration/en/warmup_en_10s.wav",
+    "output_audio": "/workspace/results/final_benchmarks/multilingual_warmup_diagnostic/en_pt/prewarm_10s.wav",
+    "source_language": "en",
+    "target_language": "pt"
+  },
+  "environment": {
+    "ctranslate2": "4.8.2",
+    "cuda": "12.9",
+    "gpu": "Orin",
+    "nemo": "3.0.0",
+    "onnxruntime": "1.30.0",
+    "python": "3.12.3",
+    "pytorch": "2.8.0a0+5228986c39.nv25.06",
+    "transformers": "5.17.0"
+  },
+  "experiment": "Jetson persistent full-utterance Speech-to-Speech pipeline",
+  "input": {
+    "channels": 1,
+    "duration_s": 10.02,
+    "frames": 160320,
+    "load_ms": 4.9920940000447445,
+    "sample_rate": 16000,
+    "sample_width_bytes": 2
+  },
+  "job_id": "prewarm_10s",
+  "memory_after_job": {
+    "device_free_mb": 496.58984375,
+    "device_total_mb": 7607.31640625,
+    "system_available_mb": 497.61328125,
+    "torch_allocated_mb": 1224.46875,
+    "torch_reserved_mb": 1482.0
+  },
+  "memory_note": "Jetson uses unified memory. CUDA and system memory values must not be added together.",
+  "mt": {
+    "beam_size": 1,
+    "calls": 1,
+    "compute_type": "float16",
+    "latency_ms": 530.7472559998132,
+    "max_decoding_length": 256,
+    "model_id": "facebook/nllb-200-distilled-600M",
+    "model_path": "/workspace/models/ctranslate2/nllb-200-distilled-600M-fp16",
+    "policy": "final_only",
+    "revision": "f8d333a098d19b4fd9a8b18f94170487ad3f821d",
+    "runtime": "CTranslate2",
+    "tokenizer_path": "/workspace/models/nllb_tokenizer",
+    "translated_text": "Mas isso não é verdade, embora haja algo escrito na parte de trás do documento, não é um mapa do tesouro."
+  },
+  "startup": {
+    "model_load_ms": {
+      "asr": 137604.73694900065,
+      "mt": 24416.48099900067,
+      "total": 165778.44316200115,
+      "tts": 3757.2252139998454
+    },
+    "warmup": {
+      "asr_ms": 12251.260072999685,
+      "asr_rtf": 2.041876678833281,
+      "asr_text": "Rolando Mendoza fired his M-16 rifle at the tourists.",
+      "input_audio": "/workspace/data/multilingual_eval/warmup_multiduration/en/warmup_en_06s.wav",
+      "input_duration_s": 6.0,
+      "input_load_ms": 6.99677100055851,
+      "mt_ms": 1474.0430749998268,
+      "total_ms": 14847.503212999982,
+      "translated_text": "Rolando Mendoza disparou o seu rifle M-16 contra os turistas.",
+      "tts_ms": 722.7404209997985
+    },
+    "warmup_enabled": true
+  },
+  "steady_state_metrics": {
+    "asr_compute_ms": 1878.9765809997334,
+    "asr_rtf": 0.1875226128742249,
+    "compute_and_runtime_ms": 2901.9687079990035,
+    "file_to_file_wall_ms": 2920.312859999285,
+    "input_load_ms": 4.9920940000447445,
+    "mt_ms": 530.7472559998132,
+    "output_write_ms": 0.5581859995800187,
+    "tts_synthesis_ms": 492.2448709994569
+  },
+  "target_hardware": "NVIDIA Jetson Orin Nano 8 GB",
+  "tts": {
+    "audio": {
+      "channels": 1,
+      "duration_s": 4.725260770975057,
+      "frames": 104192,
+      "sample_rate": 22050,
+      "sample_width_bytes": 2
+    },
+    "execution_provider": "CPUExecutionProvider",
+    "family": "Piper",
+    "output_write_ms": 0.5581859995800187,
+    "runtime": "ONNX Runtime CPU",
+    "synthesis_ms": 492.2448709994569,
+    "voice": "pt_PT-tugão-medium"
+  }
+}

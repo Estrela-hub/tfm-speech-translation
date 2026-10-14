@@ -1,0 +1,165 @@
+{
+  "configuration": {
+    "asr_mode": "full_utterance",
+    "jobs": 5,
+    "mt_compute_type": "float16",
+    "mt_runtime": "CTranslate2",
+    "source_language": "es",
+    "target_language": "pt",
+    "tts_runtime": "ONNX Runtime CPU"
+  },
+  "experiment": "Jetson persistent full-utterance S2S repeated-execution test",
+  "startup": {
+    "model_load_ms": {
+      "asr": 136582.16190500025,
+      "mt": 23632.318904001295,
+      "total": 164384.45968200176,
+      "tts": 4169.978873000218
+    },
+    "warmup": {
+      "asr_bucket_total_ms": 17368.775558003108,
+      "asr_bucket_warmups": [
+        {
+          "bucket_s": 8,
+          "compute_ms": 11918.821037997986,
+          "rtf": 1.5087115237972133,
+          "text": "Desde el gobierno informaron que 19 de las personas heridas eran policías."
+        },
+        {
+          "bucket_s": 12,
+          "compute_ms": 1792.5565559999086,
+          "rtf": 0.22690589316454537,
+          "text": "Desde el gobierno informaron que 19 de las personas heridas eran policías."
+        },
+        {
+          "bucket_s": 16,
+          "compute_ms": 1765.1037220020953,
+          "rtf": 0.22343085088634118,
+          "text": "Desde el gobierno informaron que 19 de las personas heridas eran policías."
+        },
+        {
+          "bucket_s": 24,
+          "compute_ms": 1892.2942420031177,
+          "rtf": 0.2395309167092554,
+          "text": "Desde el gobierno informaron que 19 de las personas heridas eran policías."
+        }
+      ],
+      "asr_ms": 11918.821037997986,
+      "asr_rtf": 1.5087115237972133,
+      "asr_text": "Desde el gobierno informaron que 19 de las personas heridas eran policías.",
+      "input_audio": "/workspace/data/multilingual_eval/warmup/warmup_es_bucket.wav",
+      "input_duration_s": 7.9,
+      "input_load_ms": 5.631613999867113,
+      "mt_ms": 2309.282969999913,
+      "total_ms": 21444.872061998467,
+      "translated_text": "O governo informou que 19 das pessoas feridas eram policiais.",
+      "tts_ms": 1398.7302139976237
+    }
+  },
+  "summary": {
+    "asr_ms": {
+      "max": 542.0606239968038,
+      "mean": 467.97759320033947,
+      "median": 468.3871920024103,
+      "min": 411.18325400020694
+    },
+    "asr_rtf": {
+      "max": 0.0705808104162505,
+      "mean": 0.04202668445402367,
+      "median": 0.03724485996378686,
+      "min": 0.029331719905872432
+    },
+    "compute_total_ms": {
+      "max": 3829.588094002247,
+      "mean": 3184.843786199781,
+      "median": 3081.062416997156,
+      "min": 2311.9193829988944
+    },
+    "file_to_file_wall_ms": {
+      "max": 3843.9778259999002,
+      "mean": 3277.5800867988437,
+      "median": 3479.531771998154,
+      "min": 2326.137846997881
+    },
+    "input_load_ms": {
+      "max": 14.031800001248484,
+      "mean": 10.672986399731599,
+      "median": 12.341982997895684,
+      "min": 6.506780002382584
+    },
+    "jobs": 5,
+    "memory": {
+      "after_each_job": [
+        {
+          "device_free_mb": 396.7734375,
+          "device_total_mb": 7607.31640625,
+          "system_available_mb": 435.90625,
+          "torch_allocated_mb": 1224.46875,
+          "torch_reserved_mb": 1654.0
+        },
+        {
+          "device_free_mb": 482.2578125,
+          "device_total_mb": 7607.31640625,
+          "system_available_mb": 483.0078125,
+          "torch_allocated_mb": 1224.46875,
+          "torch_reserved_mb": 1654.0
+        },
+        {
+          "device_free_mb": 436.6328125,
+          "device_total_mb": 7607.31640625,
+          "system_available_mb": 437.328125,
+          "torch_allocated_mb": 1224.46875,
+          "torch_reserved_mb": 1654.0
+        },
+        {
+          "device_free_mb": 422.51171875,
+          "device_total_mb": 7607.31640625,
+          "system_available_mb": 423.1484375,
+          "torch_allocated_mb": 1224.46875,
+          "torch_reserved_mb": 1654.0
+        },
+        {
+          "device_free_mb": 422.01171875,
+          "device_total_mb": 7607.31640625,
+          "system_available_mb": 422.796875,
+          "torch_allocated_mb": 1224.46875,
+          "torch_reserved_mb": 1654.0
+        }
+      ],
+      "after_warmup": {
+        "device_free_mb": 431.03515625,
+        "device_total_mb": 7607.31640625,
+        "system_available_mb": 431.78515625,
+        "torch_allocated_mb": 1224.46875,
+        "torch_reserved_mb": 1654.0
+      },
+      "system_available_change_mb": -8.98828125
+    },
+    "mt_ms": {
+      "max": 835.0220949978393,
+      "mean": 659.6211586002028,
+      "median": 699.9562710007012,
+      "min": 495.6399250004324
+    },
+    "output_consistency": {
+      "asr_exactly_stable": null,
+      "asr_unique_outputs": null,
+      "comparable": false,
+      "mt_exactly_stable": null,
+      "mt_unique_outputs": null,
+      "reason": "batch contains different input audio paths"
+    },
+    "output_write_ms": {
+      "max": 3.426162998948712,
+      "mean": 1.59360900070169,
+      "median": 1.4976820020820014,
+      "min": 0.6885040020279121
+    },
+    "tts_ms": {
+      "max": 2611.0989209992113,
+      "mean": 2057.2450343992386,
+      "median": 2043.36186799992,
+      "min": 1353.6851959979685
+    }
+  }
+}

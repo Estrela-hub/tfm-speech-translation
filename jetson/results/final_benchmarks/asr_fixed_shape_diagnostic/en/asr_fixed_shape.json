@@ -1,0 +1,95 @@
+{
+  "pipeline_sha256": "b44fd4dc3f7e414804e056a69ce0ea6ad7446964515d516aa092548b141003ec",
+  "baseline_mean_asr_ms": 1790.7888296002056,
+  "bucketed_mean_asr_ms": 351.0905746003118,
+  "bucketed_median_asr_ms": 346.8571500006874,
+  "bucketed_min_asr_ms": 281.7179080002461,
+  "bucketed_max_asr_ms": 431.35159899975406,
+  "improvement_pct": 80.39464124428936,
+  "all_text_same": false,
+  "warmups": [
+    {
+      "bucket_s": 8,
+      "original_duration_s": 7.92,
+      "padded_duration_s": 8.0,
+      "compute_ms": 13729.118991000178,
+      "text": "Bishkek was described as sinking into a state of anarchy by one observer, as gangs of people roamed the street and plundered stores of consumer goods."
+    },
+    {
+      "bucket_s": 12,
+      "original_duration_s": 7.92,
+      "padded_duration_s": 12.0,
+      "compute_ms": 1925.3786729996136,
+      "text": "Bishkek was described as sinking into a state of anarchy by one observer as gangs of people roamed the street and plundered stores of consumer goods."
+    },
+    {
+      "bucket_s": 16,
+      "original_duration_s": 7.92,
+      "padded_duration_s": 16.0,
+      "compute_ms": 1806.4987549996658,
+      "text": "Bishkek was described as sinking into a state of anarchy by one observer as gangs of people roamed the street and plundered stores of consumer goods."
+    }
+  ],
+  "jobs": [
+    {
+      "id": "eval_01",
+      "audio": "/workspace/data/multilingual_eval/audio/en_1870.wav",
+      "original_duration_s": 6.06,
+      "bucket_s": 8,
+      "input_load_ms": 7.27372999972431,
+      "compute_ms": 281.7179080002461,
+      "rtf_original_duration": 0.04648810363040365,
+      "text": "The scenes are displayed on the pyramids, and the different pyramids are lit up.",
+      "baseline_compute_ms": 1796.1106450002262,
+      "text_same_as_unpadded": false
+    },
+    {
+      "id": "eval_02",
+      "audio": "/workspace/data/multilingual_eval/audio/en_1900.wav",
+      "original_duration_s": 6.42,
+      "bucket_s": 8,
+      "input_load_ms": 6.904620999193867,
+      "compute_ms": 346.8571500006874,
+      "rtf_original_duration": 0.054027593458051,
+      "text": "In fact, it is not easy to find at all, even if one knew it existed. Once inside the cave, it is total isolation.",
+      "baseline_compute_ms": 1898.9310350007145,
+      "text_same_as_unpadded": true
+    },
+    {
+      "id": "eval_03",
+      "audio": "/workspace/data/multilingual_eval/audio/en_1944.wav",
+      "original_duration_s": 9.72,
+      "bucket_s": 12,
+      "input_load_ms": 7.929149999654328,
+      "compute_ms": 305.4820370007292,
+      "rtf_original_duration": 0.0314281931070709,
+      "text": "These are sometimes crowded family beaches with a good range of shops aligning the shore. Swimming is safe",
+      "baseline_compute_ms": 1662.0132199996078,
+      "text_same_as_unpadded": false
+    },
+    {
+      "id": "eval_04",
+      "audio": "/workspace/data/multilingual_eval/audio/en_1968.wav",
+      "original_duration_s": 10.8,
+      "bucket_s": 12,
+      "input_load_ms": 8.426596000390418,
+      "compute_ms": 390.0441790001423,
+      "rtf_original_duration": 0.036115201759272436,
+      "text": "Some cruises feature Berlin, Germany and the brochures. As you can see from the map above, Berlin is nowhere near the sea and a visit to the city is not included in the price of the cruise.",
+      "baseline_compute_ms": 1786.8764869999723,
+      "text_same_as_unpadded": true
+    },
+    {
+      "id": "eval_05",
+      "audio": "/workspace/data/multilingual_eval/audio/en_1961.wav",
+      "original_duration_s": 14.1,
+      "bucket_s": 16,
+      "input_load_ms": 6.840994999947725,
+      "compute_ms": 431.35159899975406,
+      "rtf_original_duration": 0.030592311985798162,
+      "text": "One of the most common methods used to illustrate the importance of socialization is to draw upon the unfortunate cases of children who were through neglect, misfortune, or willful abuse not socialized by adults while they were growing up.",
+      "baseline_compute_ms": 1810.0127610005075,
+      "text_same_as_unpadded": true
+    }
+  ]
+}

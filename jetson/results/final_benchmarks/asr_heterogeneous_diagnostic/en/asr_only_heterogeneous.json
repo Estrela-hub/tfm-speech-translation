@@ -1,0 +1,120 @@
+{
+  "pipeline_sha256": "b44fd4dc3f7e414804e056a69ce0ea6ad7446964515d516aa092548b141003ec",
+  "asr_load_ms": 132831.6456270004,
+  "warmup": {
+    "audio": "/workspace/data/multilingual_eval/warmup/warmup_en.wav",
+    "duration_s": 7.92,
+    "input_load_ms": 8.027030999983253,
+    "asr_compute_ms": 12729.682126000625,
+    "asr_rtf": 1.6072830967172507,
+    "text": "Bishkek was described as sinking into a state of anarchy by one observer, as gangs of people roamed the street and plundered stores of consumer goods."
+  },
+  "jobs": [
+    {
+      "id": "eval_01",
+      "audio": "/workspace/data/multilingual_eval/audio/en_1870.wav",
+      "duration_s": 6.06,
+      "input_load_ms": 9.36001500031125,
+      "asr_compute_ms": 1796.1106450002262,
+      "asr_rtf": 0.2963878952145588,
+      "text": "The scenes are displayed on the pyramids, and the differ pyramids are lit up.",
+      "memory": {
+        "device_free_mb": 2758.8203125,
+        "device_total_mb": 7607.31640625,
+        "torch_allocated_mb": 1224.470703125,
+        "torch_reserved_mb": 1480.0,
+        "system_available_mb": 2761.58203125
+      }
+    },
+    {
+      "id": "eval_02",
+      "audio": "/workspace/data/multilingual_eval/audio/en_1900.wav",
+      "duration_s": 6.42,
+      "input_load_ms": 7.161894000091706,
+      "asr_compute_ms": 1898.9310350007145,
+      "asr_rtf": 0.2957836503116378,
+      "text": "In fact, it is not easy to find at all, even if one knew it existed. Once inside the cave, it is total isolation.",
+      "memory": {
+        "device_free_mb": 2740.640625,
+        "device_total_mb": 7607.31640625,
+        "torch_allocated_mb": 1224.470703125,
+        "torch_reserved_mb": 1480.0,
+        "system_available_mb": 2743.38671875
+      }
+    },
+    {
+      "id": "eval_03",
+      "audio": "/workspace/data/multilingual_eval/audio/en_1944.wav",
+      "duration_s": 9.72,
+      "input_load_ms": 5.1993289998790715,
+      "asr_compute_ms": 1662.0132199996078,
+      "asr_rtf": 0.17098901440325182,
+      "text": "These are sometimes crowded family beaches with a good range of shops lining the shore, swimming is safe.",
+      "memory": {
+        "device_free_mb": 2725.11328125,
+        "device_total_mb": 7607.31640625,
+        "torch_allocated_mb": 1224.470703125,
+        "torch_reserved_mb": 1482.0,
+        "system_available_mb": 2727.84375
+      }
+    },
+    {
+      "id": "eval_04",
+      "audio": "/workspace/data/multilingual_eval/audio/en_1968.wav",
+      "duration_s": 10.8,
+      "input_load_ms": 5.761323999649903,
+      "asr_compute_ms": 1786.8764869999723,
+      "asr_rtf": 0.1654515265740715,
+      "text": "Some cruises feature Berlin, Germany and the brochures. As you can see from the map above, Berlin is nowhere near the sea and a visit to the city is not included in the price of the cruise.",
+      "memory": {
+        "device_free_mb": 2696.890625,
+        "device_total_mb": 7607.31640625,
+        "torch_allocated_mb": 1224.470703125,
+        "torch_reserved_mb": 1482.0,
+        "system_available_mb": 2699.59375
+      }
+    },
+    {
+      "id": "eval_05",
+      "audio": "/workspace/data/multilingual_eval/audio/en_1961.wav",
+      "duration_s": 14.1,
+      "input_load_ms": 9.932601999935287,
+      "asr_compute_ms": 1810.0127610005075,
+      "asr_rtf": 0.12836969936173812,
+      "text": "One of the most common methods used to illustrate the importance of socialization is to draw upon the unfortunate cases of children who were through neglect, misfortune, or willful abuse not socialized by adults while they were growing up.",
+      "memory": {
+        "device_free_mb": 2674.8203125,
+        "device_total_mb": 7607.31640625,
+        "torch_allocated_mb": 1224.470703125,
+        "torch_reserved_mb": 1534.0,
+        "system_available_mb": 2677.5
+      }
+    }
+  ],
+  "mean_asr_ms": 1790.7888296002056,
+  "median_asr_ms": 1796.1106450002262,
+  "min_asr_ms": 1662.0132199996078,
+  "max_asr_ms": 1898.9310350007145,
+  "mean_rtf": 0.21139635717305164,
+  "memory_before": {
+    "device_free_mb": 4605.8515625,
+    "device_total_mb": 7607.31640625,
+    "torch_allocated_mb": 0.0,
+    "torch_reserved_mb": 0.0,
+    "system_available_mb": 4610.21875
+  },
+  "memory_after_load": {
+    "device_free_mb": 2848.02734375,
+    "device_total_mb": 7607.31640625,
+    "torch_allocated_mb": 1216.345703125,
+    "torch_reserved_mb": 1478.0,
+    "system_available_mb": 2854.140625
+  },
+  "memory_after_warmup": {
+    "device_free_mb": 2796.23828125,
+    "device_total_mb": 7607.31640625,
+    "torch_allocated_mb": 1224.470703125,
+    "torch_reserved_mb": 1480.0,
+    "system_available_mb": 2799.0390625
+  }
+}

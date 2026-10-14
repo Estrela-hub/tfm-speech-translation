@@ -1,0 +1,187 @@
+{
+  "configuration": {
+    "beam_size": 1,
+    "compute_type": "float16",
+    "latency_scope": "tokenization + CTranslate2 translation + detokenization",
+    "measured_runs": 20,
+    "model_id": "facebook/nllb-200-distilled-600M",
+    "model_path": "/workspace/models/ctranslate2/nllb-200-distilled-600M-fp16",
+    "policy": "final_only",
+    "revision": "f8d333a098d19b4fd9a8b18f94170487ad3f821d",
+    "runtime": "CTranslate2",
+    "source_code": "spa_Latn",
+    "source_language": "es",
+    "source_text": "Esto parece tener sentido, ya que en la Tierra no se percibe su movimiento, ¿cierto?",
+    "target_code": "por_Latn",
+    "target_language": "pt",
+    "tokenizer_path": "/workspace/models/nllb_tokenizer",
+    "warmup_runs": 3
+  },
+  "environment": {
+    "ctranslate2": "4.8.2",
+    "cuda": "12.9",
+    "gpu": "Orin",
+    "python": "3.12.3",
+    "pytorch": "2.8.0a0+5228986c39.nv25.06",
+    "transformers": "5.17.0"
+  },
+  "experiment": "Final NLLB CTranslate2 steady-state benchmark",
+  "memory": {
+    "after_benchmark": {
+      "device_free_mb": 2430.4453125,
+      "device_total_mb": 7607.30859375,
+      "system_available_mb": 2433.25,
+      "torch_allocated_mb": 0.0,
+      "torch_reserved_mb": 0.0
+    },
+    "after_model": {
+      "device_free_mb": 2874.1484375,
+      "device_total_mb": 7607.30859375,
+      "system_available_mb": 2877.3984375,
+      "torch_allocated_mb": 0.0,
+      "torch_reserved_mb": 0.0
+    },
+    "before_model": {
+      "device_free_mb": 5394.4921875,
+      "device_total_mb": 7607.30859375,
+      "system_available_mb": 5399.89453125,
+      "torch_allocated_mb": 0.0,
+      "torch_reserved_mb": 0.0
+    }
+  },
+  "memory_note": "Jetson uses unified memory. CUDA and system memory values must not be added together.",
+  "model_load_ms": 22942.609921999974,
+  "output_consistency": {
+    "exact": true,
+    "translation": "Isto parece fazer sentido, já que na Terra não se percebe o seu movimento, certo?"
+  },
+  "runs": [
+    {
+      "latency_ms": 328.72891899933165,
+      "run": 1,
+      "translation": "Isto parece fazer sentido, já que na Terra não se percebe o seu movimento, certo?"
+    },
+    {
+      "latency_ms": 330.01591700121935,
+      "run": 2,
+      "translation": "Isto parece fazer sentido, já que na Terra não se percebe o seu movimento, certo?"
+    },
+    {
+      "latency_ms": 330.1163340001949,
+      "run": 3,
+      "translation": "Isto parece fazer sentido, já que na Terra não se percebe o seu movimento, certo?"
+    },
+    {
+      "latency_ms": 328.6745900004462,
+      "run": 4,
+      "translation": "Isto parece fazer sentido, já que na Terra não se percebe o seu movimento, certo?"
+    },
+    {
+      "latency_ms": 330.5083350005589,
+      "run": 5,
+      "translation": "Isto parece fazer sentido, já que na Terra não se percebe o seu movimento, certo?"
+    },
+    {
+      "latency_ms": 329.2590970013407,
+      "run": 6,
+      "translation": "Isto parece fazer sentido, já que na Terra não se percebe o seu movimento, certo?"
+    },
+    {
+      "latency_ms": 330.44773199981137,
+      "run": 7,
+      "translation": "Isto parece fazer sentido, já que na Terra não se percebe o seu movimento, certo?"
+    },
+    {
+      "latency_ms": 331.11793600073725,
+      "run": 8,
+      "translation": "Isto parece fazer sentido, já que na Terra não se percebe o seu movimento, certo?"
+    },
+    {
+      "latency_ms": 329.3658519996825,
+      "run": 9,
+      "translation": "Isto parece fazer sentido, já que na Terra não se percebe o seu movimento, certo?"
+    },
+    {
+      "latency_ms": 328.49706600063655,
+      "run": 10,
+      "translation": "Isto parece fazer sentido, já que na Terra não se percebe o seu movimento, certo?"
+    },
+    {
+      "latency_ms": 330.5555770002684,
+      "run": 11,
+      "translation": "Isto parece fazer sentido, já que na Terra não se percebe o seu movimento, certo?"
+    },
+    {
+      "latency_ms": 330.3468410013011,
+      "run": 12,
+      "translation": "Isto parece fazer sentido, já que na Terra não se percebe o seu movimento, certo?"
+    },
+    {
+      "latency_ms": 331.5994780004985,
+      "run": 13,
+      "translation": "Isto parece fazer sentido, já que na Terra não se percebe o seu movimento, certo?"
+    },
+    {
+      "latency_ms": 328.37342400125635,
+      "run": 14,
+      "translation": "Isto parece fazer sentido, já que na Terra não se percebe o seu movimento, certo?"
+    },
+    {
+      "latency_ms": 330.16428600058134,
+      "run": 15,
+      "translation": "Isto parece fazer sentido, já que na Terra não se percebe o seu movimento, certo?"
+    },
+    {
+      "latency_ms": 329.9133199998323,
+      "run": 16,
+      "translation": "Isto parece fazer sentido, já que na Terra não se percebe o seu movimento, certo?"
+    },
+    {
+      "latency_ms": 329.3173239999305,
+      "run": 17,
+      "translation": "Isto parece fazer sentido, já que na Terra não se percebe o seu movimento, certo?"
+    },
+    {
+      "latency_ms": 328.27681500020844,
+      "run": 18,
+      "translation": "Isto parece fazer sentido, já que na Terra não se percebe o seu movimento, certo?"
+    },
+    {
+      "latency_ms": 329.05493099860905,
+      "run": 19,
+      "translation": "Isto parece fazer sentido, já que na Terra não se percebe o seu movimento, certo?"
+    },
+    {
+      "latency_ms": 329.992556000434,
+      "run": 20,
+      "translation": "Isto parece fazer sentido, já que na Terra não se percebe o seu movimento, certo?"
+    }
+  ],
+  "summary": {
+    "latency_ms": {
+      "max": 331.5994780004985,
+      "mean": 329.71631650034396,
+      "median": 329.95293800013314,
+      "min": 328.27681500020844,
+      "p95": 331.1420131007253,
+      "stdev": 0.9372785598748483
+    }
+  },
+  "warmup": [
+    {
+      "latency_ms": 1055.214440000782,
+      "run": 1,
+      "translation": "Isto parece fazer sentido, já que na Terra não se percebe o seu movimento, certo?"
+    },
+    {
+      "latency_ms": 343.2885689999239,
+      "run": 2,
+      "translation": "Isto parece fazer sentido, já que na Terra não se percebe o seu movimento, certo?"
+    },
+    {
+      "latency_ms": 330.0050670004566,
+      "run": 3,
+      "translation": "Isto parece fazer sentido, já que na Terra não se percebe o seu movimento, certo?"
+    }
+  ]
+}

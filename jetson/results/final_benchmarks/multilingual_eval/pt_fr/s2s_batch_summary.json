@@ -1,0 +1,165 @@
+{
+  "configuration": {
+    "asr_mode": "full_utterance",
+    "jobs": 5,
+    "mt_compute_type": "float16",
+    "mt_runtime": "CTranslate2",
+    "source_language": "pt",
+    "target_language": "fr",
+    "tts_runtime": "ONNX Runtime CPU"
+  },
+  "experiment": "Jetson persistent full-utterance S2S repeated-execution test",
+  "startup": {
+    "model_load_ms": {
+      "asr": 135720.78214700014,
+      "mt": 24628.1235489987,
+      "total": 164471.96574199916,
+      "tts": 4123.060046000319
+    },
+    "warmup": {
+      "asr_bucket_total_ms": 17193.521297002007,
+      "asr_bucket_warmups": [
+        {
+          "bucket_s": 8,
+          "compute_ms": 11745.865875000163,
+          "rtf": 1.4719130169173136,
+          "text": "Leões são os felinos mais sociais, vivendo em grandes grupos chamados de alcateias."
+        },
+        {
+          "bucket_s": 12,
+          "compute_ms": 1883.214945999498,
+          "rtf": 0.23599184786961128,
+          "text": "Leões são os felinos mais sociais, vivendo em grandes grupos chamados de alcateias."
+        },
+        {
+          "bucket_s": 16,
+          "compute_ms": 1762.9395380026835,
+          "rtf": 0.2209197416043463,
+          "text": "Leões são os felinos mais sociais, vivendo em grandes grupos chamados de alcateias."
+        },
+        {
+          "bucket_s": 24,
+          "compute_ms": 1801.5009379996627,
+          "rtf": 0.2257519972430655,
+          "text": "Leões são os felinos mais sociais, vivendo em grandes grupos chamados de alcateias."
+        }
+      ],
+      "asr_ms": 11745.865875000163,
+      "asr_rtf": 1.4719130169173136,
+      "asr_text": "Leões são os felinos mais sociais, vivendo em grandes grupos chamados de alcateias.",
+      "input_audio": "/workspace/data/multilingual_eval/warmup/warmup_pt.wav",
+      "input_duration_s": 7.98,
+      "input_load_ms": 4.859863998717628,
+      "mt_ms": 3403.3021599971107,
+      "total_ms": 23378.42539799749,
+      "translated_text": "Les lions sont les chats les plus sociables, vivant en grands groupes appelés alcachées.",
+      "tts_ms": 2351.3292249990627
+    }
+  },
+  "summary": {
+    "asr_ms": {
+      "max": 558.1864850028069,
+      "mean": 402.7506500002346,
+      "median": 349.97560199917643,
+      "min": 330.887165000604
+    },
+    "asr_rtf": {
+      "max": 0.06645077202414368,
+      "mean": 0.03525187458993642,
+      "median": 0.026770806229822332,
+      "min": 0.023427420696638453
+    },
+    "compute_total_ms": {
+      "max": 3445.2283649989113,
+      "mean": 2780.349208800908,
+      "median": 2579.166093000822,
+      "min": 2402.934286004893
+    },
+    "file_to_file_wall_ms": {
+      "max": 3517.6831190001394,
+      "mean": 2897.5008945999434,
+      "median": 2871.5478330013866,
+      "min": 2560.3512579982635
+    },
+    "input_load_ms": {
+      "max": 64.6059159989818,
+      "mean": 18.850532599753933,
+      "median": 8.432221999100875,
+      "min": 5.215812001551967
+    },
+    "jobs": 5,
+    "memory": {
+      "after_each_job": [
+        {
+          "device_free_mb": 390.45703125,
+          "device_total_mb": 7607.31640625,
+          "system_available_mb": 391.36328125,
+          "torch_allocated_mb": 1224.46875,
+          "torch_reserved_mb": 1654.0
+        },
+        {
+          "device_free_mb": 361.6640625,
+          "device_total_mb": 7607.31640625,
+          "system_available_mb": 367.2578125,
+          "torch_allocated_mb": 1224.46875,
+          "torch_reserved_mb": 1654.0
+        },
+        {
+          "device_free_mb": 359.28125,
+          "device_total_mb": 7607.31640625,
+          "system_available_mb": 360.203125,
+          "torch_allocated_mb": 1224.46875,
+          "torch_reserved_mb": 1654.0
+        },
+        {
+          "device_free_mb": 351.65234375,
+          "device_total_mb": 7607.31640625,
+          "system_available_mb": 352.59375,
+          "torch_allocated_mb": 1224.46875,
+          "torch_reserved_mb": 1654.0
+        },
+        {
+          "device_free_mb": 323.09765625,
+          "device_total_mb": 7607.31640625,
+          "system_available_mb": 323.73046875,
+          "torch_allocated_mb": 1224.46875,
+          "torch_reserved_mb": 1654.0
+        }
+      ],
+      "after_warmup": {
+        "device_free_mb": 380.5625,
+        "device_total_mb": 7607.31640625,
+        "system_available_mb": 381.3515625,
+        "torch_allocated_mb": 1224.46875,
+        "torch_reserved_mb": 1654.0
+      },
+      "system_available_change_mb": -57.62109375
+    },
+    "mt_ms": {
+      "max": 793.2039449988224,
+      "mean": 598.8318180003262,
+      "median": 567.1416600016528,
+      "min": 459.44603200041456
+    },
+    "output_consistency": {
+      "asr_exactly_stable": null,
+      "asr_unique_outputs": null,
+      "comparable": false,
+      "mt_exactly_stable": null,
+      "mt_unique_outputs": null,
+      "reason": "batch contains different input audio paths"
+    },
+    "output_write_ms": {
+      "max": 14.330010999401566,
+      "mean": 5.366691399831325,
+      "median": 2.400889999989886,
+      "min": 1.4013329964654986
+    },
+    "tts_ms": {
+      "max": 2220.29786100029,
+      "mean": 1778.7667408003472,
+      "median": 1665.396830001555,
+      "min": 1385.3017690016713
+    }
+  }
+}

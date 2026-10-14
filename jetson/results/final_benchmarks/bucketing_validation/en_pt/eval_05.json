@@ -1,0 +1,137 @@
+{
+  "architecture": "16 kHz PCM16 WAV -> full-utterance Parakeet -> final ASR hypothesis -> NLLB CTranslate2 FP16 final-only -> Piper ONNX Runtime CPU -> output WAV",
+  "asr": {
+    "checkpoint": "/workspace/models/parakeet/parakeet-tdt-0.6b-v3.nemo",
+    "compute_ms": 453.1440600003407,
+    "cuda_graph_decoder": false,
+    "final_text": "One of the most common methods used to illustrate the importance of socialization is to draw upon the unfortunate cases of children who were through neglect, misfortune, or willful abuse not socialized by adults while they were growing up.",
+    "method": "NeMo full-utterance RNNT/TDT inference",
+    "mode": "full_utterance",
+    "model_id": "nvidia/parakeet-tdt-0.6b-v3",
+    "precision": "torch.float16",
+    "revision": "541d1f99c6b0c3cd0b11a95167540bb8edefd82b",
+    "rtf": 0.03213787659576885
+  },
+  "configuration": {
+    "input_audio": "/workspace/data/multilingual_eval/audio/en_1961.wav",
+    "output_audio": "/workspace/results/final_benchmarks/bucketing_validation/en_pt/eval_05.wav",
+    "source_language": "en",
+    "target_language": "pt"
+  },
+  "environment": {
+    "ctranslate2": "4.8.2",
+    "cuda": "12.9",
+    "gpu": "Orin",
+    "nemo": "3.0.0",
+    "onnxruntime": "1.30.0",
+    "python": "3.12.3",
+    "pytorch": "2.8.0a0+5228986c39.nv25.06",
+    "transformers": "5.17.0"
+  },
+  "experiment": "Jetson persistent full-utterance Speech-to-Speech pipeline",
+  "input": {
+    "channels": 1,
+    "duration_s": 14.1,
+    "frames": 225600,
+    "load_ms": 9.964958000637125,
+    "sample_rate": 16000,
+    "sample_width_bytes": 2
+  },
+  "job_id": "eval_05",
+  "memory_after_job": {
+    "device_free_mb": 378.890625,
+    "device_total_mb": 7607.31640625,
+    "system_available_mb": 380.08203125,
+    "torch_allocated_mb": 1224.46875,
+    "torch_reserved_mb": 1654.0
+  },
+  "memory_note": "Jetson uses unified memory. CUDA and system memory values must not be added together.",
+  "mt": {
+    "beam_size": 1,
+    "calls": 1,
+    "compute_type": "float16",
+    "latency_ms": 898.0778739987727,
+    "max_decoding_length": 256,
+    "model_id": "facebook/nllb-200-distilled-600M",
+    "model_path": "/workspace/models/ctranslate2/nllb-200-distilled-600M-fp16",
+    "policy": "final_only",
+    "revision": "f8d333a098d19b4fd9a8b18f94170487ad3f821d",
+    "runtime": "CTranslate2",
+    "tokenizer_path": "/workspace/models/nllb_tokenizer",
+    "translated_text": "Um dos métodos mais comuns utilizados para ilustrar a importância da socialização é basear-se nos casos infelizes de crianças que foram negligenciadas, infelizes ou abusadas intencionalmente por adultos quando cresciam."
+  },
+  "startup": {
+    "model_load_ms": {
+      "asr": 131269.5935970005,
+      "mt": 22766.039365000324,
+      "total": 157778.15920399915,
+      "tts": 3742.5262419983483
+    },
+    "warmup": {
+      "asr_bucket_total_ms": 17970.34499199981,
+      "asr_bucket_warmups": [
+        {
+          "bucket_s": 8,
+          "compute_ms": 12561.610578999534,
+          "rtf": 1.5860619417928705,
+          "text": "Bishkek was described as sinking into a state of anarchy by one observer, as gangs of people roamed the street and plundered stores of consumer goods."
+        },
+        {
+          "bucket_s": 12,
+          "compute_ms": 1826.612656001089,
+          "rtf": 0.2306329111112486,
+          "text": "Bishkek was described as sinking into a state of anarchy by one observer, as gangs of people roamed the street and plundered stores of consumer goods."
+        },
+        {
+          "bucket_s": 16,
+          "compute_ms": 1742.6064169994788,
+          "rtf": 0.22002606275245945,
+          "text": "Bishkek was described as sinking into a state of anarchy by one observer, as gangs of people roamed the street and plundered stores of consumer goods."
+        },
+        {
+          "bucket_s": 24,
+          "compute_ms": 1839.515339999707,
+          "rtf": 0.23226203787875088,
+          "text": "Bishkek was described as sinking into a state of anarchy by one observer, as gangs of people roamed the street and plundered stores of consumer goods."
+        }
+      ],
+      "asr_ms": 12561.610578999534,
+      "asr_rtf": 1.5860619417928705,
+      "asr_text": "Bishkek was described as sinking into a state of anarchy by one observer, as gangs of people roamed the street and plundered stores of consumer goods.",
+      "input_audio": "/workspace/data/multilingual_eval/warmup/warmup_en.wav",
+      "input_duration_s": 7.92,
+      "input_load_ms": 4.722263000076055,
+      "mt_ms": 3383.3436899985827,
+      "total_ms": 23243.319191999035,
+      "translated_text": "Bishkek foi descrito como mergulhando em um estado de anarquia por um observador, enquanto gangues de pessoas vagam pelas ruas e saqueam lojas de bens de consumo.",
+      "tts_ms": 1338.3872189988324
+    },
+    "warmup_enabled": true
+  },
+  "steady_state_metrics": {
+    "asr_compute_ms": 453.1440600003407,
+    "asr_rtf": 0.03213787659576885,
+    "compute_and_runtime_ms": 2323.873711999113,
+    "file_to_file_wall_ms": 2341.942035000102,
+    "input_load_ms": 9.964958000637125,
+    "mt_ms": 898.0778739987727,
+    "output_write_ms": 1.1103720007668016,
+    "tts_synthesis_ms": 972.6517779999995
+  },
+  "target_hardware": "NVIDIA Jetson Orin Nano 8 GB",
+  "tts": {
+    "audio": {
+      "channels": 1,
+      "duration_s": 9.7059410430839,
+      "frames": 214016,
+      "sample_rate": 22050,
+      "sample_width_bytes": 2
+    },
+    "execution_provider": "CPUExecutionProvider",
+    "family": "Piper",
+    "output_write_ms": 1.1103720007668016,
+    "runtime": "ONNX Runtime CPU",
+    "synthesis_ms": 972.6517779999995,
+    "voice": "pt_PT-tugão-medium"
+  }
+}

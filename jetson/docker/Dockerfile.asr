@@ -1,0 +1,11 @@
+FROM nvcr.io/nvidia/pytorch:25.06-py3-igpu@sha256:05bb8855c5ab94a556653fe4f7206e922c8ec93fdb0c88a02c2e013e20cff1d2
+
+# The Jetson iGPU PyTorch build has torch.distributed disabled.
+# NVIDIA Apex assumes torch.distributed is available and prevents
+# NeMo ASR from importing. Apex is not required for our inference workload.
+RUN python3 -m pip uninstall -y apex
+
+RUN python3 -m pip install --no-cache-dir \
+    "nemo_toolkit[asr]==3.0.0"
+
+WORKDIR /workspace

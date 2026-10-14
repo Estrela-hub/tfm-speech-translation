@@ -1,0 +1,222 @@
+{
+  "configuration": {
+    "audio": "/workspace/data/fleur_es_sample.wav",
+    "audio_info": {
+      "channels": 1,
+      "duration_s": 7.68,
+      "frames": 122880,
+      "sample_rate": 16000,
+      "sample_width_bytes": 2
+    },
+    "checkpoint": "/workspace/models/parakeet/parakeet-tdt-0.6b-v3.nemo",
+    "input_io_included": false,
+    "input_load_ms": 6.524581000121543,
+    "measured_runs": 20,
+    "mode": "full_utterance",
+    "model_id": "nvidia/parakeet-tdt-0.6b-v3",
+    "precision": "torch.float16",
+    "revision": "541d1f99c6b0c3cd0b11a95167540bb8edefd82b",
+    "warmup_runs": 3
+  },
+  "environment": {
+    "cuda": "12.9",
+    "gpu": "Orin",
+    "python": "3.12.3",
+    "pytorch": "2.8.0a0+5228986c39.nv25.06"
+  },
+  "experiment": "Final Parakeet ASR steady-state benchmark",
+  "memory": {
+    "allocated_mb": 1224.470703125,
+    "peak_allocated_mb": 1249.2392578125,
+    "peak_reserved_mb": 1480.0,
+    "reserved_mb": 1480.0
+  },
+  "model_load_ms": 131786.26971000084,
+  "output_consistency": {
+    "exact": true,
+    "text": "Esto parece tener sentido, ya que en la Tierra no se percibe su movimiento, ¿cierto?"
+  },
+  "runs": [
+    {
+      "audio_duration_s": 7.68,
+      "compute_ms": 269.0917050003918,
+      "rtf": 0.03503798242192602,
+      "run": 1,
+      "text": "Esto parece tener sentido, ya que en la Tierra no se percibe su movimiento, ¿cierto?"
+    },
+    {
+      "audio_duration_s": 7.68,
+      "compute_ms": 272.2098590002133,
+      "rtf": 0.03544399205731945,
+      "run": 2,
+      "text": "Esto parece tener sentido, ya que en la Tierra no se percibe su movimiento, ¿cierto?"
+    },
+    {
+      "audio_duration_s": 7.68,
+      "compute_ms": 266.70772900070006,
+      "rtf": 0.034727568880299486,
+      "run": 3,
+      "text": "Esto parece tener sentido, ya que en la Tierra no se percibe su movimiento, ¿cierto?"
+    },
+    {
+      "audio_duration_s": 7.68,
+      "compute_ms": 266.7392760013172,
+      "rtf": 0.03473167656267151,
+      "run": 4,
+      "text": "Esto parece tener sentido, ya que en la Tierra no se percibe su movimiento, ¿cierto?"
+    },
+    {
+      "audio_duration_s": 7.68,
+      "compute_ms": 266.14031399913074,
+      "rtf": 0.03465368671863682,
+      "run": 5,
+      "text": "Esto parece tener sentido, ya que en la Tierra no se percibe su movimiento, ¿cierto?"
+    },
+    {
+      "audio_duration_s": 7.68,
+      "compute_ms": 266.84995899995556,
+      "rtf": 0.03474608841145255,
+      "run": 6,
+      "text": "Esto parece tener sentido, ya que en la Tierra no se percibe su movimiento, ¿cierto?"
+    },
+    {
+      "audio_duration_s": 7.68,
+      "compute_ms": 267.5100899996323,
+      "rtf": 0.034832042968702126,
+      "run": 7,
+      "text": "Esto parece tener sentido, ya que en la Tierra no se percibe su movimiento, ¿cierto?"
+    },
+    {
+      "audio_duration_s": 7.68,
+      "compute_ms": 267.85058500172454,
+      "rtf": 0.03487637825543288,
+      "run": 8,
+      "text": "Esto parece tener sentido, ya que en la Tierra no se percibe su movimiento, ¿cierto?"
+    },
+    {
+      "audio_duration_s": 7.68,
+      "compute_ms": 268.3058570000867,
+      "rtf": 0.034935658463552954,
+      "run": 9,
+      "text": "Esto parece tener sentido, ya que en la Tierra no se percibe su movimiento, ¿cierto?"
+    },
+    {
+      "audio_duration_s": 7.68,
+      "compute_ms": 267.55972399951133,
+      "rtf": 0.03483850572910304,
+      "run": 10,
+      "text": "Esto parece tener sentido, ya que en la Tierra no se percibe su movimiento, ¿cierto?"
+    },
+    {
+      "audio_duration_s": 7.68,
+      "compute_ms": 267.4514199989062,
+      "rtf": 0.034824403645690914,
+      "run": 11,
+      "text": "Esto parece tener sentido, ya que en la Tierra no se percibe su movimiento, ¿cierto?"
+    },
+    {
+      "audio_duration_s": 7.68,
+      "compute_ms": 267.64985600129876,
+      "rtf": 0.03485024166683578,
+      "run": 12,
+      "text": "Esto parece tener sentido, ya que en la Tierra no se percibe su movimiento, ¿cierto?"
+    },
+    {
+      "audio_duration_s": 7.68,
+      "compute_ms": 265.9409349998896,
+      "rtf": 0.03462772591144396,
+      "run": 13,
+      "text": "Esto parece tener sentido, ya que en la Tierra no se percibe su movimiento, ¿cierto?"
+    },
+    {
+      "audio_duration_s": 7.68,
+      "compute_ms": 265.9434160013916,
+      "rtf": 0.03462804895851453,
+      "run": 14,
+      "text": "Esto parece tener sentido, ya que en la Tierra no se percibe su movimiento, ¿cierto?"
+    },
+    {
+      "audio_duration_s": 7.68,
+      "compute_ms": 265.7640170000377,
+      "rtf": 0.03460468971354658,
+      "run": 15,
+      "text": "Esto parece tener sentido, ya que en la Tierra no se percibe su movimiento, ¿cierto?"
+    },
+    {
+      "audio_duration_s": 7.68,
+      "compute_ms": 266.68733800033806,
+      "rtf": 0.034724913802127354,
+      "run": 16,
+      "text": "Esto parece tener sentido, ya que en la Tierra no se percibe su movimiento, ¿cierto?"
+    },
+    {
+      "audio_duration_s": 7.68,
+      "compute_ms": 266.32042600067507,
+      "rtf": 0.034677138802171235,
+      "run": 17,
+      "text": "Esto parece tener sentido, ya que en la Tierra no se percibe su movimiento, ¿cierto?"
+    },
+    {
+      "audio_duration_s": 7.68,
+      "compute_ms": 267.14735199857387,
+      "rtf": 0.034784811458147644,
+      "run": 18,
+      "text": "Esto parece tener sentido, ya que en la Tierra no se percibe su movimiento, ¿cierto?"
+    },
+    {
+      "audio_duration_s": 7.68,
+      "compute_ms": 266.22319200032507,
+      "rtf": 0.03466447812504233,
+      "run": 19,
+      "text": "Esto parece tener sentido, ya que en la Tierra no se percibe su movimiento, ¿cierto?"
+    },
+    {
+      "audio_duration_s": 7.68,
+      "compute_ms": 265.45386599900667,
+      "rtf": 0.03456430546862066,
+      "run": 20,
+      "text": "Esto parece tener sentido, ya que en la Tierra no se percibe su movimiento, ¿cierto?"
+    }
+  ],
+  "summary": {
+    "compute_ms": {
+      "max": 272.2098590002133,
+      "mean": 267.1773458001553,
+      "median": 266.7946175006364,
+      "min": 265.45386599900667,
+      "p95": 269.2476127003829,
+      "stdev": 1.5004039620904057
+    },
+    "rtf": {
+      "max": 0.03544399205731945,
+      "mean": 0.03478871690106189,
+      "median": 0.03473888248706203,
+      "min": 0.03456430546862066,
+      "p95": 0.03505828290369569,
+      "stdev": 0.00019536509923052183
+    }
+  },
+  "warmup": [
+    {
+      "audio_duration_s": 7.68,
+      "compute_ms": 12260.597471999063,
+      "rtf": 1.596431962499878,
+      "run": 1,
+      "text": "Esto parece tener sentido, ya que en la Tierra no se percibe su movimiento, ¿cierto?"
+    },
+    {
+      "audio_duration_s": 7.68,
+      "compute_ms": 296.25006100104656,
+      "rtf": 0.038574226692844604,
+      "run": 2,
+      "text": "Esto parece tener sentido, ya que en la Tierra no se percibe su movimiento, ¿cierto?"
+    },
+    {
+      "audio_duration_s": 7.68,
+      "compute_ms": 276.3244260004285,
+      "rtf": 0.035979742968805795,
+      "run": 3,
+      "text": "Esto parece tener sentido, ya que en la Tierra no se percibe su movimiento, ¿cierto?"
+    }
+  ]
+}

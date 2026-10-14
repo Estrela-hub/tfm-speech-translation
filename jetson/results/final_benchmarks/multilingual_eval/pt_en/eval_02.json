@@ -1,0 +1,137 @@
+{
+  "architecture": "16 kHz PCM16 WAV -> full-utterance Parakeet -> final ASR hypothesis -> NLLB CTranslate2 FP16 final-only -> Piper ONNX Runtime CPU -> output WAV",
+  "asr": {
+    "checkpoint": "/workspace/models/parakeet/parakeet-tdt-0.6b-v3.nemo",
+    "compute_ms": 410.54038099900936,
+    "cuda_graph_decoder": false,
+    "final_text": "O acusado compareceu ao tribunal com o rosto coberto, declarou o superintendente da polícia, Xandra Sespae.",
+    "method": "NeMo full-utterance RNNT/TDT inference",
+    "mode": "full_utterance",
+    "model_id": "nvidia/parakeet-tdt-0.6b-v3",
+    "precision": "torch.float16",
+    "revision": "541d1f99c6b0c3cd0b11a95167540bb8edefd82b",
+    "rtf": 0.039781044670446644
+  },
+  "configuration": {
+    "input_audio": "/workspace/data/multilingual_eval/audio/pt_1669.wav",
+    "output_audio": "/workspace/results/final_benchmarks/multilingual_eval/pt_en/eval_02.wav",
+    "source_language": "pt",
+    "target_language": "en"
+  },
+  "environment": {
+    "ctranslate2": "4.8.2",
+    "cuda": "12.9",
+    "gpu": "Orin",
+    "nemo": "3.0.0",
+    "onnxruntime": "1.30.0",
+    "python": "3.12.3",
+    "pytorch": "2.8.0a0+5228986c39.nv25.06",
+    "transformers": "5.17.0"
+  },
+  "experiment": "Jetson persistent full-utterance Speech-to-Speech pipeline",
+  "input": {
+    "channels": 1,
+    "duration_s": 10.32,
+    "frames": 165120,
+    "load_ms": 6.868771000881679,
+    "sample_rate": 16000,
+    "sample_width_bytes": 2
+  },
+  "job_id": "eval_02",
+  "memory_after_job": {
+    "device_free_mb": 243.36328125,
+    "device_total_mb": 7607.31640625,
+    "system_available_mb": 243.140625,
+    "torch_allocated_mb": 1224.46875,
+    "torch_reserved_mb": 1654.0
+  },
+  "memory_note": "Jetson uses unified memory. CUDA and system memory values must not be added together.",
+  "mt": {
+    "beam_size": 1,
+    "calls": 1,
+    "compute_type": "float16",
+    "latency_ms": 455.71480100261397,
+    "max_decoding_length": 256,
+    "model_id": "facebook/nllb-200-distilled-600M",
+    "model_path": "/workspace/models/ctranslate2/nllb-200-distilled-600M-fp16",
+    "policy": "final_only",
+    "revision": "f8d333a098d19b4fd9a8b18f94170487ad3f821d",
+    "runtime": "CTranslate2",
+    "tokenizer_path": "/workspace/models/nllb_tokenizer",
+    "translated_text": "The defendant appeared in court with his face covered, police superintendent Xandra Sespae said."
+  },
+  "startup": {
+    "model_load_ms": {
+      "asr": 134864.19170799854,
+      "mt": 24641.005933000997,
+      "total": 163694.18383200173,
+      "tts": 4188.986191002186
+    },
+    "warmup": {
+      "asr_bucket_total_ms": 17771.313645996997,
+      "asr_bucket_warmups": [
+        {
+          "bucket_s": 8,
+          "compute_ms": 12234.732804001396,
+          "rtf": 1.5331745368422802,
+          "text": "Leões são os felinos mais sociais, vivendo em grandes grupos chamados de alcateias."
+        },
+        {
+          "bucket_s": 12,
+          "compute_ms": 1890.1672609972593,
+          "rtf": 0.2368630652878771,
+          "text": "Leões são os felinos mais sociais, vivendo em grandes grupos chamados de alcateias."
+        },
+        {
+          "bucket_s": 16,
+          "compute_ms": 1771.6599199993652,
+          "rtf": 0.22201252130317858,
+          "text": "Leões são os felinos mais sociais, vivendo em grandes grupos chamados de alcateias."
+        },
+        {
+          "bucket_s": 24,
+          "compute_ms": 1874.7536609989766,
+          "rtf": 0.23493153646603715,
+          "text": "Leões são os felinos mais sociais, vivendo em grandes grupos chamados de alcateias."
+        }
+      ],
+      "asr_ms": 12234.732804001396,
+      "asr_rtf": 1.5331745368422802,
+      "asr_text": "Leões são os felinos mais sociais, vivendo em grandes grupos chamados de alcateias.",
+      "input_audio": "/workspace/data/multilingual_eval/warmup/warmup_pt.wav",
+      "input_duration_s": 7.98,
+      "input_load_ms": 7.008486998529406,
+      "mt_ms": 2779.5614450005814,
+      "total_ms": 23632.1864140009,
+      "translated_text": "Lions are the most social cats, living in large groups called alcaceans.",
+      "tts_ms": 2282.035852000263
+    },
+    "warmup_enabled": true
+  },
+  "steady_state_metrics": {
+    "asr_compute_ms": 410.54038099900936,
+    "asr_rtf": 0.039781044670446644,
+    "compute_and_runtime_ms": 2784.6831120004936,
+    "file_to_file_wall_ms": 2812.3363770027936,
+    "input_load_ms": 6.868771000881679,
+    "mt_ms": 455.71480100261397,
+    "output_write_ms": 13.722245999815641,
+    "tts_synthesis_ms": 1918.4279299988702
+  },
+  "target_hardware": "NVIDIA Jetson Orin Nano 8 GB",
+  "tts": {
+    "audio": {
+      "channels": 1,
+      "duration_s": 5.0967800453514736,
+      "frames": 112384,
+      "sample_rate": 22050,
+      "sample_width_bytes": 2
+    },
+    "execution_provider": "CPUExecutionProvider",
+    "family": "Piper",
+    "output_write_ms": 13.722245999815641,
+    "runtime": "ONNX Runtime CPU",
+    "synthesis_ms": 1918.4279299988702,
+    "voice": "en_US-lessac-medium"
+  }
+}

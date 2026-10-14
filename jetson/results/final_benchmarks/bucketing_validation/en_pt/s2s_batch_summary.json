@@ -1,0 +1,165 @@
+{
+  "configuration": {
+    "asr_mode": "full_utterance",
+    "jobs": 5,
+    "mt_compute_type": "float16",
+    "mt_runtime": "CTranslate2",
+    "source_language": "en",
+    "target_language": "pt",
+    "tts_runtime": "ONNX Runtime CPU"
+  },
+  "experiment": "Jetson persistent full-utterance S2S repeated-execution test",
+  "startup": {
+    "model_load_ms": {
+      "asr": 131269.5935970005,
+      "mt": 22766.039365000324,
+      "total": 157778.15920399915,
+      "tts": 3742.5262419983483
+    },
+    "warmup": {
+      "asr_bucket_total_ms": 17970.34499199981,
+      "asr_bucket_warmups": [
+        {
+          "bucket_s": 8,
+          "compute_ms": 12561.610578999534,
+          "rtf": 1.5860619417928705,
+          "text": "Bishkek was described as sinking into a state of anarchy by one observer, as gangs of people roamed the street and plundered stores of consumer goods."
+        },
+        {
+          "bucket_s": 12,
+          "compute_ms": 1826.612656001089,
+          "rtf": 0.2306329111112486,
+          "text": "Bishkek was described as sinking into a state of anarchy by one observer, as gangs of people roamed the street and plundered stores of consumer goods."
+        },
+        {
+          "bucket_s": 16,
+          "compute_ms": 1742.6064169994788,
+          "rtf": 0.22002606275245945,
+          "text": "Bishkek was described as sinking into a state of anarchy by one observer, as gangs of people roamed the street and plundered stores of consumer goods."
+        },
+        {
+          "bucket_s": 24,
+          "compute_ms": 1839.515339999707,
+          "rtf": 0.23226203787875088,
+          "text": "Bishkek was described as sinking into a state of anarchy by one observer, as gangs of people roamed the street and plundered stores of consumer goods."
+        }
+      ],
+      "asr_ms": 12561.610578999534,
+      "asr_rtf": 1.5860619417928705,
+      "asr_text": "Bishkek was described as sinking into a state of anarchy by one observer, as gangs of people roamed the street and plundered stores of consumer goods.",
+      "input_audio": "/workspace/data/multilingual_eval/warmup/warmup_en.wav",
+      "input_duration_s": 7.92,
+      "input_load_ms": 4.722263000076055,
+      "mt_ms": 3383.3436899985827,
+      "total_ms": 23243.319191999035,
+      "translated_text": "Bishkek foi descrito como mergulhando em um estado de anarquia por um observador, enquanto gangues de pessoas vagam pelas ruas e saqueam lojas de bens de consumo.",
+      "tts_ms": 1338.3872189988324
+    }
+  },
+  "summary": {
+    "asr_ms": {
+      "max": 510.4237160012417,
+      "mean": 398.7058072005311,
+      "median": 400.1802229995519,
+      "min": 295.78881900124543
+    },
+    "asr_rtf": {
+      "max": 0.08422833597380226,
+      "mean": 0.047174919069438014,
+      "median": 0.03705372435181036,
+      "min": 0.030430948456918253
+    },
+    "compute_total_ms": {
+      "max": 2323.873711999113,
+      "mean": 1544.6684658003505,
+      "median": 1443.5047570004826,
+      "min": 1122.0935500004998
+    },
+    "file_to_file_wall_ms": {
+      "max": 2341.942035000102,
+      "mean": 1610.3910030000407,
+      "median": 1539.325101999566,
+      "min": 1160.62697399866
+    },
+    "input_load_ms": {
+      "max": 34.38881199872412,
+      "mean": 13.201957999626757,
+      "median": 9.173476999421837,
+      "min": 4.322602000684128
+    },
+    "jobs": 5,
+    "memory": {
+      "after_each_job": [
+        {
+          "device_free_mb": 425.06640625,
+          "device_total_mb": 7607.31640625,
+          "system_available_mb": 425.81640625,
+          "torch_allocated_mb": 1224.46875,
+          "torch_reserved_mb": 1654.0
+        },
+        {
+          "device_free_mb": 415.8515625,
+          "device_total_mb": 7607.31640625,
+          "system_available_mb": 416.37109375,
+          "torch_allocated_mb": 1224.46875,
+          "torch_reserved_mb": 1654.0
+        },
+        {
+          "device_free_mb": 414.171875,
+          "device_total_mb": 7607.31640625,
+          "system_available_mb": 414.59765625,
+          "torch_allocated_mb": 1224.46875,
+          "torch_reserved_mb": 1654.0
+        },
+        {
+          "device_free_mb": 413.83203125,
+          "device_total_mb": 7607.31640625,
+          "system_available_mb": 414.2578125,
+          "torch_allocated_mb": 1224.46875,
+          "torch_reserved_mb": 1654.0
+        },
+        {
+          "device_free_mb": 378.890625,
+          "device_total_mb": 7607.31640625,
+          "system_available_mb": 380.08203125,
+          "torch_allocated_mb": 1224.46875,
+          "torch_reserved_mb": 1654.0
+        }
+      ],
+      "after_warmup": {
+        "device_free_mb": 422.93359375,
+        "device_total_mb": 7607.31640625,
+        "system_available_mb": 424.24609375,
+        "torch_allocated_mb": 1224.46875,
+        "torch_reserved_mb": 1654.0
+      },
+      "system_available_change_mb": -44.1640625
+    },
+    "mt_ms": {
+      "max": 898.0778739987727,
+      "mean": 588.2029075997707,
+      "median": 534.4395560005069,
+      "min": 403.48611999979767
+    },
+    "output_consistency": {
+      "asr_exactly_stable": null,
+      "asr_unique_outputs": null,
+      "comparable": false,
+      "mt_exactly_stable": null,
+      "mt_unique_outputs": null,
+      "reason": "batch contains different input audio paths"
+    },
+    "output_write_ms": {
+      "max": 1.1103720007668016,
+      "mean": 0.7289128003321821,
+      "median": 0.6546770000568358,
+      "min": 0.4862870009674225
+    },
+    "tts_ms": {
+      "max": 972.6517779999995,
+      "mean": 557.7597510000487,
+      "median": 476.7885279998154,
+      "min": 384.61521200042625
+    }
+  }
+}

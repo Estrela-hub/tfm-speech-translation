@@ -68,3 +68,19 @@ desktop_rtx3060/results/asr_selection/parakeet_streaming_configs/audio/
 
 # Raw NeMo execution logs; structured experiment outputs are retained.
 desktop_rtx3060/results/asr_selection/**/nemo.log
+
+
+# =============================================================================
+# Jetson generated benchmark artefacts
+# =============================================================================
+
+# Model weights are kept locally on the deployment device.
+jetson/models/
+
+# Generated audio outputs from final benchmarks.
+# Structured JSON benchmark results are retained.
+jetson/results/final_benchmarks/**/*.wav
+
+# Raw benchmark execution logs.
+# Structured JSON benchmark results are retained.
+jetson/results/final_benchmarks/**/*.log

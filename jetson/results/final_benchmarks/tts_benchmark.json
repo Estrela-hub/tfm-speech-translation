@@ -1,0 +1,332 @@
+{
+  "configuration": {
+    "execution_provider": "CPUExecutionProvider",
+    "language": "pt",
+    "measured_runs": 20,
+    "runtime": "ONNX Runtime CPU",
+    "text": "Isto parece fazer sentido, já que na Terra não se percebe o seu movimento, certo?",
+    "voice": "pt_PT-tugão-medium",
+    "warmup_runs": 3
+  },
+  "environment": {
+    "onnxruntime": "1.30.0",
+    "providers": [
+      "CPUExecutionProvider"
+    ],
+    "python": "3.12.3"
+  },
+  "experiment": "Final Piper TTS steady-state benchmark",
+  "note": "Piper synthesis is stochastic. Audio duration may therefore vary slightly between runs.",
+  "output_format": {
+    "channels": 1,
+    "sample_rate": 22050,
+    "sample_width_bytes": 2
+  },
+  "runs": [
+    {
+      "audio": {
+        "channels": 1,
+        "duration_s": 4.272471655328798,
+        "frames": 94208,
+        "sample_rate": 22050,
+        "sample_width_bytes": 2
+      },
+      "rtf": 0.11308045973760471,
+      "run": 1,
+      "synthesis_ms": 483.13305900046544
+    },
+    {
+      "audio": {
+        "channels": 1,
+        "duration_s": 4.272471655328798,
+        "frames": 94208,
+        "sample_rate": 22050,
+        "sample_width_bytes": 2
+      },
+      "rtf": 0.1126980199856421,
+      "run": 2,
+      "synthesis_ms": 481.49909600033425
+    },
+    {
+      "audio": {
+        "channels": 1,
+        "duration_s": 4.295691609977324,
+        "frames": 94720,
+        "sample_rate": 22050,
+        "sample_width_bytes": 2
+      },
+      "rtf": 0.1111425910766361,
+      "run": 3,
+      "synthesis_ms": 477.4342959990463
+    },
+    {
+      "audio": {
+        "channels": 1,
+        "duration_s": 4.179591836734694,
+        "frames": 92160,
+        "sample_rate": 22050,
+        "sample_width_bytes": 2
+      },
+      "rtf": 0.11078189523916036,
+      "run": 4,
+      "synthesis_ms": 463.02310499959276
+    },
+    {
+      "audio": {
+        "channels": 1,
+        "duration_s": 4.307301587301588,
+        "frames": 94976,
+        "sample_rate": 22050,
+        "sample_width_bytes": 2
+      },
+      "rtf": 0.11051573574598543,
+      "run": 5,
+      "synthesis_ms": 476.02460400048585
+    },
+    {
+      "audio": {
+        "channels": 1,
+        "duration_s": 4.342131519274377,
+        "frames": 95744,
+        "sample_rate": 22050,
+        "sample_width_bytes": 2
+      },
+      "rtf": 0.1112996846950603,
+      "run": 6,
+      "synthesis_ms": 483.27786899972125
+    },
+    {
+      "audio": {
+        "channels": 1,
+        "duration_s": 4.156371882086168,
+        "frames": 91648,
+        "sample_rate": 22050,
+        "sample_width_bytes": 2
+      },
+      "rtf": 0.11147098891635655,
+      "run": 7,
+      "synthesis_ms": 463.3148840002832
+    },
+    {
+      "audio": {
+        "channels": 1,
+        "duration_s": 4.121541950113379,
+        "frames": 90880,
+        "sample_rate": 22050,
+        "sample_width_bytes": 2
+      },
+      "rtf": 0.12709935876908834,
+      "run": 8,
+      "synthesis_ms": 523.8453389993083
+    },
+    {
+      "audio": {
+        "channels": 1,
+        "duration_s": 4.179591836734694,
+        "frames": 92160,
+        "sample_rate": 22050,
+        "sample_width_bytes": 2
+      },
+      "rtf": 0.11156897831517297,
+      "run": 9,
+      "synthesis_ms": 466.3127909989271
+    },
+    {
+      "audio": {
+        "channels": 1,
+        "duration_s": 4.191201814058957,
+        "frames": 92416,
+        "sample_rate": 22050,
+        "sample_width_bytes": 2
+      },
+      "rtf": 0.1123357807349562,
+      "run": 10,
+      "synthesis_ms": 470.8219280000776
+    },
+    {
+      "audio": {
+        "channels": 1,
+        "duration_s": 4.179591836734694,
+        "frames": 92160,
+        "sample_rate": 22050,
+        "sample_width_bytes": 2
+      },
+      "rtf": 0.11112293978526643,
+      "run": 11,
+      "synthesis_ms": 464.44853200046055
+    },
+    {
+      "audio": {
+        "channels": 1,
+        "duration_s": 4.295691609977324,
+        "frames": 94720,
+        "sample_rate": 22050,
+        "sample_width_bytes": 2
+      },
+      "rtf": 0.1110190153995935,
+      "run": 12,
+      "synthesis_ms": 476.90345299997716
+    },
+    {
+      "audio": {
+        "channels": 1,
+        "duration_s": 4.191201814058957,
+        "frames": 92416,
+        "sample_rate": 22050,
+        "sample_width_bytes": 2
+      },
+      "rtf": 0.11190488523534915,
+      "run": 13,
+      "synthesis_ms": 469.0159580004547
+    },
+    {
+      "audio": {
+        "channels": 1,
+        "duration_s": 4.214421768707483,
+        "frames": 92928,
+        "sample_rate": 22050,
+        "sample_width_bytes": 2
+      },
+      "rtf": 0.12184656975072512,
+      "run": 14,
+      "synthesis_ms": 513.5128359997907
+    },
+    {
+      "audio": {
+        "channels": 1,
+        "duration_s": 4.191201814058957,
+        "frames": 92416,
+        "sample_rate": 22050,
+        "sample_width_bytes": 2
+      },
+      "rtf": 0.11350576161829616,
+      "run": 15,
+      "synthesis_ms": 475.72555400074634
+    },
+    {
+      "audio": {
+        "channels": 1,
+        "duration_s": 4.272471655328798,
+        "frames": 94208,
+        "sample_rate": 22050,
+        "sample_width_bytes": 2
+      },
+      "rtf": 0.11111937475531289,
+      "run": 16,
+      "synthesis_ms": 474.75437899993267
+    },
+    {
+      "audio": {
+        "channels": 1,
+        "duration_s": 4.214421768707483,
+        "frames": 92928,
+        "sample_rate": 22050,
+        "sample_width_bytes": 2
+      },
+      "rtf": 0.11259425255522157,
+      "run": 17,
+      "synthesis_ms": 474.5196690000739
+    },
+    {
+      "audio": {
+        "channels": 1,
+        "duration_s": 4.179591836734694,
+        "frames": 92160,
+        "sample_rate": 22050,
+        "sample_width_bytes": 2
+      },
+      "rtf": 0.12319076099156943,
+      "run": 18,
+      "synthesis_ms": 514.8870990014984
+    },
+    {
+      "audio": {
+        "channels": 1,
+        "duration_s": 4.2260317460317465,
+        "frames": 93184,
+        "sample_rate": 22050,
+        "sample_width_bytes": 2
+      },
+      "rtf": 0.11174742699090381,
+      "run": 19,
+      "synthesis_ms": 472.24817400092434
+    },
+    {
+      "audio": {
+        "channels": 1,
+        "duration_s": 4.237641723356009,
+        "frames": 93440,
+        "sample_rate": 22050,
+        "sample_width_bytes": 2
+      },
+      "rtf": 0.11194222682505905,
+      "run": 20,
+      "synthesis_ms": 474.3710509992525
+    }
+  ],
+  "summary": {
+    "audio_duration_s": {
+      "max": 4.342131519274377,
+      "mean": 4.2260317460317465,
+      "median": 4.214421768707483,
+      "min": 4.121541950113379,
+      "p95": 4.309043083900227,
+      "stdev": 0.05835461252934638
+    },
+    "rtf": {
+      "max": 0.12709935876908834,
+      "mean": 0.11359933535614801,
+      "median": 0.11182615611312649,
+      "min": 0.11051573574598543,
+      "p95": 0.12338619088044538,
+      "stdev": 0.004653071122420886
+    },
+    "synthesis_ms": {
+      "max": 523.8453389993083,
+      "mean": 479.95368380006767,
+      "median": 475.2399665003395,
+      "min": 463.02310499959276,
+      "p95": 515.3350110013889,
+      "stdev": 17.29869649576836
+    }
+  },
+  "voice_load_ms": 3455.3178530004516,
+  "warmup": [
+    {
+      "audio": {
+        "channels": 1,
+        "duration_s": 4.214421768707483,
+        "frames": 92928,
+        "sample_rate": 22050,
+        "sample_width_bytes": 2
+      },
+      "rtf": 1.425633537585416,
+      "run": 1,
+      "synthesis_ms": 6008.221014999435
+    },
+    {
+      "audio": {
+        "channels": 1,
+        "duration_s": 4.260861678004535,
+        "frames": 93952,
+        "sample_rate": 22050,
+        "sample_width_bytes": 2
+      },
+      "rtf": 0.11722627152570238,
+      "run": 2,
+      "synthesis_ms": 499.4849279992195
+    },
+    {
+      "audio": {
+        "channels": 1,
+        "duration_s": 4.284081632653061,
+        "frames": 94464,
+        "sample_rate": 22050,
+        "sample_width_bytes": 2
+      },
+      "rtf": 0.12191790021448898,
+      "run": 3,
+      "synthesis_ms": 522.3062370005209
+    }
+  ]
+}

@@ -1,0 +1,186 @@
+{
+  "runtime": "CTranslate2 4.8.2",
+  "compute_type": "float16",
+  "model_id": "facebook/nllb-200-distilled-600M",
+  "revision": "f8d333a098d19b4fd9a8b18f94170487ad3f821d",
+  "manifest_sha256": "b2e3f73365232c700a1246b7bf4726eba2401f743a6a644066c5f35d4c470399",
+  "samples_per_language": 200,
+  "directions": 20,
+  "translations": 4000,
+  "macro_spbleu": 35.58081053113517,
+  "macro_chrf_pp": 55.24902581782375,
+  "historical_transformers_fp16": {
+    "macro_spbleu": 35.63,
+    "macro_chrf_pp": 55.28
+  },
+  "delta_vs_historical": {
+    "spbleu": -0.049189468864831554,
+    "chrf_pp": -0.030974182176251475
+  },
+  "mean_latency_ms": 540.9893048057556,
+  "median_latency_ms": 526.0762785001134,
+  "empty_outputs": 0,
+  "near_max_outputs": 1,
+  "per_direction": [
+    {
+      "source": "en",
+      "target": "es",
+      "spbleu": 30.684142705416097,
+      "chrf_pp": 51.56303556657996,
+      "mean_latency_ms": 524.2630390449267,
+      "median_latency_ms": 509.72569799887424
+    },
+    {
+      "source": "en",
+      "target": "fr",
+      "spbleu": 48.66736857066642,
+      "chrf_pp": 64.6476546084515,
+      "mean_latency_ms": 578.0252824797753,
+      "median_latency_ms": 562.0705575001921
+    },
+    {
+      "source": "en",
+      "target": "de",
+      "spbleu": 37.56764901854457,
+      "chrf_pp": 56.16124129769972,
+      "mean_latency_ms": 590.1536585351278,
+      "median_latency_ms": 547.4636989983992
+    },
+    {
+      "source": "en",
+      "target": "pt",
+      "spbleu": 46.084417079336006,
+      "chrf_pp": 63.01134639230492,
+      "mean_latency_ms": 531.311451415022,
+      "median_latency_ms": 523.6353799991775
+    },
+    {
+      "source": "es",
+      "target": "en",
+      "spbleu": 33.6525805239976,
+      "chrf_pp": 55.81430014280294,
+      "mean_latency_ms": 477.38461689998076,
+      "median_latency_ms": 481.19917400072154
+    },
+    {
+      "source": "es",
+      "target": "fr",
+      "spbleu": 33.56442749286372,
+      "chrf_pp": 53.04669053218144,
+      "mean_latency_ms": 601.7404853200242,
+      "median_latency_ms": 585.0595040010376
+    },
+    {
+      "source": "es",
+      "target": "de",
+      "spbleu": 23.88290613183776,
+      "chrf_pp": 45.90784545060605,
+      "mean_latency_ms": 581.7338957649554,
+      "median_latency_ms": 572.9109044987126
+    },
+    {
+      "source": "es",
+      "target": "pt",
+      "spbleu": 30.203277415322308,
+      "chrf_pp": 50.57373969763622,
+      "mean_latency_ms": 548.0351279499337,
+      "median_latency_ms": 543.0403349982953
+    },
+    {
+      "source": "fr",
+      "target": "en",
+      "spbleu": 45.001300188896344,
+      "chrf_pp": 63.65608798273414,
+      "mean_latency_ms": 465.33451637504186,
+      "median_latency_ms": 462.80662100070913
+    },
+    {
+      "source": "fr",
+      "target": "es",
+      "spbleu": 26.351644220889824,
+      "chrf_pp": 47.96979681203629,
+      "mean_latency_ms": 540.7835962451463,
+      "median_latency_ms": 534.2299434996676
+    },
+    {
+      "source": "fr",
+      "target": "de",
+      "spbleu": 29.135592088510396,
+      "chrf_pp": 49.68168643280006,
+      "mean_latency_ms": 564.7236334299487,
+      "median_latency_ms": 562.3868070015305
+    },
+    {
+      "source": "fr",
+      "target": "pt",
+      "spbleu": 35.93278712287494,
+      "chrf_pp": 55.24899133061369,
+      "mean_latency_ms": 538.0154860701259,
+      "median_latency_ms": 527.9737190012384
+    },
+    {
+      "source": "de",
+      "target": "en",
+      "spbleu": 43.38068546585554,
+      "chrf_pp": 63.32184624600373,
+      "mean_latency_ms": 462.3020402050133,
+      "median_latency_ms": 463.05556549850735
+    },
+    {
+      "source": "de",
+      "target": "es",
+      "spbleu": 24.88576676383346,
+      "chrf_pp": 46.87331108813047,
+      "mean_latency_ms": 536.3646124851766,
+      "median_latency_ms": 534.4111485010217
+    },
+    {
+      "source": "de",
+      "target": "fr",
+      "spbleu": 37.917215983874776,
+      "chrf_pp": 56.75089537457518,
+      "mean_latency_ms": 582.5522011499197,
+      "median_latency_ms": 570.5608749995008
+    },
+    {
+      "source": "de",
+      "target": "pt",
+      "spbleu": 34.50279875588513,
+      "chrf_pp": 53.73612727637267,
+      "mean_latency_ms": 541.4146268149852,
+      "median_latency_ms": 527.922822497203
+    },
+    {
+      "source": "pt",
+      "target": "en",
+      "spbleu": 49.8277264435199,
+      "chrf_pp": 67.31440607865201,
+      "mean_latency_ms": 465.55075769500036,
+      "median_latency_ms": 463.00413599965395
+    },
+    {
+      "source": "pt",
+      "target": "es",
+      "spbleu": 28.745689782679822,
+      "chrf_pp": 49.584945137796566,
+      "mean_latency_ms": 532.1916547100409,
+      "median_latency_ms": 509.1531225007202
+    },
+    {
+      "source": "pt",
+      "target": "fr",
+      "spbleu": 40.93930769932763,
+      "chrf_pp": 58.54632333743134,
+      "mean_latency_ms": 589.6717479600011,
+      "median_latency_ms": 571.92356700034
+    },
+    {
+      "source": "pt",
+      "target": "de",
+      "spbleu": 30.688927168571244,
+      "chrf_pp": 51.570245571066145,
+      "mean_latency_ms": 568.2336655649669,
+      "median_latency_ms": 556.1974265001481
+    }
+  ]
+}

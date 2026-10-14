@@ -1,0 +1,137 @@
+{
+  "architecture": "16 kHz PCM16 WAV -> full-utterance Parakeet -> final ASR hypothesis -> NLLB CTranslate2 FP16 final-only -> Piper ONNX Runtime CPU -> output WAV",
+  "asr": {
+    "checkpoint": "/workspace/models/parakeet/parakeet-tdt-0.6b-v3.nemo",
+    "compute_ms": 384.6331740023743,
+    "cuda_graph_decoder": false,
+    "final_text": "Continue acatando os lembretes das autoridades, obedecendo a todas as placas e prestando muita atenção aos alertas de segurança.",
+    "method": "NeMo full-utterance RNNT/TDT inference",
+    "mode": "full_utterance",
+    "model_id": "nvidia/parakeet-tdt-0.6b-v3",
+    "precision": "torch.float16",
+    "revision": "541d1f99c6b0c3cd0b11a95167540bb8edefd82b",
+    "rtf": 0.031119188835143554
+  },
+  "configuration": {
+    "input_audio": "/workspace/data/multilingual_eval/audio/pt_1959.wav",
+    "output_audio": "/workspace/results/final_benchmarks/multilingual_eval/pt_de/eval_03.wav",
+    "source_language": "pt",
+    "target_language": "de"
+  },
+  "environment": {
+    "ctranslate2": "4.8.2",
+    "cuda": "12.9",
+    "gpu": "Orin",
+    "nemo": "3.0.0",
+    "onnxruntime": "1.30.0",
+    "python": "3.12.3",
+    "pytorch": "2.8.0a0+5228986c39.nv25.06",
+    "transformers": "5.17.0"
+  },
+  "experiment": "Jetson persistent full-utterance Speech-to-Speech pipeline",
+  "input": {
+    "channels": 1,
+    "duration_s": 12.36,
+    "frames": 197760,
+    "load_ms": 23.052354001265485,
+    "sample_rate": 16000,
+    "sample_width_bytes": 2
+  },
+  "job_id": "eval_03",
+  "memory_after_job": {
+    "device_free_mb": 379.51953125,
+    "device_total_mb": 7607.31640625,
+    "system_available_mb": 379.9453125,
+    "torch_allocated_mb": 1224.46875,
+    "torch_reserved_mb": 1654.0
+  },
+  "memory_note": "Jetson uses unified memory. CUDA and system memory values must not be added together.",
+  "mt": {
+    "beam_size": 1,
+    "calls": 1,
+    "compute_type": "float16",
+    "latency_ms": 520.0930809987767,
+    "max_decoding_length": 256,
+    "model_id": "facebook/nllb-200-distilled-600M",
+    "model_path": "/workspace/models/ctranslate2/nllb-200-distilled-600M-fp16",
+    "policy": "final_only",
+    "revision": "f8d333a098d19b4fd9a8b18f94170487ad3f821d",
+    "runtime": "CTranslate2",
+    "tokenizer_path": "/workspace/models/nllb_tokenizer",
+    "translated_text": "Folge den Aufschub der Behörden, gehorche allen Schildschildern und achte sehr auf die Sicherheitswarnungen."
+  },
+  "startup": {
+    "model_load_ms": {
+      "asr": 136485.46915199768,
+      "mt": 25425.071867000952,
+      "total": 166065.18808899636,
+      "tts": 4154.647069997736
+    },
+    "warmup": {
+      "asr_bucket_total_ms": 17374.686860996007,
+      "asr_bucket_warmups": [
+        {
+          "bucket_s": 8,
+          "compute_ms": 11896.486581998033,
+          "rtf": 1.4907877922303299,
+          "text": "Leões são os felinos mais sociais, vivendo em grandes grupos chamados de alcateias."
+        },
+        {
+          "bucket_s": 12,
+          "compute_ms": 1884.1638430021703,
+          "rtf": 0.23611075726844238,
+          "text": "Leões são os felinos mais sociais, vivendo em grandes grupos chamados de alcateias."
+        },
+        {
+          "bucket_s": 16,
+          "compute_ms": 1755.827404998854,
+          "rtf": 0.2200284968670243,
+          "text": "Leões são os felinos mais sociais, vivendo em grandes grupos chamados de alcateias."
+        },
+        {
+          "bucket_s": 24,
+          "compute_ms": 1838.2090309969499,
+          "rtf": 0.2303520088968609,
+          "text": "Leões são os felinos mais sociais, vivendo em grandes grupos chamados de alcateias."
+        }
+      ],
+      "asr_ms": 11896.486581998033,
+      "asr_rtf": 1.4907877922303299,
+      "asr_text": "Leões são os felinos mais sociais, vivendo em grandes grupos chamados de alcateias.",
+      "input_audio": "/workspace/data/multilingual_eval/warmup/warmup_pt.wav",
+      "input_duration_s": 7.98,
+      "input_load_ms": 5.239613998128334,
+      "mt_ms": 2723.0780409990984,
+      "total_ms": 22980.686595998122,
+      "translated_text": "Löwen sind die geselligsten Katzen, die in großen Gruppen leben, die Alkazien genannt werden.",
+      "tts_ms": 2030.572502000723
+    },
+    "warmup_enabled": true
+  },
+  "steady_state_metrics": {
+    "asr_compute_ms": 384.6331740023743,
+    "asr_rtf": 0.031119188835143554,
+    "compute_and_runtime_ms": 2713.5371650001616,
+    "file_to_file_wall_ms": 2747.5838030004525,
+    "input_load_ms": 23.052354001265485,
+    "mt_ms": 520.0930809987767,
+    "output_write_ms": 5.17093899907195,
+    "tts_synthesis_ms": 1808.8109099990106
+  },
+  "target_hardware": "NVIDIA Jetson Orin Nano 8 GB",
+  "tts": {
+    "audio": {
+      "channels": 1,
+      "duration_s": 5.5495691609977325,
+      "frames": 122368,
+      "sample_rate": 22050,
+      "sample_width_bytes": 2
+    },
+    "execution_provider": "CPUExecutionProvider",
+    "family": "Piper",
+    "output_write_ms": 5.17093899907195,
+    "runtime": "ONNX Runtime CPU",
+    "synthesis_ms": 1808.8109099990106,
+    "voice": "de_DE-thorsten-medium"
+  }
+}

@@ -1,0 +1,137 @@
+{
+  "architecture": "16 kHz PCM16 WAV -> full-utterance Parakeet -> final ASR hypothesis -> NLLB CTranslate2 FP16 final-only -> Piper ONNX Runtime CPU -> output WAV",
+  "asr": {
+    "checkpoint": "/workspace/models/parakeet/parakeet-tdt-0.6b-v3.nemo",
+    "compute_ms": 420.2042920005624,
+    "cuda_graph_decoder": false,
+    "final_text": "Todos los sustantivos, así como el vocablo si para significar usted, llevan siempre su letra inicial mayúscula, aunque estén ubicados en el medio de la oración.",
+    "method": "NeMo full-utterance RNNT/TDT inference",
+    "mode": "full_utterance",
+    "model_id": "nvidia/parakeet-tdt-0.6b-v3",
+    "precision": "torch.float16",
+    "revision": "541d1f99c6b0c3cd0b11a95167540bb8edefd82b",
+    "rtf": 0.03765271433696796
+  },
+  "configuration": {
+    "input_audio": "/workspace/data/multilingual_eval/audio/es_1675.wav",
+    "output_audio": "/workspace/results/final_benchmarks/multilingual_eval/es_pt/eval_03.wav",
+    "source_language": "es",
+    "target_language": "pt"
+  },
+  "environment": {
+    "ctranslate2": "4.8.2",
+    "cuda": "12.9",
+    "gpu": "Orin",
+    "nemo": "3.0.0",
+    "onnxruntime": "1.30.0",
+    "python": "3.12.3",
+    "pytorch": "2.8.0a0+5228986c39.nv25.06",
+    "transformers": "5.17.0"
+  },
+  "experiment": "Jetson persistent full-utterance Speech-to-Speech pipeline",
+  "input": {
+    "channels": 1,
+    "duration_s": 11.16,
+    "frames": 178560,
+    "load_ms": 12.341982997895684,
+    "sample_rate": 16000,
+    "sample_width_bytes": 2
+  },
+  "job_id": "eval_03",
+  "memory_after_job": {
+    "device_free_mb": 436.6328125,
+    "device_total_mb": 7607.31640625,
+    "system_available_mb": 437.328125,
+    "torch_allocated_mb": 1224.46875,
+    "torch_reserved_mb": 1654.0
+  },
+  "memory_note": "Jetson uses unified memory. CUDA and system memory values must not be added together.",
+  "mt": {
+    "beam_size": 1,
+    "calls": 1,
+    "compute_type": "float16",
+    "latency_ms": 699.9562710007012,
+    "max_decoding_length": 256,
+    "model_id": "facebook/nllb-200-distilled-600M",
+    "model_path": "/workspace/models/ctranslate2/nllb-200-distilled-600M-fp16",
+    "policy": "final_only",
+    "revision": "f8d333a098d19b4fd9a8b18f94170487ad3f821d",
+    "runtime": "CTranslate2",
+    "tokenizer_path": "/workspace/models/nllb_tokenizer",
+    "translated_text": "Todos os substantivos, bem como a palavra se para significar você, sempre têm sua letra inicial majuscula, mesmo que estejam localizados no meio da oração."
+  },
+  "startup": {
+    "model_load_ms": {
+      "asr": 136582.16190500025,
+      "mt": 23632.318904001295,
+      "total": 164384.45968200176,
+      "tts": 4169.978873000218
+    },
+    "warmup": {
+      "asr_bucket_total_ms": 17368.775558003108,
+      "asr_bucket_warmups": [
+        {
+          "bucket_s": 8,
+          "compute_ms": 11918.821037997986,
+          "rtf": 1.5087115237972133,
+          "text": "Desde el gobierno informaron que 19 de las personas heridas eran policías."
+        },
+        {
+          "bucket_s": 12,
+          "compute_ms": 1792.5565559999086,
+          "rtf": 0.22690589316454537,
+          "text": "Desde el gobierno informaron que 19 de las personas heridas eran policías."
+        },
+        {
+          "bucket_s": 16,
+          "compute_ms": 1765.1037220020953,
+          "rtf": 0.22343085088634118,
+          "text": "Desde el gobierno informaron que 19 de las personas heridas eran policías."
+        },
+        {
+          "bucket_s": 24,
+          "compute_ms": 1892.2942420031177,
+          "rtf": 0.2395309167092554,
+          "text": "Desde el gobierno informaron que 19 de las personas heridas eran policías."
+        }
+      ],
+      "asr_ms": 11918.821037997986,
+      "asr_rtf": 1.5087115237972133,
+      "asr_text": "Desde el gobierno informaron que 19 de las personas heridas eran policías.",
+      "input_audio": "/workspace/data/multilingual_eval/warmup/warmup_es_bucket.wav",
+      "input_duration_s": 7.9,
+      "input_load_ms": 5.631613999867113,
+      "mt_ms": 2309.282969999913,
+      "total_ms": 21444.872061998467,
+      "translated_text": "O governo informou que 19 das pessoas feridas eram policiais.",
+      "tts_ms": 1398.7302139976237
+    },
+    "warmup_enabled": true
+  },
+  "steady_state_metrics": {
+    "asr_compute_ms": 420.2042920005624,
+    "asr_rtf": 0.03765271433696796,
+    "compute_and_runtime_ms": 3028.946619000635,
+    "file_to_file_wall_ms": 3047.023162998812,
+    "input_load_ms": 12.341982997895684,
+    "mt_ms": 699.9562710007012,
+    "output_write_ms": 1.4976820020820014,
+    "tts_synthesis_ms": 1908.7860559993715
+  },
+  "target_hardware": "NVIDIA Jetson Orin Nano 8 GB",
+  "tts": {
+    "audio": {
+      "channels": 1,
+      "duration_s": 7.209795918367347,
+      "frames": 158976,
+      "sample_rate": 22050,
+      "sample_width_bytes": 2
+    },
+    "execution_provider": "CPUExecutionProvider",
+    "family": "Piper",
+    "output_write_ms": 1.4976820020820014,
+    "runtime": "ONNX Runtime CPU",
+    "synthesis_ms": 1908.7860559993715,
+    "voice": "pt_PT-tugão-medium"
+  }
+}

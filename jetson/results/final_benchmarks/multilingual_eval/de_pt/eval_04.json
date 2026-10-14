@@ -1,0 +1,137 @@
+{
+  "architecture": "16 kHz PCM16 WAV -> full-utterance Parakeet -> final ASR hypothesis -> NLLB CTranslate2 FP16 final-only -> Piper ONNX Runtime CPU -> output WAV",
+  "asr": {
+    "checkpoint": "/workspace/models/parakeet/parakeet-tdt-0.6b-v3.nemo",
+    "compute_ms": 377.24888999946415,
+    "cuda_graph_decoder": false,
+    "final_text": "Die Szenen werden auf den Pyramiden dargestellt, wobei die verschiedenen Pyramiden beleuchtet werden.",
+    "method": "NeMo full-utterance RNNT/TDT inference",
+    "mode": "full_utterance",
+    "model_id": "nvidia/parakeet-tdt-0.6b-v3",
+    "precision": "torch.float16",
+    "revision": "541d1f99c6b0c3cd0b11a95167540bb8edefd82b",
+    "rtf": 0.02354861985015382
+  },
+  "configuration": {
+    "input_audio": "/workspace/data/multilingual_eval/audio/de_1870.wav",
+    "output_audio": "/workspace/results/final_benchmarks/multilingual_eval/de_pt/eval_04.wav",
+    "source_language": "de",
+    "target_language": "pt"
+  },
+  "environment": {
+    "ctranslate2": "4.8.2",
+    "cuda": "12.9",
+    "gpu": "Orin",
+    "nemo": "3.0.0",
+    "onnxruntime": "1.30.0",
+    "python": "3.12.3",
+    "pytorch": "2.8.0a0+5228986c39.nv25.06",
+    "transformers": "5.17.0"
+  },
+  "experiment": "Jetson persistent full-utterance Speech-to-Speech pipeline",
+  "input": {
+    "channels": 1,
+    "duration_s": 16.02,
+    "frames": 256320,
+    "load_ms": 7.672318002732936,
+    "sample_rate": 16000,
+    "sample_width_bytes": 2
+  },
+  "job_id": "eval_04",
+  "memory_after_job": {
+    "device_free_mb": 453.94140625,
+    "device_total_mb": 7607.31640625,
+    "system_available_mb": 468.19140625,
+    "torch_allocated_mb": 1224.46875,
+    "torch_reserved_mb": 1654.0
+  },
+  "memory_note": "Jetson uses unified memory. CUDA and system memory values must not be added together.",
+  "mt": {
+    "beam_size": 1,
+    "calls": 1,
+    "compute_type": "float16",
+    "latency_ms": 390.56952300234116,
+    "max_decoding_length": 256,
+    "model_id": "facebook/nllb-200-distilled-600M",
+    "model_path": "/workspace/models/ctranslate2/nllb-200-distilled-600M-fp16",
+    "policy": "final_only",
+    "revision": "f8d333a098d19b4fd9a8b18f94170487ad3f821d",
+    "runtime": "CTranslate2",
+    "tokenizer_path": "/workspace/models/nllb_tokenizer",
+    "translated_text": "As cenas são apresentadas nas pirâmides, iluminando as diferentes pirâmides."
+  },
+  "startup": {
+    "model_load_ms": {
+      "asr": 135836.4271729988,
+      "mt": 24075.083235999045,
+      "total": 164000.11350400018,
+      "tts": 4088.603095002327
+    },
+    "warmup": {
+      "asr_bucket_total_ms": 17165.309218999028,
+      "asr_bucket_warmups": [
+        {
+          "bucket_s": 8,
+          "compute_ms": 11701.179497002158,
+          "rtf": 1.466313220175709,
+          "text": "Er war nicht dazu in der Lage, die benötigten Medikamente einzunehmen, um seinen Schmerz zu verwenden, da sie bei den Commonwealth Games verboten sind."
+        },
+        {
+          "bucket_s": 12,
+          "compute_ms": 1840.1277049997589,
+          "rtf": 0.23059244423555875,
+          "text": "Er war nicht dazu in der Lage, die benötigten Medikamente einzunehmen, um seinen Schmerz zu verwenden, da sie bei den Commonwealth Games verboten sind."
+        },
+        {
+          "bucket_s": 16,
+          "compute_ms": 1787.9224509997584,
+          "rtf": 0.22405043245611006,
+          "text": "Er war nicht dazu in der Lage, die benötigten Medikamente einzunehmen, um seinen Schmerz zu verwenden, da sie bei den Commonwealth Games verboten sind."
+        },
+        {
+          "bucket_s": 24,
+          "compute_ms": 1836.079565997352,
+          "rtf": 0.23008515864628468,
+          "text": "Er war nicht dazu in der Lage, die benötigten Medikamente einzunehmen, um seinen Schmerz zu verwenden, da sie bei den Commonwealth Games verboten sind."
+        }
+      ],
+      "asr_ms": 11701.179497002158,
+      "asr_rtf": 1.466313220175709,
+      "asr_text": "Er war nicht dazu in der Lage, die benötigten Medikamente einzunehmen, um seinen Schmerz zu verwenden, da sie bei den Commonwealth Games verboten sind.",
+      "input_audio": "/workspace/data/multilingual_eval/warmup/warmup_de.wav",
+      "input_duration_s": 7.98,
+      "input_load_ms": 4.616760998032987,
+      "mt_ms": 2269.5979379968776,
+      "total_ms": 21689.510775999224,
+      "translated_text": "Ele não conseguiu tomar os medicamentos necessários para usar a dor, pois eles são proibidos nos Jogos da Commonwealth.",
+      "tts_ms": 1937.9706530016847
+    },
+    "warmup_enabled": true
+  },
+  "steady_state_metrics": {
+    "asr_compute_ms": 377.24888999946415,
+    "asr_rtf": 0.02354861985015382,
+    "compute_and_runtime_ms": 2147.133512000437,
+    "file_to_file_wall_ms": 2159.71949699815,
+    "input_load_ms": 7.672318002732936,
+    "mt_ms": 390.56952300234116,
+    "output_write_ms": 0.5253609997453168,
+    "tts_synthesis_ms": 1379.3150989986316
+  },
+  "target_hardware": "NVIDIA Jetson Orin Nano 8 GB",
+  "tts": {
+    "audio": {
+      "channels": 1,
+      "duration_s": 3.7151927437641725,
+      "frames": 81920,
+      "sample_rate": 22050,
+      "sample_width_bytes": 2
+    },
+    "execution_provider": "CPUExecutionProvider",
+    "family": "Piper",
+    "output_write_ms": 0.5253609997453168,
+    "runtime": "ONNX Runtime CPU",
+    "synthesis_ms": 1379.3150989986316,
+    "voice": "pt_PT-tugão-medium"
+  }
+}

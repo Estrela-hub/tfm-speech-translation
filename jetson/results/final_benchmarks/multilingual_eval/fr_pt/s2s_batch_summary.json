@@ -1,0 +1,165 @@
+{
+  "configuration": {
+    "asr_mode": "full_utterance",
+    "jobs": 5,
+    "mt_compute_type": "float16",
+    "mt_runtime": "CTranslate2",
+    "source_language": "fr",
+    "target_language": "pt",
+    "tts_runtime": "ONNX Runtime CPU"
+  },
+  "experiment": "Jetson persistent full-utterance S2S repeated-execution test",
+  "startup": {
+    "model_load_ms": {
+      "asr": 137591.65499600203,
+      "mt": 23258.77932000003,
+      "total": 164845.53496400258,
+      "tts": 3995.1006480005162
+    },
+    "warmup": {
+      "asr_bucket_total_ms": 17329.00082299966,
+      "asr_bucket_warmups": [
+        {
+          "bucket_s": 8,
+          "compute_ms": 11671.426513999904,
+          "rtf": 1.462584776190464,
+          "text": "L'équipe des sapeurs-pompiers a finalement éteint le feu à 23 h 35."
+        },
+        {
+          "bucket_s": 12,
+          "compute_ms": 1976.5534840007604,
+          "rtf": 0.247688406516386,
+          "text": "L'équipe des sapeurs-pompiers a finalement éteint le feu à 23 h 35."
+        },
+        {
+          "bucket_s": 16,
+          "compute_ms": 1807.284089998575,
+          "rtf": 0.2264767030073402,
+          "text": "L'équipe des sapeurs-pompiers a finalement éteint le feu à 23 h 35."
+        },
+        {
+          "bucket_s": 24,
+          "compute_ms": 1873.7367350004206,
+          "rtf": 0.2348041021303785,
+          "text": "L'équipe des sapeurs-pompiers a finalement éteint le feu à 23 h 35."
+        }
+      ],
+      "asr_ms": 11671.426513999904,
+      "asr_rtf": 1.462584776190464,
+      "asr_text": "L'équipe des sapeurs-pompiers a finalement éteint le feu à 23 h 35.",
+      "input_audio": "/workspace/data/multilingual_eval/warmup/warmup_fr.wav",
+      "input_duration_s": 7.98,
+      "input_load_ms": 4.739871001220308,
+      "mt_ms": 1503.58445099846,
+      "total_ms": 21949.896632999298,
+      "translated_text": "A equipe de bombeiros finalmente apagou o fogo às 23h35.",
+      "tts_ms": 2766.3756820002163
+    }
+  },
+  "summary": {
+    "asr_ms": {
+      "max": 941.908978002175,
+      "mean": 541.6717632004293,
+      "median": 479.8038059998362,
+      "min": 294.4304900011048
+    },
+    "asr_rtf": {
+      "max": 0.15543052442280117,
+      "mean": 0.06189991099071777,
+      "median": 0.04020922942705359,
+      "min": 0.03555923792283874
+    },
+    "compute_total_ms": {
+      "max": 4589.49938799924,
+      "mean": 3363.3429812027316,
+      "median": 3555.203526004334,
+      "min": 1680.704169004457
+    },
+    "file_to_file_wall_ms": {
+      "max": 4606.89388800165,
+      "mean": 3515.3622778008867,
+      "median": 3616.4108680022764,
+      "min": 1694.8123829970427
+    },
+    "input_load_ms": {
+      "max": 11.572865998459747,
+      "mean": 8.453837399429176,
+      "median": 8.519131999491947,
+      "min": 6.731296998623293
+    },
+    "jobs": 5,
+    "memory": {
+      "after_each_job": [
+        {
+          "device_free_mb": 381.56640625,
+          "device_total_mb": 7607.31640625,
+          "system_available_mb": 381.94921875,
+          "torch_allocated_mb": 1224.46875,
+          "torch_reserved_mb": 1654.0
+        },
+        {
+          "device_free_mb": 384.2734375,
+          "device_total_mb": 7607.31640625,
+          "system_available_mb": 384.66015625,
+          "torch_allocated_mb": 1224.46875,
+          "torch_reserved_mb": 1654.0
+        },
+        {
+          "device_free_mb": 337.4296875,
+          "device_total_mb": 7607.31640625,
+          "system_available_mb": 338.8828125,
+          "torch_allocated_mb": 1224.46875,
+          "torch_reserved_mb": 1654.0
+        },
+        {
+          "device_free_mb": 345.26171875,
+          "device_total_mb": 7607.31640625,
+          "system_available_mb": 346.0546875,
+          "torch_allocated_mb": 1224.46875,
+          "torch_reserved_mb": 1654.0
+        },
+        {
+          "device_free_mb": 255.4375,
+          "device_total_mb": 7607.31640625,
+          "system_available_mb": 255.70703125,
+          "torch_allocated_mb": 1224.46875,
+          "torch_reserved_mb": 1654.0
+        }
+      ],
+      "after_warmup": {
+        "device_free_mb": 278.75,
+        "device_total_mb": 7607.31640625,
+        "system_available_mb": 325.953125,
+        "torch_allocated_mb": 1224.46875,
+        "torch_reserved_mb": 1654.0
+      },
+      "system_available_change_mb": -70.24609375
+    },
+    "mt_ms": {
+      "max": 909.5053269993514,
+      "mean": 698.417269600759,
+      "median": 768.4488199993211,
+      "min": 453.55784300045343
+    },
+    "output_consistency": {
+      "asr_exactly_stable": null,
+      "asr_unique_outputs": null,
+      "comparable": false,
+      "mt_exactly_stable": null,
+      "mt_unique_outputs": null,
+      "reason": "batch contains different input audio paths"
+    },
+    "output_write_ms": {
+      "max": 12.899310000648256,
+      "mean": 3.4922442006063648,
+      "median": 1.4173270028550178,
+      "min": 0.5140009998285677
+    },
+    "tts_ms": {
+      "max": 3150.9888420005154,
+      "mean": 2123.2539484015433,
+      "median": 2284.003222001047,
+      "min": 932.7158360028989
+    }
+  }
+}
